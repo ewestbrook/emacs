@@ -1,0 +1,114 @@
+beano
+beano
+beano
+ls
+ls /root/
+beano
+beano
+beano
+git st
+echo $TERM
+export TERM=xterm-color
+git st
+git wdiff lua/vtail/
+git st
+git fetch
+git fetch
+git fetch
+git t
+git st
+git add lua/telegram/bot
+git st
+git commit -m 'telegrom.bot: += pgrep(): notify when process gone'
+git st
+git wdiff lua/vtail
+git --no-pager wdiff lua/vtail
+git commit -m 'vtail.defaults: ignore imap idle disconnects' lua/vtail/
+git st
+git push
+make
+host mysql.rc.vmedex.net
+nc -v mysql.rc.vmedex.net 3306
+traceroute -n 63.157.22.131
+sudo /vxl/bin/vsvc
+sudo svc -u /service/vpn*
+ip rule show
+ip route show table ewc1
+ip route show table ew24
+vnet myips
+export VXLSHDP0=1
+vnet myips
+ping 192.168.205.
+ping 192.168.205.1
+ip route add default via 192.168.205.1 dev ce2496vpn0 table ew24
+sudo ip route add default via 192.168.205.1 dev ce2496vpn0 table ew24
+ip route show table ew24
+ip route show table ewc1
+ip rule show
+nc -v mysql.rc.vmedex.net 3306
+bist
+ls bin
+drivemap.sh
+drivemap.sh
+drivemap.sh
+drivemap.sh
+drivemap.sh
+beano
+beano
+sudo kill 3203344
+sudo kill 3203377
+ls
+ls orgmode/
+cd /vxl
+grep -rinI powered lua
+grep -rinI powered lua/envdefs
+grep -rinI cache-control lua
+grep -rinI cache lua/envdefs
+wg https://westbrook.io/
+curl https://westbrook.io/
+curl -v https://westbrook.io/
+svc -t /service/wwwwc
+curl -v https://westbrook.io/
+whois 110.83.135.227
+ipcalc 110.80.0.0 - 110.87.255.255
+sudo ipset add offenders-4 110.80.0.0/13 comment "CHINANET FUJIAN PROVINCE NETWORK"
+ls /home/eric
+ls /git
+ls /root
+ls /mnt/md9
+find /mnt/md9 -iname '*brave*'
+sudo find /mnt/md9 -iname '*brave*'
+cd /home/eric
+mkdir install
+pd
+rmdir install
+cd /mnt/md9
+ls -alh
+ls -alh /home/
+ls -alh /home/eric/
+mkdir -pv /home/eric/apk
+cd /home/eric/apk
+ls -alh
+adb devices
+adb shell pm list packages 
+adb shell pm path com.amazon.clouddrive.photos
+adb pull /data/app/com.amazon.clouddrive.photos-1/base.apk
+mv -vi base.apk amazonphotos.apk
+adb disconnect
+adb devices
+adb install amazonphotos.apk
+exit
+cd =
+cd -2
+pwd
+cd =
+cd -
+cd -
+cd -
+cd =
+cd -
+cd =
+setq
+help setq
+ll
+exit

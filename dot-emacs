@@ -1,0 +1,193 @@
+;; -------------------------------------------------------
+(add-to-list 'load-path "~/.emacs.d/ew")
+(add-to-list 'load-path "~/.emacs.d/elpa/org-9.1.13")
+;; -------------------------------------------------------
+(load "/usr/share/emacs/site-lisp/site-gentoo")
+;; -------------------------------------------------------
+(tool-bar-mode -1)
+(show-paren-mode t)
+(line-number-mode 1)
+(column-number-mode 1)
+(global-font-lock-mode t)
+(global-auto-revert-mode 1)
+;; -------------------------------------------------------
+(setq make-backup-files nil)
+(setq large-file-warning-threshold 50000000)
+(setq buffers-menu-max-size nil)
+(setq inhibit-splash-screen t)
+(setq mouse-buffer-menu-mode-mult 0)
+(setq scroll-step 1)
+(setq-default transient-mark-mode t) 
+(setq require-final-newline t)
+(setq next-line-add-newlines nil)
+(setq lpr-command "xpp")
+(setq ps-lpr-command "xpp")
+(setq default-major-mode 'text-mode)
+(setq font-lock-maximum-decoration t)
+;; -------------------------------------------------------
+(setq-default indent-tabs-mode nil)
+(setq default-tab-width 2)
+(setq column-number-mode t)
+(setq default-tab-width 2)
+(setq standard-indent 2)
+(setq lua-indent-level 2)
+(setq javascript-indent-level 2)
+(setq js-indent-level 2)
+(setq tab-width 2)
+(setq c-basic-offset 2)
+(setq cperl-indent-level 2)
+;; -------------------------------------------------------
+(set-fill-column 57)
+(set-cursor-color "Red")
+(set-mouse-color "Yellow")
+(set-foreground-color "#A6A376")
+(set-background-color "#181818")
+(set-default-font
+ "-misc-fixed-medium-r-semicondensed--13-*-*-*-*-*-*-*")
+;; (set-default-font "Ubuntu Mono 9")
+;; -------------------------------------------------------
+(add-to-list 'same-window-regexps "\*eshell\*")
+(add-to-list 'same-window-regexps "\*shell\*")
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
+;; -------------------------------------------------------
+(defun no-split-window () (interactive) nil)
+(setq split-window-preferred-function 'no-split-window)
+;; -------------------------------------------------------
+(setq vc-handled-backends nil)
+(add-to-list 'vc-handled-backends 'CVS)
+(add-to-list 'vc-handled-backends 'RCS)
+(add-to-list 'vc-handled-backends 'SVN)
+(add-to-list 'vc-handled-backends 'GIT)
+;; -------------------------------------------------------
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'post-forward)
+;; -------------------------------------------------------
+;; ew-modeline
+(load "ewmodeline")
+;; -------------------------------------------------------
+;; wspace
+(load "show-wspace")
+;; -------------------------------------------------------
+;; urls
+(load "url")
+(url-handler-mode t)
+;; -------------------------------------------------------
+;; git
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/git")
+(autoload 'git-status "git" "Entry point into git-status mode." t)
+(autoload 'git-blame-mode "git-blame"
+  "Minor mode for incremental blame for Git." t)
+;; -------------------------------------------------------
+;; sh
+(defun ew-setup-sh-mode () "EW prefs for sh-mode"
+  (interactive) (setq sh-basic-offset 2 sh-indentation 2))
+(add-hook 'sh-mode-hook 'ew-setup-sh-mode)
+;; -------------------------------------------------------
+;; c
+(setq c-offsets-alist
+      '((case-label . +)
+        (statement-case-intro . +)))
+;; -------------------------------------------------------
+;; gud
+(require 'gud)
+;; -------------------------------------------------------
+;; tramp
+(setq tramp-default-method "ssh")
+;; -------------------------------------------------------
+;; elpa
+(require 'package)
+;; (add-to-list
+;;  'package-archives
+;;  '("org" . "http://orgmode.org/elpa/") t)
+;; -------------------------------------------------------
+;; perl
+(defalias 'perl-mode 'cperl-mode)
+;; -------------------------------------------------------
+;; org-mode
+(require 'ox-twbs)
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda() (org-bullets-mode 1)))
+(setq org-hide-leading-stars t)
+(setq org-bullets-bullet-list '("◉" "▶" "◆" "✸" "►" "•" "⋅"))
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((shell      . t)
+   (emacs-lisp . t)
+   (ruby . t)
+   (lua        . t)))
+;; (setq org-log-done "time")
+;; -------------------------------------------------------
+;; flymake
+(require 'flymake)
+;; (setq help-at-pt-display-when-idle
+;;       (quote (flymake-overlay)) nil (help-at-pt))
+;; (setq help-at-pt-timer-delay 0.5)
+;; -------------------------------------------------------
+;; magit
+(setq magit-status-buffer-switch-function 'switch-to-buffer)
+(load "magit-filenotify") ;; in emacs.d/ew/
+;; -------------------------------------------------------
+;; lua
+(autoload 'lua-mode "lua-mode" "Lua editing mode." t)
+(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
+(defadvice magit-ediff (around flymake-off activate)
+  (remove-hook 'lua-mode-hook' lua-flymake-hooks)
+  ad-do-it
+  (add-hook 'lua-mode-hook' lua-flymake-hooks))
+;; -------------------------------------------------------
+;; tog-ded
+(defun toggle-current-window-dedication ()
+  (interactive)
+  (let* ((window (selected-window))
+         (dedicated (window-dedicated-p window)))
+    (set-window-dedicated-p window (not dedicated))
+    (message "Window %sdedicated to %s"
+             (if dedicated "no longer " "")
+             (buffer-name))))
+(global-set-key [pause] 'toggle-current-window-dedication)
+;; -------------------------------------------------------
+;; clipboard
+(defun ew-toggle-clipboard-mode ()
+  "Toggle variable x-select-enable-clipboard"
+  (interactive) 
+  (if (eq x-select-enable-clipboard 't) 
+      (setq x-select-enable-clipboard nil)
+    (setq x-select-enable-clipboard 't))
+  (message "x-select-enable-clipboard is now %s" x-select-enable-clipboard))
+(setq x-select-enable-clipboard nil)
+;; -------------------------------------------------------
+;; local autosaves
+(defun make-auto-save-file-name ()
+  "Return file name to use for auto-saves of current buffer.."
+  (if buffer-file-name
+      (if (file-exists-p "~/.emacs_autosaves/") 
+          (concat (expand-file-name "~/.emacs_autosaves/") "#"
+                  (replace-regexp-in-string "/" "!" buffer-file-name)
+                  "#") 
+        (concat
+         (file-name-directory buffer-file-name)
+         "#"
+         (file-name-nondirectory buffer-file-name)
+         "#"))
+    (expand-file-name
+     (concat "#%" (buffer-name) "#"))))
+;; -------------------------------------------------------
+;; keys
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-cb" 'org-switchb)
+(global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "S-C-<down>") 'shrink-window)
+(global-set-key (kbd "S-C-<up>") 'enlarge-window)
+(global-set-key (kbd "C-M-g") 'grep)
+;; (global-set-key [f7] 'my-compile)
+(global-set-key (kbd"<f5>") 'gud-cont)
+;; (global-set-key (kbd"<f6>") 'gud-break)
+(global-set-key (kbd"<f7>") 'gud-finish)
+(global-set-key (kbd"<f8>") 'gud-next)
+(global-set-key (kbd"<f9>") 'gud-watch)
+(global-set-key (kbd"<f10>") 'gud-step)
+;; -------------------------------------------------------
