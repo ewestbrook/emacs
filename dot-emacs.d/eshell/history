@@ -1,6 +1,4 @@
 beano
-beano
-beano
 ls
 ls /root/
 beano
@@ -111,4 +109,20 @@ cd =
 setq
 help setq
 ll
+exit
+grep -rinI 'dovmail(user|grp)' .
+grep -rinI 'dovmail(user\|grp)' .
+grep -rinI 'dovmail\(user\|grp\)' .
+grep -rinI '\(stack\|flow\).*cred' /mnt/md9/mail-io/
+grep -rinI '\(stack\|flow\).*cred' /mnt/md9/mail-io/eric/.Import.gmail.creds/
+du -sh /mnt/md9/mail*
+du -sh /mnt/md9/mail*
+grep -rinI '\bvmail\b' /etc/dovecot/
+dirs
+cd ..
+# grep -rnI DOVMAIL
+cd ..
+grep -rnI DOVMAIL lua
+ls /etc/dovecot
+equery b /etc/dovecot.conf
 exit

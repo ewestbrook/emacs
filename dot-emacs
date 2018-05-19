@@ -1,3 +1,4 @@
+;; emacs -*- mode: emacs-lisp; -*-
 ;; -------------------------------------------------------
 (add-to-list 'load-path "~/.emacs.d/ew")
 (add-to-list 'load-path "~/.emacs.d/elpa/org-9.1.13")
@@ -10,6 +11,7 @@
 (column-number-mode 1)
 (global-font-lock-mode t)
 (global-auto-revert-mode 1)
+(put 'downcase-region 'disabled nil)
 ;; -------------------------------------------------------
 (setq make-backup-files nil)
 (setq large-file-warning-threshold 50000000)
@@ -114,6 +116,7 @@
  '((shell      . t)
    (emacs-lisp . t)
    (ruby . t)
+   (latex . t)
    (lua        . t)))
 ;; (setq org-log-done "time")
 ;; -------------------------------------------------------
@@ -190,4 +193,9 @@
 (global-set-key (kbd"<f8>") 'gud-next)
 (global-set-key (kbd"<f9>") 'gud-watch)
 (global-set-key (kbd"<f10>") 'gud-step)
+(global-set-key (kbd "M-s b") 'ediff-buffers)
+(global-set-key (kbd "M-s v") 'ediff-revision)
+(global-set-key (kbd "M-p") 'ew-toggle-clipboard-mode)
+(global-set-key (kbd "C-+") 'text-scale-increase)
+(global-set-key (kbd "C--") 'text-scale-decrease)
 ;; -------------------------------------------------------
