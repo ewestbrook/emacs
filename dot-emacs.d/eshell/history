@@ -1,7 +1,3 @@
-git add lua/telegram/bot
-git st
-git commit -m 'telegrom.bot: += pgrep(): notify when process gone'
-git st
 git wdiff lua/vtail
 git --no-pager wdiff lua/vtail
 git commit -m 'vtail.defaults: ignore imap idle disconnects' lua/vtail/
@@ -126,3 +122,7 @@ grep -rinI '\blinesrc\b' lua /ewl/lua /mml/lua /dogl/lua
 grep -rinI '\blinefilter\b' lua /ewl/lua /mml/lua /dogl/lua
 grep -rinI '\btablesrc\b' lua /ewl/lua /mml/lua /dogl/lua
 grep -rinI '\bstringsrc\b' lua /ewl/lua /mml/lua /dogl/lua
+curl -v -o /dev/null https://org.westbrook.io/cloud/
+grep -rinI mkinlinecss /vxl/lua /ewl/lua /mml/lua /dogl/lua
+exit
+find org -name '*vid*'

@@ -31,6 +31,9 @@
     :auto-preamble t
     )))
 
+;; (setq org-export-html-style-include-scripts nil)
+;; (setq org-export-html-style-include-default nil)
+
 (org-clock-persistence-insinuate)
 
 (add-to-list 'org-file-apps '("\\.pdf\\'" . "okular %s"))
