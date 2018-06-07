@@ -2,8 +2,36 @@
 ;; -------------------------------------------------------
 (add-to-list 'load-path "~/.emacs.d/ew")
 (add-to-list 'load-path "~/.emacs.d/elpa/org-9.1.13")
+(add-to-list 'load-path "~/.emacs.d/elpa/ivy-0.10.0")
 ;; -------------------------------------------------------
 (load "/usr/share/emacs/site-lisp/site-gentoo")
+;; -------------------------------------------------------
+(require 'uniquify)
+(require 'htmlize)
+(require 'gud)
+(require 'package)
+(require 'ox-twbs)
+(require 'org-bullets)
+(require 'flymake)
+(require 'ox-reveal)
+(require 'org-manage)
+;; -------------------------------------------------------
+(require 'ivy)
+(require 'counsel)
+(require 'swiper)
+(ivy-mode 1)
+(counsel-mode 1)
+(setq ivy-use-virtual-buffers t)
+(setq enable-recursive-minibuffers t)
+;; -------------------------------------------------------
+(load "show-wspace")
+(load "url") (url-handler-mode t)
+(load "ewmodeline")
+(load "ew-find-file-recursively")
+(load "ew-org-mode")
+(load "ew-org-same-window")
+(load "ew-tog-ded")
+(load "ew-gnus")
 ;; -------------------------------------------------------
 (tool-bar-mode -1)
 (show-paren-mode t)
@@ -13,19 +41,31 @@
 (global-auto-revert-mode 1)
 (put 'downcase-region 'disabled nil)
 ;; -------------------------------------------------------
-(setq make-backup-files nil)
-(setq large-file-warning-threshold 50000000)
 (setq buffers-menu-max-size nil)
+(setq default-major-mode 'text-mode)
+(setq exec-path (append exec-path '("/usr/local/texlive/2018/bin")))
+(setq font-lock-maximum-decoration t)
 (setq inhibit-splash-screen t)
+(setq large-file-warning-threshold 50000000)
+(setq lpr-command "xpp")
+(setq make-backup-files nil)
 (setq mouse-buffer-menu-mode-mult 0)
+(setq next-line-add-newlines nil)
+(setq org-manage-directory-org "~/org")
+(setq org-reveal-root "https://org.westbrook.io/revealjs")
+;; (setq org-reveal-title-slide 'auto)
+(setq org-reveal-title-slide nil)
+(setq ps-lpr-command "xpp")
+(setq require-final-newline t)
 (setq scroll-step 1)
 (setq-default transient-mark-mode t) 
-(setq require-final-newline t)
-(setq next-line-add-newlines nil)
-(setq lpr-command "xpp")
-(setq ps-lpr-command "xpp")
-(setq default-major-mode 'text-mode)
-(setq font-lock-maximum-decoration t)
+(setq uniquify-buffer-name-style 'post-forward)
+(setq user-mail-address "eric@westbrook.io")
+(setq user-full-name "Eric Westbrook")
+;; (setq browse-url-browser-function 'browse-url-generic)
+(setq browse-url-browser-function 'browse-url-firefox)
+(setq browse-url-new-window-flag  t)
+(setq browse-url-firefox-new-window-is-tab t)
 ;; -------------------------------------------------------
 (setq-default indent-tabs-mode nil)
 (setq default-tab-width 2)
@@ -33,6 +73,7 @@
 (setq default-tab-width 2)
 (setq standard-indent 2)
 (setq lua-indent-level 2)
+;; (setq lua-indent-level 4)
 (setq javascript-indent-level 2)
 (setq js-indent-level 2)
 (setq tab-width 2)
@@ -61,28 +102,19 @@
 (add-to-list 'vc-handled-backends 'SVN)
 (add-to-list 'vc-handled-backends 'GIT)
 ;; -------------------------------------------------------
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'post-forward)
-;; -------------------------------------------------------
-;; ew-modeline
-(load "ewmodeline")
-;; -------------------------------------------------------
-;; wspace
-(load "show-wspace")
-;; -------------------------------------------------------
-;; urls
-(load "url")
-(url-handler-mode t)
-;; -------------------------------------------------------
 ;; git
 (add-to-list 'load-path "/usr/share/emacs/site-lisp/git")
-(autoload 'git-status "git" "Entry point into git-status mode." t)
+(autoload 'git-status "git"
+  "Entry point into git-status mode." t)
 (autoload 'git-blame-mode "git-blame"
   "Minor mode for incremental blame for Git." t)
 ;; -------------------------------------------------------
 ;; sh
-(defun ew-setup-sh-mode () "EW prefs for sh-mode"
-  (interactive) (setq sh-basic-offset 2 sh-indentation 2))
+(defun ew-setup-sh-mode ()
+  "EW prefs for sh-mode"
+  (interactive)
+  (setq sh-basic-offset 2
+        sh-indentation 2))
 (add-hook 'sh-mode-hook 'ew-setup-sh-mode)
 ;; -------------------------------------------------------
 ;; c
@@ -90,14 +122,10 @@
       '((case-label . +)
         (statement-case-intro . +)))
 ;; -------------------------------------------------------
-;; gud
-(require 'gud)
-;; -------------------------------------------------------
 ;; tramp
 (setq tramp-default-method "ssh")
 ;; -------------------------------------------------------
 ;; elpa
-(require 'package)
 ;; (add-to-list
 ;;  'package-archives
 ;;  '("org" . "http://orgmode.org/elpa/") t)
@@ -105,23 +133,7 @@
 ;; perl
 (defalias 'perl-mode 'cperl-mode)
 ;; -------------------------------------------------------
-;; org-mode
-(require 'ox-twbs)
-(require 'org-bullets)
-(add-hook 'org-mode-hook (lambda() (org-bullets-mode 1)))
-(setq org-hide-leading-stars t)
-(setq org-bullets-bullet-list '("◉" "▶" "◆" "✸" "►" "•" "⋅"))
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((shell      . t)
-   (emacs-lisp . t)
-   (ruby . t)
-   (latex . t)
-   (lua        . t)))
-;; (setq org-log-done "time")
-;; -------------------------------------------------------
 ;; flymake
-(require 'flymake)
 ;; (setq help-at-pt-display-when-idle
 ;;       (quote (flymake-overlay)) nil (help-at-pt))
 ;; (setq help-at-pt-timer-delay 0.5)
@@ -138,17 +150,6 @@
   (remove-hook 'lua-mode-hook' lua-flymake-hooks)
   ad-do-it
   (add-hook 'lua-mode-hook' lua-flymake-hooks))
-;; -------------------------------------------------------
-;; tog-ded
-(defun toggle-current-window-dedication ()
-  (interactive)
-  (let* ((window (selected-window))
-         (dedicated (window-dedicated-p window)))
-    (set-window-dedicated-p window (not dedicated))
-    (message "Window %sdedicated to %s"
-             (if dedicated "no longer " "")
-             (buffer-name))))
-(global-set-key [pause] 'toggle-current-window-dedication)
 ;; -------------------------------------------------------
 ;; clipboard
 (defun ew-toggle-clipboard-mode ()
@@ -184,18 +185,68 @@
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
-(global-set-key (kbd "S-C-<up>") 'enlarge-window)
-(global-set-key (kbd "C-M-g") 'grep)
+(global-set-key (kbd "S-C-<up>"  ) 'enlarge-window)
+(global-set-key (kbd "C-M-g"     ) 'grep)
 ;; (global-set-key [f7] 'my-compile)
-(global-set-key (kbd"<f5>") 'gud-cont)
+(global-set-key (kbd"<f5>"    ) 'gud-cont)
 ;; (global-set-key (kbd"<f6>") 'gud-break)
-(global-set-key (kbd"<f7>") 'gud-finish)
-(global-set-key (kbd"<f8>") 'gud-next)
-(global-set-key (kbd"<f9>") 'gud-watch)
-(global-set-key (kbd"<f10>") 'gud-step)
-(global-set-key (kbd "M-s b") 'ediff-buffers)
-(global-set-key (kbd "M-s v") 'ediff-revision)
-(global-set-key (kbd "M-p") 'ew-toggle-clipboard-mode)
-(global-set-key (kbd "C-+") 'text-scale-increase)
-(global-set-key (kbd "C--") 'text-scale-decrease)
+(global-set-key (kbd"<f7>"    ) 'gud-finish)
+(global-set-key (kbd"<f8>"    ) 'gud-next)
+(global-set-key (kbd"<f9>"    ) 'gud-watch)
+(global-set-key (kbd"<f10>"   ) 'gud-step)
+(global-set-key (kbd "M-s b"  ) 'ediff-buffers)
+(global-set-key (kbd "M-s v"  ) 'ediff-revision)
+(global-set-key (kbd "M-p"    ) 'ew-toggle-clipboard-mode)
+(global-set-key (kbd "C-+"    ) 'text-scale-increase)
+(global-set-key (kbd "C--"    ) 'text-scale-decrease)
+(global-set-key (kbd "M-S-SPC") 'set-mark)
+(global-set-key [pause] 'toggle-current-window-dedication)
 ;; -------------------------------------------------------
+(defface org-default-mono '((t :family "Ubuntu Mono"))
+  "Face used for monospaced things"
+  :group 'org-faces)
+;; -------------------------------------------------------
+(defface org-ew-l1 '((t :height 1.4))
+  "Face used for level 1 things"
+  :group 'org-faces)
+;; -------------------------------------------------------
+(defface org-ew-l2 '((t :height 1.2))
+  "Face used for level 2 things"
+  :group 'org-faces)
+;; -------------------------------------------------------
+(defface org-ew-l3 '((t :height 1.1))
+  "Face used for level 3 things"
+  :group 'org-faces)
+;; -------------------------------------------------------
+(defface org-ew-shadow '((t :foreground "grey70"))
+  "Face used for shadowey business"
+  :group 'org-faces)
+;; -------------------------------------------------------
+(defface org-ew-mono-shadow
+  '((t :foreground "grey70"
+       :family "Ubuntu Mono"))
+  "Face used for mono shadowey business"
+  :group 'org-faces)
+;; -------------------------------------------------------
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-default ((t (:inherit default :family "Ubuntu"))))
+ '(org-level-1 ((t (:inherit (outline-1 org-ew-l1 org-default)))))
+ '(org-level-2 ((t (:inherit (outline-2 org-ew-l2 org-default)))))
+ '(org-level-3 ((t (:inherit (outline-3 org-ew-l3 org-default)))))
+ '(org-level-4 ((t (:inherit (outline-4 org-default)))))
+ '(org-level-5 ((t (:inherit (outline-5 org-default)))))
+ '(org-level-6 ((t (:inherit (outline-6 org-default)))))
+ '(org-level-7 ((t (:inherit (outline-7 org-default)))))
+ '(org-level-8 ((t (:inherit (outline-8 org-default)))))
+ '(org-link ((t (:inherit (link org-default)))))
+ '(org-verbatim ((t (:inherit (org-ew-mono-shadow))))))

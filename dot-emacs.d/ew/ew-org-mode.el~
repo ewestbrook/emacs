@@ -1,0 +1,84 @@
+;; -------------------------------------------------------
+;; org-mode
+
+(setq org-agenda-files '("~/org"))
+
+(setq org-clock-persist 'history)
+(org-clock-persistence-insinuate)
+
+(setq org-hide-leading-stars t)
+(setq org-bullets-bullet-list
+      '("◉" "▶" "◆" "✸" "►" "•" "⋅"))
+
+(add-to-list 'org-file-apps '("\\.pdf\\'" . "okular %s"))
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((shell      . t)
+   (org        . t)
+   (emacs-lisp . t)
+   (ruby       . t)
+   (latex      . t)
+   (lua        . t)))
+
+(setq
+ org-publish-project-alist
+ '(("org-notes"
+    :base-directory "~/org/"
+    :base-extension "org"
+    :publishing-directory "~/org/html/"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :with-sub-superscript nil
+    :auto-preamble t
+    )))
+
+(defun ew-org-twbs-to-browser ()
+  "Export org-mode to twbs html; open html in a browser."
+  (interactive)
+  (save-buffer)
+  (save-excursion (org-publish-current-file))
+  (let*
+
+      ((proj
+        (org-publish-get-project-from-filename
+         buffer-file-name))
+
+       (proj-plist (cdr proj))
+
+       (rel
+        (file-relative-name
+         buffer-file-name
+         (plist-get proj-plist :base-directory)))
+
+       (dest
+        (plist-get proj-plist :publishing-directory)))
+
+    (browse-url
+     (concat
+      "file://"
+      (file-name-as-directory (expand-file-name dest))
+      (file-name-sans-extension rel)
+      ".html"))
+
+    ))
+
+(defun ew-org-reveal-to-browser ()
+  "Call org-reveal-export-to-html-and-browse"
+  (interactive)
+  (save-buffer)
+  (org-reveal-export-to-html-and-browse))
+
+(defun ew-org-mode-hook ()
+  "EW stuff specific to org-mode"
+  (org-bullets-mode 1)
+  (local-set-key (kbd "C-c h") 'org-twbs-export-to-html)
+  (local-set-key (kbd "C-c t") 'ew-org-reveal-to-html)
+  (local-set-key (kbd "C-c r") 'ew-org-reveal-to-browser)
+  (local-set-key (kbd "C-c f") 'ew-org-twbs-to-browser)
+  (local-set-key (kbd "C-c M-h") 'org-publish-all)
+
+(add-hook 'org-mode-hook 'ew-org-mode-hook)
+
+;; (setq org-log-done "time")
+;; -------------------------------------------------------

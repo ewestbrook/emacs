@@ -1,20 +1,3 @@
-beano
-ls
-ls /root/
-beano
-beano
-beano
-git st
-echo $TERM
-export TERM=xterm-color
-git st
-git wdiff lua/vtail/
-git st
-git fetch
-git fetch
-git fetch
-git t
-git st
 git add lua/telegram/bot
 git st
 git commit -m 'telegrom.bot: += pgrep(): notify when process gone'
@@ -120,9 +103,26 @@ du -sh /mnt/md9/mail*
 grep -rinI '\bvmail\b' /etc/dovecot/
 dirs
 cd ..
-# grep -rnI DOVMAIL
 cd ..
 grep -rnI DOVMAIL lua
 ls /etc/dovecot
 equery b /etc/dovecot.conf
 exit
+grep -rinI '216\.218\.220\.99' /vxl/lua
+grep -rinI 'return 40\(1\|3\)' /vxl/lua/envdefs/
+grep -rinI 'return 40\(1\|3\)' /vxl/lua/envdefs/ /ewl/lua/envdefs/
+grep -rinI '\bnotver\b' /vxl/lua/envdefs/ /ewl/lua/envdefs/
+cd /vxl
+grep -rinI g_genericProductIdentifier lua
+pwd
+vtail /log/edoras/wwwwc/vxl.log 
+vtail /log/edoras/wwwwc/vxl.log 
+vtail /log/edoras/wwwwc
+exit
+man grep
+host 172.100.248.74
+cd /vxl
+grep -rinI '\blinesrc\b' lua /ewl/lua /mml/lua /dogl/lua
+grep -rinI '\blinefilter\b' lua /ewl/lua /mml/lua /dogl/lua
+grep -rinI '\btablesrc\b' lua /ewl/lua /mml/lua /dogl/lua
+grep -rinI '\bstringsrc\b' lua /ewl/lua /mml/lua /dogl/lua
