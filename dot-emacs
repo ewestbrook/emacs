@@ -218,6 +218,10 @@
   "Face used for level 3 things"
   :group 'org-faces)
 ;; -------------------------------------------------------
+(defface org-ew-block '((t :height 0.8))
+  "Face used for block things"
+  :group 'org-faces)
+;; -------------------------------------------------------
 (defface org-ew-shadow '((t :foreground "grey70"))
   "Face used for shadowey business"
   :group 'org-faces)
@@ -249,4 +253,6 @@
  '(org-level-7 ((t (:inherit (outline-7 org-default)))))
  '(org-level-8 ((t (:inherit (outline-8 org-default)))))
  '(org-link ((t (:inherit (link org-default)))))
- '(org-verbatim ((t (:inherit (org-ew-mono-shadow))))))
+ '(org-verbatim ((t (:inherit (org-ew-mono-shadow)))))
+ '(org-block-begin-line ((t (:inherit (org-meta-line org-ew-block org-default)))))
+ )
