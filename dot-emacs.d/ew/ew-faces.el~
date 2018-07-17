@@ -1,0 +1,46 @@
+(setq ew-prop-faces
+      '(org-default
+        org-level-1
+        org-level-2
+        org-level-3
+        org-level-4
+        org-level-5
+        org-level-6
+        org-level-7
+        org-level-8
+        org-link))
+
+(setq ew-mono-faces
+      '(org-verbatim
+        org-block-begin-line
+        org-meta-line))
+
+(defun ew-tweak-face (k v face)
+  "Apply a particular attribute to a particular face"
+  (set-face-attribute face nil k v))
+  
+(defun ew-tweak-faces (k v faces)
+  "Apply a particular attribute to a list of faces"
+  (while faces
+    (setq face (car faces))
+    (ew-tweak-face k v face)
+    (setq faces (cdr faces))))
+    
+(ew-tweak-faces :family "Helvetica"   ew-prop-faces)
+(ew-tweak-faces :family "Ubuntu Mono" ew-mono-faces)
+
+(ew-tweak-face :height 1.4 'org-level-1)
+(ew-tweak-face :height 1.2 'org-level-2)
+(ew-tweak-face :height 1.1 'org-level-3)
+(ew-tweak-face :height 0.8 'org-block-begin-line)
+
+;; (set-face-attribute 'org-block-begin-line :background "#444")
+
+(ew-tweak-face :background "#402020" 'ediff-current-diff-A)
+(ew-tweak-face :background "#582020" 'ediff-fine-diff-A)
+
+(ew-tweak-face :background "#204020" 'ediff-current-diff-B)
+(ew-tweak-face :background "#205820" 'ediff-fine-diff-B)
+
+(ew-tweak-face :background "#383800" 'ediff-current-diff-C)
+(ew-tweak-face :background "#505010" 'ediff-fine-diff-C)

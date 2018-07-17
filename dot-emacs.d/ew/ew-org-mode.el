@@ -1,6 +1,18 @@
 ;; -------------------------------------------------------
 ;; org-mode
 
+(require 'ox-twbs)
+(require 'org-bullets)
+(require 'ox-reveal)
+(require 'org-manage)
+
+(load "ew-org-same-window")
+
+(setq org-manage-directory-org "~/org")
+(setq org-reveal-root "https://org.westbrook.io/revealjs")
+;; (setq org-reveal-title-slide 'auto)
+(setq org-reveal-title-slide nil)
+
 (setq org-agenda-files '("~/org"))
 (setq org-clock-persist 'history)
 (setq org-publish-use-timestamps-flag t)

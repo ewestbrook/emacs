@@ -1,8 +1,12 @@
 ;; emacs -*- mode: emacs-lisp; -*-
 ;; -------------------------------------------------------
+(package-initialize)
 (add-to-list 'load-path "~/.emacs.d/ew")
+(add-to-list 'load-path "/git/magit/lisp")
+(add-to-list 'load-path "/git/magit-popup")
 (add-to-list 'load-path "~/.emacs.d/elpa/org-9.1.13")
 (add-to-list 'load-path "~/.emacs.d/elpa/ivy-0.10.0")
+(add-to-list 'load-path "/git/rjsx-mode")
 ;; -------------------------------------------------------
 (load "/usr/share/emacs/site-lisp/site-gentoo")
 ;; -------------------------------------------------------
@@ -10,28 +14,31 @@
 (require 'htmlize)
 (require 'gud)
 (require 'package)
-(require 'ox-twbs)
-(require 'org-bullets)
 (require 'flymake)
-(require 'ox-reveal)
-(require 'org-manage)
 ;; -------------------------------------------------------
 (require 'ivy)
 (require 'counsel)
 (require 'swiper)
+;; -------------------------------------------------------
 (ivy-mode 1)
 (counsel-mode 1)
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
 ;; -------------------------------------------------------
+(require 'rjsx-mode)
+(add-to-list 'auto-mode-alist '("\\.js$" . rjsx-mode))
+;; -------------------------------------------------------
+(load "ew-faces")
 (load "show-wspace")
 (load "url") (url-handler-mode t)
 (load "ewmodeline")
 (load "ew-find-file-recursively")
-(load "ew-org-mode")
-(load "ew-org-same-window")
 (load "ew-tog-ded")
 (load "ew-gnus")
+(load "ew-org-mode")
+(load "ew-lua-mode")
+(load "ew-ediff")
+(load "ew-magit")
 ;; -------------------------------------------------------
 (tool-bar-mode -1)
 (show-paren-mode t)
@@ -51,10 +58,6 @@
 (setq make-backup-files nil)
 (setq mouse-buffer-menu-mode-mult 0)
 (setq next-line-add-newlines nil)
-(setq org-manage-directory-org "~/org")
-(setq org-reveal-root "https://org.westbrook.io/revealjs")
-;; (setq org-reveal-title-slide 'auto)
-(setq org-reveal-title-slide nil)
 (setq ps-lpr-command "xpp")
 (setq require-final-newline t)
 (setq scroll-step 1)
@@ -72,22 +75,34 @@
 (setq column-number-mode t)
 (setq default-tab-width 2)
 (setq standard-indent 2)
-(setq lua-indent-level 2)
-;; (setq lua-indent-level 4)
 (setq javascript-indent-level 2)
 (setq js-indent-level 2)
+(setq css-indent-offset 2)
 (setq tab-width 2)
 (setq c-basic-offset 2)
 (setq cperl-indent-level 2)
+(setq tex-indent-arg 4)
 ;; -------------------------------------------------------
 (set-fill-column 57)
 (set-cursor-color "Red")
 (set-mouse-color "Yellow")
 (set-foreground-color "#A6A376")
 (set-background-color "#181818")
+;; check with (face-attribute 'default :font)
 (set-default-font
  "-misc-fixed-medium-r-semicondensed--13-*-*-*-*-*-*-*")
-;; (set-default-font "Ubuntu Mono 9")
+;; (set-default-font "WenQuanYi Zen Hei Mono 12")
+
+;; (set-default-font "Fixed 9")
+
+;; (set-default-font "Ubuntu Mono 12")
+;; (set-default-font "Roboto Mono 12")
+;; (set-default-font "LMMono12 10")
+;; (set-default-font "LMMonoCaps10 8")
+
+;; (set-default-font "LMMonoLtCond10 12")
+;; (set-default-font "Latin Modern Mono Light Cond 13")
+;; (set-default-font "Mitra Mono 9")
 ;; -------------------------------------------------------
 (add-to-list 'same-window-regexps "\*eshell\*")
 (add-to-list 'same-window-regexps "\*shell\*")
@@ -125,11 +140,6 @@
 ;; tramp
 (setq tramp-default-method "ssh")
 ;; -------------------------------------------------------
-;; elpa
-;; (add-to-list
-;;  'package-archives
-;;  '("org" . "http://orgmode.org/elpa/") t)
-;; -------------------------------------------------------
 ;; perl
 (defalias 'perl-mode 'cperl-mode)
 ;; -------------------------------------------------------
@@ -137,19 +147,6 @@
 ;; (setq help-at-pt-display-when-idle
 ;;       (quote (flymake-overlay)) nil (help-at-pt))
 ;; (setq help-at-pt-timer-delay 0.5)
-;; -------------------------------------------------------
-;; magit
-(setq magit-status-buffer-switch-function 'switch-to-buffer)
-(load "magit-filenotify") ;; in emacs.d/ew/
-;; -------------------------------------------------------
-;; lua
-(autoload 'lua-mode "lua-mode" "Lua editing mode." t)
-(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
-(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
-(defadvice magit-ediff (around flymake-off activate)
-  (remove-hook 'lua-mode-hook' lua-flymake-hooks)
-  ad-do-it
-  (add-hook 'lua-mode-hook' lua-flymake-hooks))
 ;; -------------------------------------------------------
 ;; clipboard
 (defun ew-toggle-clipboard-mode ()
@@ -160,6 +157,13 @@
     (setq x-select-enable-clipboard 't))
   (message "x-select-enable-clipboard is now %s" x-select-enable-clipboard))
 (setq x-select-enable-clipboard nil)
+;; -------------------------------------------------------
+;; dired
+(defun ew-dired-mode-setup ()
+  "EW dired stuff"
+  (dired-hide-details-mode t)
+  (local-set-key (kbd "C-x g") 'magit-status))
+(add-hook 'dired-mode-hook 'ew-dired-mode-setup)
 ;; -------------------------------------------------------
 ;; local autosaves
 (defun make-auto-save-file-name ()
@@ -202,57 +206,15 @@
 (global-set-key (kbd "M-S-SPC") 'set-mark)
 (global-set-key [pause] 'toggle-current-window-dedication)
 ;; -------------------------------------------------------
-(defface org-default-mono '((t :family "Ubuntu Mono"))
-  "Face used for monospaced things"
-  :group 'org-faces)
-;; -------------------------------------------------------
-(defface org-ew-l1 '((t :height 1.4))
-  "Face used for level 1 things"
-  :group 'org-faces)
-;; -------------------------------------------------------
-(defface org-ew-l2 '((t :height 1.2))
-  "Face used for level 2 things"
-  :group 'org-faces)
-;; -------------------------------------------------------
-(defface org-ew-l3 '((t :height 1.1))
-  "Face used for level 3 things"
-  :group 'org-faces)
-;; -------------------------------------------------------
-(defface org-ew-block '((t :height 0.8))
-  "Face used for block things"
-  :group 'org-faces)
-;; -------------------------------------------------------
-(defface org-ew-shadow '((t :foreground "grey70"))
-  "Face used for shadowey business"
-  :group 'org-faces)
-;; -------------------------------------------------------
-(defface org-ew-mono-shadow
-  '((t :foreground "grey70"
-       :family "Ubuntu Mono"))
-  "Face used for mono shadowey business"
-  :group 'org-faces)
-;; -------------------------------------------------------
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(package-selected-packages (quote (js2-mode org ivy))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-default ((t (:inherit default :family "Ubuntu"))))
- '(org-level-1 ((t (:inherit (outline-1 org-ew-l1 org-default)))))
- '(org-level-2 ((t (:inherit (outline-2 org-ew-l2 org-default)))))
- '(org-level-3 ((t (:inherit (outline-3 org-ew-l3 org-default)))))
- '(org-level-4 ((t (:inherit (outline-4 org-default)))))
- '(org-level-5 ((t (:inherit (outline-5 org-default)))))
- '(org-level-6 ((t (:inherit (outline-6 org-default)))))
- '(org-level-7 ((t (:inherit (outline-7 org-default)))))
- '(org-level-8 ((t (:inherit (outline-8 org-default)))))
- '(org-link ((t (:inherit (link org-default)))))
- '(org-verbatim ((t (:inherit (org-ew-mono-shadow)))))
- '(org-block-begin-line ((t (:inherit (org-meta-line org-ew-block org-default)))))
  )

@@ -97,10 +97,11 @@
                       :height 200
                       :weight 'bold
                       :slant 'normal
-                      ))
+                      )
+  )
 
 (set-face-attribute 'mode-line-inactive nil
-    :foreground "gray80" :background "gray10"
+    :foreground "gray80" :background "#444"
     :inverse-video nil
     :box '(:line-width 2 :color "gray10" :style nil))
 

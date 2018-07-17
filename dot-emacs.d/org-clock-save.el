@@ -1,2 +1,2 @@
-;; org-clock-save.el - edoras.westbrook.com at <2018-06-07 Thu 07:59>
+;; org-clock-save.el - edoras at <2018-07-11 Wed 03:14>
 (setq org-clock-stored-history '(("/home/eric/org/pers/time-pers.org" . 1734)))
