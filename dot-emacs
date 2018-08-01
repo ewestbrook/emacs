@@ -19,6 +19,7 @@
 (require 'ivy)
 (require 'counsel)
 (require 'swiper)
+;; (require 'notmuch)
 ;; -------------------------------------------------------
 (ivy-mode 1)
 (counsel-mode 1)
@@ -39,6 +40,7 @@
 (load "ew-lua-mode")
 (load "ew-ediff")
 (load "ew-magit")
+;; (autoload 'notmuch "notmuch" "notmuch mail" t)
 ;; -------------------------------------------------------
 (tool-bar-mode -1)
 (show-paren-mode t)
@@ -95,7 +97,7 @@
 
 ;; (set-default-font "Fixed 9")
 
-;; (set-default-font "Ubuntu Mono 12")
+;; (set-default-font "Ubuntu Mono 14")
 ;; (set-default-font "Roboto Mono 12")
 ;; (set-default-font "LMMono12 10")
 ;; (set-default-font "LMMonoCaps10 8")
@@ -186,6 +188,7 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-switchb)
+(global-set-key "\C-xg" 'magit-status)
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
