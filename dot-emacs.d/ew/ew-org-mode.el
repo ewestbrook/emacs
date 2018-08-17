@@ -1,10 +1,13 @@
-;; -------------------------------------------------------
-;; org-mode
+;;; org-mode -- Summary
 
-(require 'ox-twbs)
+;;; Commentary:
+;;; Code:
+
 (require 'org-bullets)
-(require 'ox-reveal)
 (require 'org-manage)
+(require 'ob-http)
+(require 'ox-twbs)
+(require 'ox-reveal)
 
 (load "ew-org-same-window")
 
@@ -18,9 +21,22 @@
 (setq org-publish-use-timestamps-flag t)
 ;; (setq org-publish-use-timestamps-flag nil)
 
+;; display various bullets for header levels
 (setq org-hide-leading-stars t)
 (setq org-bullets-bullet-list
-      '("◉" "▶" "◆" "✸" "►" "•" "⋅"))
+      '("✸" "▶" "◆" "◉" "►" "" "•" "⋅"))
+;; dots: 🔯 💠 ⸳ ⸱ ⸭ ⟐ ⋅ ⊡ ⊙ ⁛ ·
+;; bullets: 
+
+;; display bullet for non-header list items
+(font-lock-add-keywords
+ 'org-mode
+ '(("^ *\\([-+]\\) "
+    (0 (prog1 ()
+         (compose-region
+          (match-beginning 1)
+          (match-end 1)
+          "•"))))))
 
 (setq org-hide-emphasis-markers t)
 (setq org-hide-macro-markers t)
@@ -54,13 +70,14 @@
  'org-babel-load-languages
  '((shell      . t)
    (org        . t)
+   (http       . t)
    (emacs-lisp . t)
    (ruby       . t)
    (latex      . t)
    (lua        . t)))
 
 (defun ew-org-twbs-to-browser ()
-  "Export org-mode to twbs html; open html in a browser."
+  "Export an 'org-mode' file to twbs html, then open the html file in a browser."
   (interactive)
   (save-buffer)
   (save-excursion (org-publish-current-file))
@@ -90,19 +107,19 @@
     ))
 
 (defun ew-org-reveal-to-browser ()
-  "Call org-reveal-export-to-html-and-browse"
+  "Call org-reveal-export-to-html-and-browse."
   (interactive)
   (save-buffer)
   (org-reveal-export-to-html-and-browse))
 
 (defun ew-org-html-to-browser ()
-  "Call org-html-export-to-html and browse"
+  "Call org-html-export-to-html and browse."
   (interactive)
   (save-buffer)
   (browse-url (org-html-export-to-html)))
 
 (defun ew-org-mode-hook ()
-  "EW stuff specific to org-mode"
+  "EW stuff specific to 'org-mode'."
 
   (org-bullets-mode 1)
 
@@ -123,4 +140,8 @@
 (add-hook 'org-mode-hook 'ew-org-mode-hook)
 
 ;; (setq org-log-done "time")
+
+;; -------------------------------------------------------
+(provide 'ew-org-mode)
+;;; ew-org-mode ends here
 ;; -------------------------------------------------------

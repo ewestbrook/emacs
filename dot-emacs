@@ -1,4 +1,6 @@
-;; emacs -*- mode: emacs-lisp; -*-
+;;; dot-emacs -- Summary
+;;; Commentary:
+;;; Code:
 ;; -------------------------------------------------------
 (package-initialize)
 (add-to-list 'load-path "~/.emacs.d/ew")
@@ -7,14 +9,21 @@
 (add-to-list 'load-path "~/.emacs.d/elpa/org-9.1.13")
 (add-to-list 'load-path "~/.emacs.d/elpa/ivy-0.10.0")
 (add-to-list 'load-path "/git/rjsx-mode")
+(add-to-list 'load-path "/git/ob-http")
+(add-to-list 'load-path "/git/s.el")
+(add-to-list 'load-path "/git/web-mode")
+(add-to-list 'load-path "/git/php-mode")
+(add-to-list 'load-path "/git/flycheck")
+(add-to-list 'load-path "/git/markdown-mode")
+(add-to-list 'load-path "/git/emacs-htmlize")
+(add-to-list 'load-path "/git/python-mode")
 ;; -------------------------------------------------------
 (load "/usr/share/emacs/site-lisp/site-gentoo")
 ;; -------------------------------------------------------
 (require 'uniquify)
-(require 'htmlize)
+;; (require 'htmlize)
 (require 'gud)
 (require 'package)
-(require 'flymake)
 ;; -------------------------------------------------------
 (require 'ivy)
 (require 'counsel)
@@ -24,22 +33,51 @@
 (ivy-mode 1)
 (counsel-mode 1)
 (setq ivy-use-virtual-buffers t)
-(setq enable-recursive-minibuffers t)
+(setq enable-recursive-minibuffers nil)
 ;; -------------------------------------------------------
 (require 'rjsx-mode)
 (add-to-list 'auto-mode-alist '("\\.js$" . rjsx-mode))
 ;; -------------------------------------------------------
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
+(defun ew-web-mode-hook ()
+  "EW hooks for web-mode."
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  (setq web-mode-indent-style 2))
+(add-hook 'web-mode-hook 'ew-web-mode-hook)
+;; (setq ew-web-moders
+;;       '("\\.phtml\\'"
+;;         "\\.tpl\\.php\\'"
+;;         "\\.html\\.twig\\'"
+;;         "\\.html?\\'"))
+;; (setq moders ew-web-moders)
+;; (while moders
+;;   (setq moder (car moders))
+;;   (add-to-list 'auto-mode-alist moder)
+;;   (setq moders (cdr moders)))
+;; -------------------------------------------------------
+(load "ew-dired")
+(load "ew-ediff")
 (load "ew-faces")
+(load "ew-find-file-recursively")
+(load "ew-gnus")
+(load "ew-lua-mode")
+(load "ew-magit")
+(load "ew-org-mode")
+(load "ew-tog-ded")
+(load "ewmodeline")
 (load "show-wspace")
 (load "url") (url-handler-mode t)
-(load "ewmodeline")
-(load "ew-find-file-recursively")
-(load "ew-tog-ded")
-(load "ew-gnus")
-(load "ew-org-mode")
-(load "ew-lua-mode")
-(load "ew-ediff")
-(load "ew-magit")
 ;; (autoload 'notmuch "notmuch" "notmuch mail" t)
 ;; -------------------------------------------------------
 (tool-bar-mode -1)
@@ -63,7 +101,7 @@
 (setq ps-lpr-command "xpp")
 (setq require-final-newline t)
 (setq scroll-step 1)
-(setq-default transient-mark-mode t) 
+(setq-default transient-mark-mode t)
 (setq uniquify-buffer-name-style 'post-forward)
 (setq user-mail-address "eric@westbrook.io")
 (setq user-full-name "Eric Westbrook")
@@ -73,6 +111,7 @@
 (setq browse-url-firefox-new-window-is-tab t)
 ;; -------------------------------------------------------
 (setq-default indent-tabs-mode nil)
+(setq tab-width 2)
 (setq default-tab-width 2)
 (setq column-number-mode t)
 (setq default-tab-width 2)
@@ -80,10 +119,11 @@
 (setq javascript-indent-level 2)
 (setq js-indent-level 2)
 (setq css-indent-offset 2)
-(setq tab-width 2)
 (setq c-basic-offset 2)
 (setq cperl-indent-level 2)
-(setq tex-indent-arg 4)
+(setq tex-indent-arg 2)
+;; -------------------------------------------------------
+(set-default-coding-systems 'utf-8)
 ;; -------------------------------------------------------
 (set-fill-column 57)
 (set-cursor-color "Red")
@@ -91,12 +131,14 @@
 (set-foreground-color "#A6A376")
 (set-background-color "#181818")
 ;; check with (face-attribute 'default :font)
-(set-default-font
- "-misc-fixed-medium-r-semicondensed--13-*-*-*-*-*-*-*")
+(set-default-font "-misc-fixed-medium-r-semicondensed--13-*-*-*-*-*-*-*")
 ;; (set-default-font "WenQuanYi Zen Hei Mono 12")
 
 ;; (set-default-font "Fixed 9")
 
+(set-default-font "Ubuntu Mono 9")
+;; (set-default-font "Ubuntu Mono 10")
+;; (set-default-font "Ubuntu Mono 12")
 ;; (set-default-font "Ubuntu Mono 14")
 ;; (set-default-font "Roboto Mono 12")
 ;; (set-default-font "LMMono12 10")
@@ -110,7 +152,11 @@
 (add-to-list 'same-window-regexps "\*shell\*")
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 ;; -------------------------------------------------------
-(defun no-split-window () (interactive) nil)
+(add-hook 'after-init-hook 'global-company-mode)
+;; -------------------------------------------------------
+(defun no-split-window ()
+  "Function for preference of not splitting window."
+  (interactive) nil)
 (setq split-window-preferred-function 'no-split-window)
 ;; -------------------------------------------------------
 (setq vc-handled-backends nil)
@@ -128,7 +174,7 @@
 ;; -------------------------------------------------------
 ;; sh
 (defun ew-setup-sh-mode ()
-  "EW prefs for sh-mode"
+  "EW shell prefs."
   (interactive)
   (setq sh-basic-offset 2
         sh-indentation 2))
@@ -145,36 +191,49 @@
 ;; perl
 (defalias 'perl-mode 'cperl-mode)
 ;; -------------------------------------------------------
-;; flymake
-;; (setq help-at-pt-display-when-idle
-;;       (quote (flymake-overlay)) nil (help-at-pt))
-;; (setq help-at-pt-timer-delay 0.5)
+;; python
+(setq py-keep-windows-configuration t)
+(add-hook 'python-mode-hook
+          '(lambda ()
+             (setq python-guess-indent nil)
+             (setq python-indent 2)
+             (setq py-indent-offset 2)))
+;; -------------------------------------------------------
+;; flycheck REPLACES flymake
+(require 'flycheck)
+(add-hook 'after-init-hook #'global-flycheck-mode)
+;; -------------------------------------------------------
+;; markdown-mode
+(autoload 'markdown-mode "markdown-mode"
+  "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist
+             '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist
+             '("\\.md\\'" . markdown-mode))
+;; ----------------------
+(autoload 'gfm-mode "markdown-mode"
+  "Major mode for GitHub Flavored Markdown files" t)
+(add-to-list 'auto-mode-alist
+             '("README\\.md\\'" . gfm-mode))
 ;; -------------------------------------------------------
 ;; clipboard
 (defun ew-toggle-clipboard-mode ()
-  "Toggle variable x-select-enable-clipboard"
-  (interactive) 
-  (if (eq x-select-enable-clipboard 't) 
+  "Toggle clipboard mode."
+  (interactive)
+  (if (eq x-select-enable-clipboard 't)
       (setq x-select-enable-clipboard nil)
     (setq x-select-enable-clipboard 't))
   (message "x-select-enable-clipboard is now %s" x-select-enable-clipboard))
 (setq x-select-enable-clipboard nil)
 ;; -------------------------------------------------------
-;; dired
-(defun ew-dired-mode-setup ()
-  "EW dired stuff"
-  (dired-hide-details-mode t)
-  (local-set-key (kbd "C-x g") 'magit-status))
-(add-hook 'dired-mode-hook 'ew-dired-mode-setup)
-;; -------------------------------------------------------
 ;; local autosaves
 (defun make-auto-save-file-name ()
   "Return file name to use for auto-saves of current buffer.."
   (if buffer-file-name
-      (if (file-exists-p "~/.emacs_autosaves/") 
+      (if (file-exists-p "~/.emacs_autosaves/")
           (concat (expand-file-name "~/.emacs_autosaves/") "#"
                   (replace-regexp-in-string "/" "!" buffer-file-name)
-                  "#") 
+                  "#")
         (concat
          (file-name-directory buffer-file-name)
          "#"
@@ -214,10 +273,16 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (js2-mode org ivy))))
+ '(package-selected-packages (quote (company js2-mode org ivy))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+;; -------------------------------------------------------
+;; Local Variables:
+;; mode: emacs-lisp
+;; End:
+(provide 'dot-emacs)
+;;; dot-emacs ends here

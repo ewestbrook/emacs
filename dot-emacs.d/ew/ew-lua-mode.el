@@ -1,5 +1,6 @@
-;; -------------------------------------------------------
-;; lua-mode things
+;;; ew-lua-mode.el --- Summary
+;;; Commentary:
+;;; Code:
 
 (require 'lua-mode)
 
@@ -11,8 +12,5 @@
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
 (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
 
-(defadvice magit-ediff (around flymake-off activate)
-  (remove-hook 'lua-mode-hook' lua-flymake-hooks)
-  ad-do-it
-  (add-hook 'lua-mode-hook' lua-flymake-hooks))
-;; -------------------------------------------------------
+(provide 'ew-lua-mode)
+;;; ew-lua-mode ends here
