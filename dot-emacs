@@ -133,11 +133,13 @@
 (set-background-color "#181818")
 ;; check with (face-attribute 'default :font)
 (set-default-font "-misc-fixed-medium-r-semicondensed--13-*-*-*-*-*-*-*")
+;; (set-default-font "lucidatypewriter")
+;; (set-default-font "clean")
 ;; (set-default-font "WenQuanYi Zen Hei Mono 12")
 
 ;; (set-default-font "Fixed 9")
 
-(set-default-font "Ubuntu Mono 9")
+;; (set-default-font "Ubuntu Mono 9")
 ;; (set-default-font "Ubuntu Mono 10")
 ;; (set-default-font "Ubuntu Mono 12")
 ;; (set-default-font "Ubuntu Mono 14")
