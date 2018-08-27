@@ -140,7 +140,17 @@
 (add-hook 'org-mode-hook 'ew-org-mode-hook)
 
 ;; (setq org-log-done "time")
-
+;; -------------------------------------------------------
+;; Export UTF-8 checkboxes
+(defun sacha/org-html-checkbox (checkbox)
+  "Format CHECKBOX into HTML."
+  (case checkbox (on "<span class=\"check\">&#x2611;</span>")
+        ;; checkbox (checked)
+        (off "<span class=\"checkbox\">&#x2610;</span>")
+        (trans "<code>[-]</code>")
+        (t "")))
+(defadvice org-html-checkbox (around sacha activate)
+  (setq ad-return-value (sacha/org-html-checkbox (ad-get-arg 0))))
 ;; -------------------------------------------------------
 (provide 'ew-org-mode)
 ;;; ew-org-mode ends here
