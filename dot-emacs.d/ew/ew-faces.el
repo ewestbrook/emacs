@@ -15,7 +15,8 @@
 ;; -------------------------------------------------------
 (defvar ew-mono-faces
       '(org-block-begin-line
-        org-meta-line))
+        org-meta-line
+        org-code))
 ;; -------------------------------------------------------
 (defvar ew-nevermind-faces '(org-link org-verbatim))
 ;; -------------------------------------------------------
