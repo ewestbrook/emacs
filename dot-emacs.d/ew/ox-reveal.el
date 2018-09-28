@@ -1,1 +1,0 @@
-/git/org-reveal/ox-reveal.el

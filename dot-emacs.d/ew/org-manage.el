@@ -1,1 +1,0 @@
-/git/org-manage/org-manage.el
