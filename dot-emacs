@@ -127,13 +127,28 @@
 (set-default-coding-systems 'utf-8)
 ;; -------------------------------------------------------
 (set-fill-column 57)
+;; -------------------------------------------------------
+;; (setq default-frame-alist
+      (append default-frame-alist
+              '((cursor-color . "Red")
+                (mouse-color . "Yellow")
+                (foreground-color . "#a6a376")
+                (background-color . "#181818")
+                (font . "lucidatypewriter 9")))
+;;   )
+; -------------------------------------------------------
 (set-cursor-color "Red")
 (set-mouse-color "Yellow")
-(set-foreground-color "#A6A376")
+(set-foreground-color "#a6a376")
 (set-background-color "#181818")
+;; (set-default-font "Ubuntu Mono 10")
+;; (set-default-font "-b&h-lucidatypewriter-medium-r-normal-sans-12-116-75-75-m-70-iso8859-1")
+(set-default-font "lucidatypewriter 9")
+;; (set-default-font "lucidatypewriter 14")
+;; (set-default-font "Liberation Mono 9")
+;; -------------------------------------------------------
 ;; check with (face-attribute 'default :font)
-(set-default-font "-misc-fixed-medium-r-semicondensed--13-*-*-*-*-*-*-*")
-;; (set-default-font "lucidatypewriter")
+;; (set-default-font "-misc-fixed-medium-r-semicondensed--13-*-*-*-*-*-*-*")
 ;; (set-default-font "clean")
 ;; (set-default-font "WenQuanYi Zen Hei Mono 12")
 
