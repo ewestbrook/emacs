@@ -2,7 +2,8 @@
 ;;
 ;;; Code:
 
-;;;### (autoloads nil "ob-core" "ob-core.el" "2360a439d4b3b494bbdc436ee6d6976d")
+;;;### (autoloads nil "ob-core" "ob-core.el" (23195 45027 373190
+;;;;;;  293000))
 ;;; Generated autoloads from ob-core.el
 
 (autoload 'org-babel-execute-safely-maybe "ob-core" "\
@@ -145,7 +146,7 @@ end-body --------- point at the end of the body
 
 \(fn FILE &rest BODY)" nil t)
 
-(put 'org-babel-map-src-blocks 'lisp-indent-function '1)
+(function-put 'org-babel-map-src-blocks 'lisp-indent-function '1)
 
 (autoload 'org-babel-map-inline-src-blocks "ob-core" "\
 Evaluate BODY forms on each inline source block in FILE.
@@ -154,7 +155,7 @@ buffer.
 
 \(fn FILE &rest BODY)" nil t)
 
-(put 'org-babel-map-inline-src-blocks 'lisp-indent-function '1)
+(function-put 'org-babel-map-inline-src-blocks 'lisp-indent-function '1)
 
 (autoload 'org-babel-map-call-lines "ob-core" "\
 Evaluate BODY forms on each call line in FILE.
@@ -163,7 +164,7 @@ buffer.
 
 \(fn FILE &rest BODY)" nil t)
 
-(put 'org-babel-map-call-lines 'lisp-indent-function '1)
+(function-put 'org-babel-map-call-lines 'lisp-indent-function '1)
 
 (autoload 'org-babel-map-executables "ob-core" "\
 Evaluate BODY forms on each active Babel code in FILE.
@@ -172,7 +173,7 @@ buffer.
 
 \(fn FILE &rest BODY)" nil t)
 
-(put 'org-babel-map-executables 'lisp-indent-function '1)
+(function-put 'org-babel-map-executables 'lisp-indent-function '1)
 
 (autoload 'org-babel-execute-buffer "ob-core" "\
 Execute source code blocks in a buffer.
@@ -232,7 +233,8 @@ Mark current src block.
 
 ;;;***
 
-;;;### (autoloads nil "ob-keys" "ob-keys.el" "22ff8882b2f215251464dafb29893479")
+;;;### (autoloads nil "ob-keys" "ob-keys.el" (23195 45027 377190
+;;;;;;  245000))
 ;;; Generated autoloads from ob-keys.el
 
 (autoload 'org-babel-describe-bindings "ob-keys" "\
@@ -242,7 +244,7 @@ Describe all keybindings behind `org-babel-key-prefix'.
 
 ;;;***
 
-;;;### (autoloads nil "ob-lob" "ob-lob.el" "c7b7a7fd9c121e0d73709dd5a4821194")
+;;;### (autoloads nil "ob-lob" "ob-lob.el" (23195 45027 377190 245000))
 ;;; Generated autoloads from ob-lob.el
 
 (autoload 'org-babel-lob-execute-maybe "ob-lob" "\
@@ -265,7 +267,8 @@ see.
 
 ;;;***
 
-;;;### (autoloads nil "ob-tangle" "ob-tangle.el" "6f42a8d7a0ef762480d9e747e6ab033a")
+;;;### (autoloads nil "ob-tangle" "ob-tangle.el" (23195 45027 381190
+;;;;;;  197000))
 ;;; Generated autoloads from ob-tangle.el
 
 (autoload 'org-babel-tangle-file "ob-tangle" "\
@@ -567,7 +570,8 @@ to override `appt-message-warning-time'.
 
 ;;;***
 
-;;;### (autoloads nil "org-archive" "org-archive.el" "b46ec348f237e44615caaa99e48ff324")
+;;;### (autoloads nil "org-archive" "org-archive.el" (23195 45027
+;;;;;;  385190 149000))
 ;;; Generated autoloads from org-archive.el
 
 (autoload 'org-add-archive-files "org-archive" "\
@@ -627,7 +631,8 @@ This command is set with the variable `org-archive-default-command'.
 
 ;;;***
 
-;;;### (autoloads nil "org-attach" "org-attach.el" "649a2308d04a53d6af3d987342905a97")
+;;;### (autoloads nil "org-attach" "org-attach.el" (23266 24793 820849
+;;;;;;  631000))
 ;;; Generated autoloads from org-attach.el
 
 (autoload 'org-attach "org-attach" "\
@@ -638,7 +643,8 @@ Shows a list of commands and prompts for another key to execute a command.
 
 ;;;***
 
-;;;### (autoloads nil "org-bbdb" "org-bbdb.el" "fa404717dfcbde54e13812132d9d4850")
+;;;### (autoloads nil "org-bbdb" "org-bbdb.el" (23195 45027 385190
+;;;;;;  149000))
 ;;; Generated autoloads from org-bbdb.el
 
 (autoload 'org-bbdb-anniversaries "org-bbdb" "\
@@ -695,7 +701,8 @@ Set `org-capture-templates' to be similar to `org-remember-templates'.
 
 ;;;***
 
-;;;### (autoloads nil "org-clock" "org-clock.el" "731d09f8ca5acf7266b16282a1e05671")
+;;;### (autoloads nil "org-clock" "org-clock.el" (23205 49922 832961
+;;;;;;  711000))
 ;;; Generated autoloads from org-clock.el
 
 (autoload 'org-resolve-clocks "org-clock" "\
@@ -923,7 +930,8 @@ Try very hard to provide sensible version strings.
 
 ;;;***
 
-;;;### (autoloads nil "org-datetree" "org-datetree.el" "ba966f278edd387a7bef6fe54c90b123")
+;;;### (autoloads nil "org-datetree" "org-datetree.el" (23195 45027
+;;;;;;  393190 54000))
 ;;; Generated autoloads from org-datetree.el
 
 (autoload 'org-datetree-find-date-create "org-datetree" "\
@@ -1002,7 +1010,8 @@ with \"H:MM:SS\" format, return `h:mm:ss'.  Otherwise, return
 
 ;;;***
 
-;;;### (autoloads nil "org-element" "org-element.el" "e62435f392d3c18634ecbe76b12866cd")
+;;;### (autoloads nil "org-element" "org-element.el" (23422 27911
+;;;;;;  118415 356000))
 ;;; Generated autoloads from org-element.el
 
 (autoload 'org-element-update-syntax "org-element" "\
@@ -1074,7 +1083,8 @@ Providing it allows for quicker computation.
 
 ;;;***
 
-;;;### (autoloads nil "org-feed" "org-feed.el" "cc9d7655449e79a01a0a7b58bd1d9ca1")
+;;;### (autoloads nil "org-feed" "org-feed.el" (23195 45027 397190
+;;;;;;  6000))
 ;;; Generated autoloads from org-feed.el
 
 (autoload 'org-feed-update-all "org-feed" "\
@@ -1101,7 +1111,8 @@ Show the raw feed buffer of a feed.
 
 ;;;***
 
-;;;### (autoloads nil "org-footnote" "org-footnote.el" "e9ce16dcb970cce6c642f3b7f07bbbc8")
+;;;### (autoloads nil "org-footnote" "org-footnote.el" (23195 45027
+;;;;;;  397190 6000))
 ;;; Generated autoloads from org-footnote.el
 
 (autoload 'org-footnote-action "org-footnote" "\
@@ -1122,7 +1133,7 @@ offer additional commands in a menu.
 
 ;;;***
 
-;;;### (autoloads nil "org-id" "org-id.el" "3a6cfd2d05c88ba07781cd0a2d1078f3")
+;;;### (autoloads nil "org-id" "org-id.el" (23195 45027 397190 6000))
 ;;; Generated autoloads from org-id.el
 
 (autoload 'org-id-get-create "org-id" "\
@@ -1214,7 +1225,8 @@ Store a link to the current entry, using its ID.
 
 ;;;***
 
-;;;### (autoloads nil "org-indent" "org-indent.el" "a1b3a5cb538d830f8686ef38fac39a3f")
+;;;### (autoloads nil "org-indent" "org-indent.el" (23195 45027 397190
+;;;;;;  6000))
 ;;; Generated autoloads from org-indent.el
 
 (autoload 'org-indent-mode "org-indent" "\
@@ -1231,7 +1243,8 @@ during idle time.
 
 ;;;***
 
-;;;### (autoloads nil "org-irc" "org-irc.el" "4c557982f1eec29419c881a776b4c7bf")
+;;;### (autoloads nil "org-irc" "org-irc.el" (23122 46211 569086
+;;;;;;  279000))
 ;;; Generated autoloads from org-irc.el
 
 (autoload 'org-irc-store-link "org-irc" "\
@@ -1269,7 +1282,8 @@ Load FILE with optional arguments NOERROR and MUSTSUFFIX.
 
 ;;;***
 
-;;;### (autoloads nil "org-mobile" "org-mobile.el" "e005b7accde48f9f5da5855f7bb547ec")
+;;;### (autoloads nil "org-mobile" "org-mobile.el" (23195 45027 401189
+;;;;;;  958000))
 ;;; Generated autoloads from org-mobile.el
 
 (autoload 'org-mobile-push "org-mobile" "\
@@ -1288,7 +1302,8 @@ agenda view showing the flagged items.
 
 ;;;***
 
-;;;### (autoloads nil "org-plot" "org-plot.el" "85b14ab93a67abe34c254eb6c55bd79c")
+;;;### (autoloads nil "org-plot" "org-plot.el" (23195 45027 401189
+;;;;;;  958000))
 ;;; Generated autoloads from org-plot.el
 
 (autoload 'org-plot/gnuplot "org-plot" "\
@@ -1300,7 +1315,8 @@ line directly before or after the table.
 
 ;;;***
 
-;;;### (autoloads nil "org-table" "org-table.el" "655b68fb9b54da75d23bcfc26f39e1d3")
+;;;### (autoloads nil "org-table" "org-table.el" (23251 59267 34174
+;;;;;;  368000))
 ;;; Generated autoloads from org-table.el
 
 (autoload 'org-table-create-with-table\.el "org-table" "\
@@ -1563,7 +1579,7 @@ entries.
 A non-nil value for INTERACTIVE? is used to signal that this
 function is being called interactively.
 
-\(fn &optional WITH-CASE SORTING-TYPE GETKEY-FUNC COMPARE-FUNC INTERACTIVE\\?)" t nil)
+\(fn &optional WITH-CASE SORTING-TYPE GETKEY-FUNC COMPARE-FUNC INTERACTIVE\\=\\?)" t nil)
 
 (autoload 'org-table-cut-region "org-table" "\
 Copy region in table to the clipboard and blank all relevant fields.
@@ -1998,7 +2014,8 @@ which will prompt for the width.
 
 ;;;***
 
-;;;### (autoloads nil "org-timer" "org-timer.el" "df503e638f325920ee58c88d4d825ad2")
+;;;### (autoloads nil "org-timer" "org-timer.el" (23195 45027 405189
+;;;;;;  911000))
 ;;; Generated autoloads from org-timer.el
 
 (autoload 'org-timer-start "org-timer" "\
@@ -2064,8 +2081,8 @@ using three `C-u' prefix arguments.
 
 ;;;***
 
-;;;### (autoloads nil "org-version" "org-version.el" (23279 54768
-;;;;;;  238656 635000))
+;;;### (autoloads nil "org-version" "org-version.el" (23427 16140
+;;;;;;  563457 533000))
 ;;; Generated autoloads from org-version.el
 
 (autoload 'org-release "org-version" "\
@@ -2085,7 +2102,7 @@ The location of ODT styles.")
 
 ;;;***
 
-;;;### (autoloads nil "org" "org.el" (23279 38659 992378 536000))
+;;;### (autoloads nil "org" "org.el" (23427 16131 247531 494000))
 ;;; Generated autoloads from org.el
 
 (autoload 'org-babel-do-load-languages "org" "\
@@ -2307,196 +2324,8 @@ Call the customize function with org as argument.
 
 ;;;***
 
-;;;### (autoloads nil "ox" "ox.el" "72daa607ccab31f421d02552b327a7c8")
-;;; Generated autoloads from ox.el
-
-(autoload 'org-export-get-backend "ox" "\
-Return export back-end named after NAME.
-NAME is a symbol.  Return nil if no such back-end is found.
-
-\(fn NAME)" nil nil)
-
-(autoload 'org-export-get-environment "ox" "\
-Collect export options from the current buffer.
-
-Optional argument BACKEND is an export back-end, as returned by
-`org-export-create-backend'.
-
-When optional argument SUBTREEP is non-nil, assume the export is
-done against the current sub-tree.
-
-Third optional argument EXT-PLIST is a property list with
-external parameters overriding Org default settings, but still
-inferior to file-local settings.
-
-\(fn &optional BACKEND SUBTREEP EXT-PLIST)" nil nil)
-
-(autoload 'org-export-as "ox" "\
-Transcode current Org buffer into BACKEND code.
-
-BACKEND is either an export back-end, as returned by, e.g.,
-`org-export-create-backend', or a symbol referring to
-a registered back-end.
-
-If narrowing is active in the current buffer, only transcode its
-narrowed part.
-
-If a region is active, transcode that region.
-
-When optional argument SUBTREEP is non-nil, transcode the
-sub-tree at point, extracting information from the headline
-properties first.
-
-When optional argument VISIBLE-ONLY is non-nil, don't export
-contents of hidden elements.
-
-When optional argument BODY-ONLY is non-nil, only return body
-code, without surrounding template.
-
-Optional argument EXT-PLIST, when provided, is a property list
-with external parameters overriding Org default settings, but
-still inferior to file-local settings.
-
-Return code as a string.
-
-\(fn BACKEND &optional SUBTREEP VISIBLE-ONLY BODY-ONLY EXT-PLIST)" nil nil)
-
-(autoload 'org-export-string-as "ox" "\
-Transcode STRING into BACKEND code.
-
-BACKEND is either an export back-end, as returned by, e.g.,
-`org-export-create-backend', or a symbol referring to
-a registered back-end.
-
-When optional argument BODY-ONLY is non-nil, only return body
-code, without preamble nor postamble.
-
-Optional argument EXT-PLIST, when provided, is a property list
-with external parameters overriding Org default settings, but
-still inferior to file-local settings.
-
-Return code as a string.
-
-\(fn STRING BACKEND &optional BODY-ONLY EXT-PLIST)" nil nil)
-
-(autoload 'org-export-replace-region-by "ox" "\
-Replace the active region by its export to BACKEND.
-BACKEND is either an export back-end, as returned by, e.g.,
-`org-export-create-backend', or a symbol referring to
-a registered back-end.
-
-\(fn BACKEND)" nil nil)
-
-(autoload 'org-export-insert-default-template "ox" "\
-Insert all export keywords with default values at beginning of line.
-
-BACKEND is a symbol referring to the name of a registered export
-back-end, for which specific export options should be added to
-the template, or `default' for default template.  When it is nil,
-the user will be prompted for a category.
-
-If SUBTREEP is non-nil, export configuration will be set up
-locally for the subtree through node properties.
-
-\(fn &optional BACKEND SUBTREEP)" t nil)
-
-(autoload 'org-export-to-buffer "ox" "\
-Call `org-export-as' with output to a specified buffer.
-
-BACKEND is either an export back-end, as returned by, e.g.,
-`org-export-create-backend', or a symbol referring to
-a registered back-end.
-
-BUFFER is the name of the output buffer.  If it already exists,
-it will be erased first, otherwise, it will be created.
-
-A non-nil optional argument ASYNC means the process should happen
-asynchronously.  The resulting buffer should then be accessible
-through the `org-export-stack' interface.  When ASYNC is nil, the
-buffer is displayed if `org-export-show-temporary-export-buffer'
-is non-nil.
-
-Optional arguments SUBTREEP, VISIBLE-ONLY, BODY-ONLY and
-EXT-PLIST are similar to those used in `org-export-as', which
-see.
-
-Optional argument POST-PROCESS is a function which should accept
-no argument.  It is always called within the current process,
-from BUFFER, with point at its beginning.  Export back-ends can
-use it to set a major mode there, e.g,
-
-  (defun org-latex-export-as-latex
-    (&optional async subtreep visible-only body-only ext-plist)
-    (interactive)
-    (org-export-to-buffer \\='latex \"*Org LATEX Export*\"
-      async subtreep visible-only body-only ext-plist (lambda () (LaTeX-mode))))
-
-This function returns BUFFER.
-
-\(fn BACKEND BUFFER &optional ASYNC SUBTREEP VISIBLE-ONLY BODY-ONLY EXT-PLIST POST-PROCESS)" nil nil)
-
-(put 'org-export-to-buffer 'lisp-indent-function '2)
-
-(autoload 'org-export-to-file "ox" "\
-Call `org-export-as' with output to a specified file.
-
-BACKEND is either an export back-end, as returned by, e.g.,
-`org-export-create-backend', or a symbol referring to
-a registered back-end.  FILE is the name of the output file, as
-a string.
-
-A non-nil optional argument ASYNC means the process should happen
-asynchronously.  The resulting buffer will then be accessible
-through the `org-export-stack' interface.
-
-Optional arguments SUBTREEP, VISIBLE-ONLY, BODY-ONLY and
-EXT-PLIST are similar to those used in `org-export-as', which
-see.
-
-Optional argument POST-PROCESS is called with FILE as its
-argument and happens asynchronously when ASYNC is non-nil.  It
-has to return a file name, or nil.  Export back-ends can use this
-to send the output file through additional processing, e.g,
-
-  (defun org-latex-export-to-latex
-    (&optional async subtreep visible-only body-only ext-plist)
-    (interactive)
-    (let ((outfile (org-export-output-file-name \".tex\" subtreep)))
-      (org-export-to-file \\='latex outfile
-        async subtreep visible-only body-only ext-plist
-        (lambda (file) (org-latex-compile file)))
-
-The function returns either a file name returned by POST-PROCESS,
-or FILE.
-
-\(fn BACKEND FILE &optional ASYNC SUBTREEP VISIBLE-ONLY BODY-ONLY EXT-PLIST POST-PROCESS)" nil nil)
-
-(put 'org-export-to-file 'lisp-indent-function '2)
-
-(autoload 'org-export-dispatch "ox" "\
-Export dispatcher for Org mode.
-
-It provides an access to common export related tasks in a buffer.
-Its interface comes in two flavors: standard and expert.
-
-While both share the same set of bindings, only the former
-displays the valid keys associations in a dedicated buffer.
-Scrolling (resp. line-wise motion) in this buffer is done with
-SPC and DEL (resp. C-n and C-p) keys.
-
-Set variable `org-export-dispatch-use-expert-ui' to switch to one
-flavor or the other.
-
-When ARG is `\\[universal-argument]', repeat the last export action, with the same
-set of options used back then, on the current buffer.
-
-When ARG is `\\[universal-argument] \\[universal-argument]', display the asynchronous export stack.
-
-\(fn &optional ARG)" t nil)
-
-;;;***
-
-;;;### (autoloads nil "ox-ascii" "ox-ascii.el" "4a772695edb7dedf932be8995d9c407a")
+;;;### (autoloads nil "ox-ascii" "ox-ascii.el" (23122 46211 585086
+;;;;;;  74000))
 ;;; Generated autoloads from ox-ascii.el
 
 (autoload 'org-ascii-export-as-ascii "ox-ascii" "\
@@ -2596,7 +2425,8 @@ Return output file name.
 
 ;;;***
 
-;;;### (autoloads nil "ox-beamer" "ox-beamer.el" "d99129f12ce947bce4b46176eeaf2a40")
+;;;### (autoloads nil "ox-beamer" "ox-beamer.el" (23117 3473 979208
+;;;;;;  93000))
 ;;; Generated autoloads from ox-beamer.el
 
 (autoload 'org-beamer-mode "ox-beamer" "\
@@ -2731,7 +2561,8 @@ Return output file name.
 
 ;;;***
 
-;;;### (autoloads nil "ox-html" "ox-html.el" "b2b303489000b91b8507671209cc2924")
+;;;### (autoloads nil "ox-html" "ox-html.el" (23278 38207 656449
+;;;;;;  914000))
 ;;; Generated autoloads from ox-html.el
 
 (put 'org-html-head-include-default-style 'safe-local-variable 'booleanp)
@@ -2837,7 +2668,8 @@ Return output file name.
 
 ;;;***
 
-;;;### (autoloads nil "ox-icalendar" "ox-icalendar.el" "9d179af5b2a082e77567ef226b3b132b")
+;;;### (autoloads nil "ox-icalendar" "ox-icalendar.el" (23195 45027
+;;;;;;  417189 767000))
 ;;; Generated autoloads from ox-icalendar.el
 
 (autoload 'org-icalendar-export-to-ics "ox-icalendar" "\
@@ -2887,7 +2719,8 @@ The file is stored under the name chosen in
 
 ;;;***
 
-;;;### (autoloads nil "ox-latex" "ox-latex.el" "62b465cef63a59a8fa6b5db9fc12558c")
+;;;### (autoloads nil "ox-latex" "ox-latex.el" (23195 45027 421189
+;;;;;;  719000))
 ;;; Generated autoloads from ox-latex.el
 
 (autoload 'org-latex-make-preamble "ox-latex" "\
@@ -2899,7 +2732,7 @@ non-nil, only includes packages relevant to image generation, as
 specified in `org-latex-default-packages-alist' or
 `org-latex-packages-alist'.
 
-\(fn INFO &optional TEMPLATE SNIPPET\\?)" nil nil)
+\(fn INFO &optional TEMPLATE SNIPPET\\=\\?)" nil nil)
 
 (autoload 'org-latex-export-as-latex "ox-latex" "\
 Export current buffer as a LaTeX buffer.
@@ -3023,7 +2856,7 @@ Return output file name.
 
 ;;;***
 
-;;;### (autoloads nil "ox-md" "ox-md.el" "68551e4d17f879632900749c3d173d5d")
+;;;### (autoloads nil "ox-md" "ox-md.el" (23260 10064 718296 919000))
 ;;; Generated autoloads from ox-md.el
 
 (autoload 'org-md-export-as-markdown "ox-md" "\
@@ -3095,7 +2928,7 @@ Return output file name.
 
 ;;;***
 
-;;;### (autoloads nil "ox-odt" "ox-odt.el" "9ca93a8f4db1aedd392d836a7e4e6370")
+;;;### (autoloads nil "ox-odt" "ox-odt.el" (23422 27911 126415 291000))
 ;;; Generated autoloads from ox-odt.el
 
 (put 'org-odt-preferred-output-format 'safe-local-variable 'stringp)
@@ -3157,7 +2990,7 @@ is non-nil then the newly converted file is opened using
 
 ;;;***
 
-;;;### (autoloads nil "ox-org" "ox-org.el" "49bbdfb54542fbea3d9e2c956bb0d56b")
+;;;### (autoloads nil "ox-org" "ox-org.el" (23122 46211 589086 23000))
 ;;; Generated autoloads from ox-org.el
 
 (autoload 'org-org-export-as-org "ox-org" "\
@@ -3235,7 +3068,8 @@ Return output file name.
 
 ;;;***
 
-;;;### (autoloads nil "ox-publish" "ox-publish.el" "5920e1273f48b9bead560af7f30c3537")
+;;;### (autoloads nil "ox-publish" "ox-publish.el" (23195 45027 421189
+;;;;;;  719000))
 ;;; Generated autoloads from ox-publish.el
 
 (defalias 'org-publish-project 'org-publish)
@@ -3278,7 +3112,8 @@ the project.
 
 ;;;***
 
-;;;### (autoloads nil "ox-texinfo" "ox-texinfo.el" "fa6ddaec0cc36a7edd90b629e42b6fdd")
+;;;### (autoloads nil "ox-texinfo" "ox-texinfo.el" (23195 45027 425189
+;;;;;;  671000))
 ;;; Generated autoloads from ox-texinfo.el
 
 (autoload 'org-texinfo-export-to-texinfo "ox-texinfo" "\
