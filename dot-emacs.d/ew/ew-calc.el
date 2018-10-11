@@ -2,7 +2,10 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+(require 's)
+;; -------------------------------------------------------
 (defun ew-calc-mkfloat(v)
+  "Make a float out of V, whatever it is."
   (catch 'lhs
     (cond
      ((not     v) (throw 'lhs 0.0))

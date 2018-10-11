@@ -95,6 +95,8 @@
 (load "ewmodeline")
 (load "show-wspace")
 (load "ew-calc")
+(load "ew-kill")
+(load "ew-font")
 (load "url") (url-handler-mode t)
 ;; (autoload 'notmuch "notmuch" "notmuch mail" t)
 ;; -------------------------------------------------------
@@ -144,47 +146,7 @@
 (set-default-coding-systems 'utf-8)
 ;; -------------------------------------------------------
 (set-fill-column 57)
-;; -------------------------------------------------------
-;; check current with (face-attribute 'default :font)
-(defvar ew-default-font-var
-  "-*-lucidatypewriter-*-*-*-*-11-*-*-*-*-*-*-*")
-;; -------------------------------------------------------
-(set-cursor-color "Red")
-(set-mouse-color "Yellow")
-(set-foreground-color "#a6a376")
-(set-background-color "#181818")
-(set-default-font ew-default-font-var)
-;; -------------------------------------------------------
-;; (setq default-frame-alist
-      (append default-frame-alist
-              '((cursor-color . "Red")
-                (mouse-color . "Yellow")
-                (foreground-color . "#a6a376")
-                (background-color . "#181818")
-                (font . ew-default-font-var)))
-;;   )
-;; -------------------------------------------------------
-;; "-*-bitstream charter-*-*-*-*-*-*-*-*-*-*-*-*")
-;; "-*-lucidatypewriter-*-*-*-*-*-*-*-*-*-*-*-*")
-;; "-*-lucidatypewriter-*-*-*-*-10-*-*-*-*-*-*-*")
-;; "-*-lucidatypewriter-*-*-*-*-12-*-*-*-*-*-*-*")
-;; "-b&h-lucidatypewriter-medium-r-normal-sans-12-116-75-75-m-70-iso8859-1")
-;; "-misc-fixed-medium-r-semicondensed--13-*-*-*-*-*-*-*")
-;; "Fixed 9")
-;; "LMMono12 10")
-;; "LMMonoCaps10 8")
-;; "LMMonoLtCond10 12")
-;; "Latin Modern Mono Light Cond 13")
-;; "Liberation Mono 9")
-;; "Mitra Mono 9")
-;; "Ubuntu Mono 14")
-;; "Roboto Mono 12")
-;; "Ubuntu Mono 10")
-;; "Ubuntu Mono 9")
-;; "WenQuanYi Zen Hei Mono 12")
-;; "clean")
-;; "lucidatypewriter 14")
-;; "lucidatypewriter 9")
+(ew-set-font-and-stuff)
 ;; -------------------------------------------------------
 (add-to-list 'same-window-regexps "\*eshell\*")
 (add-to-list 'same-window-regexps "\*shell\*")
