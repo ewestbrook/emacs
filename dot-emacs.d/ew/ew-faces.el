@@ -31,9 +31,9 @@
     (setq faces (cdr faces))))
 ;; -------------------------------------------------------
 (defun ew-org-mode-face-tweaks()
-  "EW org-mode face tweaks"
-  (ewtfs :family "Helvetica"   ew-prop-faces)
-  (ewtfs :family "Ubuntu Mono" ew-mono-faces)
+  "EW 'org-mode' face tweaks."
+  (ewtfs :family "Noto Sans"   ew-prop-faces)
+  (ewtfs :family "Noto Sans Mono" ew-mono-faces)
   (ewtf :height 1.5 'org-level-1)
   (ewtf :height 1.3 'org-level-2)
   (ewtf :height 1.2 'org-level-3)
@@ -41,7 +41,7 @@
 (add-hook 'org-mode-hook 'ew-org-mode-face-tweaks)
 ;; -------------------------------------------------------
 (defun ew-ediff-mode-face-tweaks()
-  "EW ediff face tweaks"
+  "EW 'ediff-mode' face tweaks."
   (ewtf :background "#402020" 'ediff-current-diff-A)
   (ewtf :background "#582020" 'ediff-fine-diff-A)
   (ewtf :background "#303030" 'ediff-odd-diff-A)
@@ -59,7 +59,7 @@
 (add-hook 'ediff-mode-hook 'ew-ediff-mode-face-tweaks)
 ;; -------------------------------------------------------
 (defun ew-magit-mode-face-tweaks()
-  "EW magit face tweaks"
+  "EW 'magit-mode' face tweaks."
   (ewtf :background "#242424" 'magit-diff-context)
   (ewtf :background "#204020" 'magit-diff-added)
   (ewtf :foreground "#cccccc" 'magit-diff-added)
@@ -71,7 +71,7 @@
 (add-hook 'magit-status-mode-hook 'ew-magit-mode-face-tweaks)
 ;; -------------------------------------------------------
 (defun ew-company-face-tweaks()
-  "EW company mode face tweaks."
+  "EW 'company-mode' face tweaks."
   (ewtf :background "#282828" 'company-tooltip)
   (ewtf :foreground "#dd00dd" 'company-tooltip)
   (ewtf :background "#282828" 'company-tooltip-selection)
