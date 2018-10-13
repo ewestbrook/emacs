@@ -2,3 +2,4 @@ auto-save-list
 dot-emacs.d/tramp
 *~
 dot-emacs.d/session.*
+dot-emacs.d/.cask/
