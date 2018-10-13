@@ -15,6 +15,7 @@
 (setq org-reveal-root "https://org.westbrook.io/revealjs")
 ;; (setq org-reveal-title-slide 'auto)
 (setq org-reveal-title-slide nil)
+(setq org-publish-list-skipped-files nil)
 
 (setq org-agenda-files '("~/org"))
 (setq org-clock-persist 'history)
