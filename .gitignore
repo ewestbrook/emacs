@@ -3,3 +3,4 @@ dot-emacs.d/tramp
 *~
 dot-emacs.d/session.*
 dot-emacs.d/.cask/
+dot-emacs.d/url/

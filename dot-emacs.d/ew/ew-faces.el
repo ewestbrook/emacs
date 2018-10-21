@@ -67,6 +67,7 @@
   "EW 'magit-mode' face tweaks."
   ;; ----------------------
   (ewtf :family "Noto Sans" 'magit-section-heading)
+  (ewtf :height 1.6 'magit-section-heading)
   ;; ----------------------
   (ewtf :background "#242424" 'magit-diff-context)
   ;; ----------------------
