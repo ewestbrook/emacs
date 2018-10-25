@@ -1,154 +1,218 @@
-;; Mode line setup
+;;; ewmodeline -- Summary
+;;; Commentary:
+;;; Code:
+;; -------------------------------------------------------
+(defun currentbufferfilepath(&optional @dir-path-only-p)
+  "Current buffer file path."
+  (let (($fpath
+         (if (string-equal major-mode 'dired-mode)
+             (progn
+               (let (($result (mapconcat 'identity (dired-get-marked-files) "\n")))
+                 (if (equal (length $result) 0)
+                     (progn default-directory )
+                   (progn $result))))
+           (if (buffer-file-name)
+               (buffer-file-name)
+             (expand-file-name default-directory)))))
+    (if @dir-path-only-p
+        (file-name-directory $fpath)
+      $fpath)))
+
+(defun ewmodeline-is-root-buffer()
+  "If a root buffer."
+  (string-match "\\(sudo\\|ssh:root\\)" (currentbufferfilepath))
+  )
+
 (setq-default
  mode-line-format
  '(
-   ; read-only or modified status
+
    (:eval
-    (cond (buffer-read-only
-           (propertize "RO" 'face 'mode-line-read-only-face))
-          ((buffer-modified-p)
-           (propertize "M" 'face 'mode-line-modified-face))
-          (t " ")))
-   " "
-   ; directory and buffer/file name
-   ;; (:propertize (:eval (shorten-directory default-directory 10))
-   ;;              face mode-line-folder-face)
-   (:propertize "%b"
-                face mode-line-filename-face)
-   ; Position, including warning for 80 columns
-   (:propertize " %l" face mode-line-number-face)
-   (:propertize " " face mode-line-position-face)
-   (:eval (propertize "%c" 'face
-                      (if (>= (current-column) 58)
-                          'mode-line-80col-face
-                        'mode-line-position-face)))
-   " "
-   ; narrow [default -- keep?]
+    (cond
+     ((window-dedicated-p)
+      (propertize "d" 'face 'mode-line-dedicated-face))
+     (t "")))
+
+   (:eval
+    (cond
+     (buffer-read-only
+      (propertize "ro" 'face 'mode-line-read-only-face))
+     (t "")))
+
+   (:eval
+    (cond
+     ((ewmodeline-is-root-buffer)
+      (propertize "su" 'face 'mode-line-isroot-face))
+     (t "")))
+
+   (:eval
+    (cond
+     ((buffer-modified-p)
+      (propertize "m" 'face 'mode-line-modified-face))
+     (t "")))
+
+   (:propertize " " face mode-line)
+
+   (:eval
+    (propertize "%b" 'face
+                 (if (ewmodeline-is-root-buffer)
+                     'mode-line-filename-face
+                   'mode-line-filename-face)))
+
+   (:propertize " " face mode-line)
+
+   (:propertize "%l" face mode-line-number-face)
+
+   (:propertize "x" face mode-line)
+
+   (:eval
+    (propertize "%c" 'face
+                (if (>= (current-column) 58)
+                    'mode-line-80col-face
+                  'mode-line-position-face)))
+
+   (:propertize " " face mode-line)
+
    "%n"
-   ; mode indicators: vc, recursive edit, major mode, minor modes, process, global
-   (vc-mode vc-mode)
-   " %["
+
+   (:propertize " " face mode-line)
+
    (:propertize mode-name
                 face mode-line-mode-face)
-   "%] "
-   (:eval (propertize (format-mode-line minor-mode-alist)
-                      'face 'mode-line-minor-mode-face))
    (:propertize mode-line-process
                 face mode-line-process-face)
+   ;; (vc-mode vc-mode)
+   (:eval (propertize (format-mode-line minor-mode-alist)
+                      'face 'mode-line-minor-mode-face))
    (global-mode-string global-mode-string)
-   ; emacsclient [default -- keep?]
    mode-line-client
-   ; nyan-mode uses nyan cat as an alternative to %p
-   ;; (:eval (when nyan-mode (list (nyan-create))))
    ))
-
-;; Helper function
-(defun shorten-directory (dir max-length)
-  "Show up to `max-length' characters of a directory name `dir'."
-  (let ((path (reverse (split-string (abbreviate-file-name dir) "/")))
-        (output ""))
-    (when (and path (equal "" (car path)))
-      (setq path (cdr path)))
-    (while (and path (< (length output) (- max-length 4)))
-      (setq output (concat (car path) "/" output))
-      (setq path (cdr path)))
-    (when path
-      (setq output (concat ".../" output)))
-    output))
 
 ;; Extra mode line faces
 (make-face 'mode-line-read-only-face)
 (make-face 'mode-line-modified-face)
 (make-face 'mode-line-folder-face)
 (make-face 'mode-line-filename-face)
+(make-face 'mode-line-root-filename-face)
 (make-face 'mode-line-position-face)
 (make-face 'mode-line-number-face)
 (make-face 'mode-line-mode-face)
 (make-face 'mode-line-minor-mode-face)
 (make-face 'mode-line-process-face)
 (make-face 'mode-line-80col-face)
+(make-face 'mode-line-dedicated-face)
+(make-face 'mode-line-isroot-face)
+(make-face 'mode-line-indicator-face)
 
+;; general face
+(ewtf :foreground    "gray60" 'mode-line)
+(ewtf :inverse-video nil 'mode-line)
+(ewtf :height        100 'mode-line)
+(ewtf :family        "Noto Sans" 'mode-line)
 (if (eq 0 (user-uid))
-    (set-face-attribute 'mode-line nil
-                        :foreground "gray60"
-                        :background "#422"
-                        :inverse-video nil
-                        :height 100
-                        :family "Ubuntu"
-                        :box '(:line-width 2 :color "#622" :style nil))
-  (set-face-attribute 'mode-line nil
-                      :foreground "gray60"
-                      :background "#242"
-                      :inverse-video nil
-                      :height 100
-                      :family "Ubuntu"
-                      :box '(:line-width 2 :color "#262" :style nil)))
+    (progn
+      (ewtf :background    "#622" 'mode-line)
+      (ewtf :box
+            '(:line-width 2 :color "#833" :style nil)
+            'mode-line))
+  (progn
+    (ewtf :background    "#242" 'mode-line)
+    (ewtf :box
+          '(:line-width 2 :color "#383" :style nil)
+          'mode-line)))
 
-(if (eq 0 (user-uid))
-    (set-face-attribute 'mode-line-filename-face nil
-                        :inherit 'mode-line-face
-                        :foreground "red"
-                        :height 200
-                        :weight 'bold
-                        :slant 'italic)
-  (set-face-attribute 'mode-line-filename-face nil
-                      :inherit 'mode-line-face
-                      :foreground "#eab700"
-                      :height 200
-                      :weight 'bold
-                      :slant 'normal
-                      )
-  )
+;; inactive general face
+(ewtf :foreground "gray50" 'mode-line-inactive)
+(ewtf :background "gray10" 'mode-line-inactive)
+(ewtf :inverse-video nil 'mode-line-inactive)
+(ewtf :height 100 'mode-line-inactive)
+(ewtf :box '(:line-width 2 :color "gray30" :style nil)
+      'mode-line-inactive)
 
-(set-face-attribute 'mode-line-inactive nil
-    :foreground "gray80" :background "#444"
-    :inverse-video nil
-    :box '(:line-width 2 :color "gray10" :style nil))
+;; filename face
+(ewtf :inherit 'mode-line 'mode-line-filename-face)
+(ewtf :height 140 'mode-line-filename-face)
+(ewtf :weight 'bold 'mode-line-filename-face)
+(ewtf :foreground "#eab700" 'mode-line-filename-face)
+(ewtf :slant 'normal 'mode-line-filename-face)
 
-(set-face-attribute 'mode-line-read-only-face nil
-    :inherit 'mode-line-face
-    :foreground "#888"
-    :height 200
-    :weight 'bold
-    :box '(:line-width 2 :color "#888"))
+;; root filename face
+(ewtf :inherit 'mode-line-filename-face
+      'mode-line-root-filename-face)
+(ewtf :foreground "#f30" 'mode-line-root-filename-face)
+;; (ewtf :slant 'italic 'mode-line-root-filename-face)
+(ewtf :slant 'normal 'mode-line-root-filename-face)
 
-(set-face-attribute 'mode-line-modified-face nil
-    :inherit 'mode-line-face
-    :foreground "#d400ff"
-    :weight 'bold
-    :height 200
-    :box '(:line-width 2 :color "#d400ff"))
- 
-(set-face-attribute 'mode-line-folder-face nil
-    :inherit 'mode-line-face
-    :foreground "gray60")
+;; general indicator face
+(ewtf :inherit 'mode-line 'mode-line-indicator-face)
+(ewtf :height 140 'mode-line-indicator-face)
+(ewtf :weight 'bold 'mode-line-indicator-face)
 
-(set-face-attribute 'mode-line-position-face nil
-    :inherit 'mode-line-face
-    :height 120
-    :family "Ubuntu Mono")
+;; read-only indicator face
+(ewtf :inherit 'mode-line-indicator-face 'mode-line-read-only-face)
+(ewtf :background nil 'mode-line-read-only-face)
+(ewtf :foreground "gray70" 'mode-line-read-only-face)
+(ewtf :box '(:line-width 2 :color "#888")
+      'mode-line-read-only-face)
 
-(set-face-attribute 'mode-line-mode-face nil
-    :inherit 'mode-line-face
-    :foreground "gray80")
+;; modified indicator face
+(ewtf :inherit 'mode-line-indicator-face 'mode-line-modified-face)
+(ewtf :foreground "#f4c" 'mode-line-modified-face)
+(ewtf :background nil 'mode-line-modified-face)
+(ewtf :box '(:line-width 2 :color "#f4c")
+      'mode-line-modified-face)
 
-(set-face-attribute 'mode-line-minor-mode-face nil
-    :inherit 'mode-line-mode-face
-    :foreground "gray40")
+;; dedicated indicator face
+(ewtf :inherit 'mode-line-indicator-face 'mode-line-dedicated-face)
+(ewtf :background nil 'mode-line-dedicated-face)
+(ewtf :foreground "#0cf" 'mode-line-dedicated-face)
+(ewtf :box '(:line-width 2 :color "#0cf")
+      'mode-line-dedicated-face)
 
-(set-face-attribute 'mode-line-process-face nil
-    :inherit 'mode-line-face
-    :foreground "#718c00")
+;; isroot indicator face
+(ewtf :inherit 'mode-line-indicator-face 'mode-line-isroot-face)
+(ewtf :background nil 'mode-line-isroot-face)
+(ewtf :foreground "#f22" 'mode-line-isroot-face)
+(ewtf :box '(:line-width 2 :color "#f22")
+      'mode-line-isroot-face)
 
-(set-face-attribute 'mode-line-80col-face nil
-    :inherit 'mode-line-position-face
-    ;; :foreground "black"
-    ;; :background "#d44"
-    :slant 'italic
-    :weight 'normal
-    :height 140
-    )
+;; folder face
+(ewtf :inherit 'mode-line 'mode-line-folder-face)
+(ewtf :foreground "gray60" 'mode-line-folder-face)
 
-(set-face-attribute 'mode-line-number-face nil
-    :inherit 'mode-line-position-face
-    :height 160)
+;; number (row) face
+(ewtf :inherit 'mode-line-position-face
+      'mode-line-number-face)
+(ewtf :height 110 'mode-line-number-face)
+
+;; position (column) face
+(ewtf :inherit 'mode-line 'mode-line-position-face)
+(ewtf :height 110 'mode-line-position-face)
+
+;; mode (name) face
+(ewtf :inherit 'mode-line 'mode-line-mode-face)
+(ewtf :foreground "#2f2" 'mode-line-mode-face)
+(ewtf :weight 'bold 'mode-line-mode-face)
+(ewtf :height 110 'mode-line-mode-face)
+
+;; minor mode face
+(ewtf :inherit 'mode-line-mode-face
+      'mode-line-minor-mode-face)
+(ewtf :foreground "gray40" 'mode-line-minor-mode-face)
+(ewtf :height 100 'mode-line-minor-mode-face)
+
+;; process face
+(ewtf :inherit 'mode-line 'mode-line-process-face)
+(ewtf :foreground "#718c00" 'mode-line-process-face)
+
+;; 80col face
+(ewtf :inherit 'mode-line-position-face
+      'mode-line-80col-face)
+;; (ewtf :slant 'italic 'mode-line-80col-face)
+;; (ewtf :slant 'normal 'mode-line-80col-face)
+(ewtf :weight 'bold 'mode-line-80col-face)
+(ewtf :height 120 'mode-line-80col-face)
+(ewtf :foreground "#f44" 'mode-line-80col-face)
+;; -------------------------------------------------------
+(provide 'ewmodeline)
+;;; ewmodeline ends here
