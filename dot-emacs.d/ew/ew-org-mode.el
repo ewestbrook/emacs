@@ -75,7 +75,8 @@
    (emacs-lisp . t)
    (ruby       . t)
    (latex      . t)
-   (lua        . t)))
+   (lua        . t)
+   (python     . t)))
 
 (defun ew-org-twbs-to-browser ()
   "Export an 'org-mode' file to twbs html, then open the html file in a browser."
