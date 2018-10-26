@@ -138,7 +138,7 @@
 ;; filename
 (ewtf :height (ewmodeline-height2) 'mode-line-filename-face)
 (ewtf :weight 'bold 'mode-line-filename-face)
-(ewtf :foreground "#eab700" 'mode-line-filename-face)
+(ewtf :foreground "#fc0" 'mode-line-filename-face)
 ;; -------------------------------------------------------
 ;; root filename
 (ewtf :inherit 'mode-line-filename-face 'mode-line-root-filename-face)
