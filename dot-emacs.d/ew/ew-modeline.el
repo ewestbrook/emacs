@@ -1,4 +1,4 @@
-;;; ewmodeline -- Summary
+;;; ew-modeline -- Summary
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
@@ -18,7 +18,7 @@
         (file-name-directory $fpath)
       $fpath)))
 ;; -------------------------------------------------------
-(defun ewmodeline-is-root-buffer()
+(defun ew-modeline-is-root-buffer()
   "If a root buffer."
   (string-match "\\(sudo\\|ssh:root\\)" (currentbufferfilepath))
   )
@@ -26,13 +26,13 @@
 (cond
  ((string= "p13a" (system-name))
   (progn
-    (defun ewmodeline-height0() 150)
-    (defun ewmodeline-height1() 200)
-    (defun ewmodeline-height2() 240)))
+    (defun ew-modeline-height0() 150)
+    (defun ew-modeline-height1() 200)
+    (defun ew-modeline-height2() 240)))
  (t (progn
-    (defun ewmodeline-height0() 110)
-    (defun ewmodeline-height1() 140)
-    (defun ewmodeline-height2() 160))))
+    (defun ew-modeline-height0() 110)
+    (defun ew-modeline-height1() 140)
+    (defun ew-modeline-height2() 160))))
 ;; -------------------------------------------------------
 (setq-default
  mode-line-format
@@ -58,7 +58,7 @@
 
    (:eval
     (cond
-     ((ewmodeline-is-root-buffer)
+     ((ew-modeline-is-root-buffer)
       (propertize "su" 'face 'mode-line-isroot-face))
      (t "")))
 
@@ -67,7 +67,7 @@
    (:eval
     (propertize
      "%b" 'face
-     (if (ewmodeline-is-root-buffer)
+     (if (ew-modeline-is-root-buffer)
          'mode-line-filename-face
        'mode-line-filename-face)))
 
@@ -121,7 +121,7 @@
 (make-face 'mode-line-root-filename-face)
 ;; -------------------------------------------------------
 ;; main
-(ewtf :height (ewmodeline-height0) 'mode-line)
+(ewtf :height (ew-modeline-height0) 'mode-line)
 (ewtf :foreground "gray70" 'mode-line)
 (ewtf :background "#131" 'mode-line)
 (ewtf :box '(:line-width 2 :color "gray30") 'mode-line)
@@ -132,11 +132,11 @@
 (ewtf :foreground "gray50" 'mode-line-inactive)
 (ewtf :background "gray10" 'mode-line-inactive)
 (ewtf :inverse-video nil 'mode-line-inactive)
-(ewtf :height (ewmodeline-height0) 'mode-line-inactive)
+(ewtf :height (ew-modeline-height0) 'mode-line-inactive)
 (ewtf :box '(:line-width 2 :color "gray20") 'mode-line-inactive)
 ;; -------------------------------------------------------
 ;; filename
-(ewtf :height (ewmodeline-height2) 'mode-line-filename-face)
+(ewtf :height (ew-modeline-height2) 'mode-line-filename-face)
 (ewtf :weight 'bold 'mode-line-filename-face)
 (ewtf :foreground "#fc0" 'mode-line-filename-face)
 ;; -------------------------------------------------------
@@ -148,31 +148,31 @@
 (ewtf :foreground "gray60" 'mode-line-folder-face)
 ;; -------------------------------------------------------
 ;; row number
-(ewtf :height (ewmodeline-height0) 'mode-line-number-face)
+(ewtf :height (ew-modeline-height0) 'mode-line-number-face)
 ;; -------------------------------------------------------
 ;; column position
-(ewtf :height (ewmodeline-height0) 'mode-line-position-face)
+(ewtf :height (ew-modeline-height0) 'mode-line-position-face)
 ;; -------------------------------------------------------
 ;; major mode
 (ewtf :foreground "#6f6" 'mode-line-mode-face)
 (ewtf :weight 'bold 'mode-line-mode-face)
-(ewtf :height (ewmodeline-height0) 'mode-line-mode-face)
+(ewtf :height (ew-modeline-height0) 'mode-line-mode-face)
 ;; -------------------------------------------------------
 ;; minor mode
 (ewtf :foreground "gray50" 'mode-line-minor-mode-face)
-(ewtf :height (ewmodeline-height0) 'mode-line-minor-mode-face)
+(ewtf :height (ew-modeline-height0) 'mode-line-minor-mode-face)
 ;; -------------------------------------------------------
 ;; process
 (ewtf :foreground "#718c00" 'mode-line-process-face)
 ;; -------------------------------------------------------
 ;; 80-col
 (ewtf :weight 'bold 'mode-line-80col-face)
-(ewtf :height (ewmodeline-height1) 'mode-line-80col-face)
+(ewtf :height (ew-modeline-height1) 'mode-line-80col-face)
 (ewtf :foreground "#f44" 'mode-line-80col-face)
 (ewtf :box '(:line-width 2) 'mode-line-80col-face)
 ;; -------------------------------------------------------
 ;; indicators
-(ewtf :height (ewmodeline-height2) 'mode-line-indicator-face)
+(ewtf :height (ew-modeline-height2) 'mode-line-indicator-face)
 (ewtf :weight 'bold 'mode-line-indicator-face)
 (ewtf :box '(:line-width 2) 'mode-line-indicator-face)
 ;; -------------------------------------------------------
@@ -191,4 +191,7 @@
 ;; indicator: isroot
 (ewtf :inherit 'mode-line-indicator-face 'mode-line-isroot-face)
 (ewtf :foreground "#ff1010" 'mode-line-isroot-face)
+;; -------------------------------------------------------
+(provide 'ew-modeline)
+;;; ew-modeline ends here
 ;; -------------------------------------------------------

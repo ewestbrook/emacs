@@ -93,7 +93,7 @@
 (load "ew-magit")
 (load "ew-org-mode")
 (load "ew-tog-ded")
-(load "ewmodeline")
+(load "ew-modeline")
 (load "show-wspace")
 (load "ew-calc")
 (load "ew-kill")
