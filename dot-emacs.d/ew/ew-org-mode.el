@@ -87,9 +87,9 @@
 ;; org-publish
 (setq org-publish-project-alist
  '(("org-notes"
-    :base-directory "~/org/"
+    :base-directory "/git/org/"
     :base-extension "org"
-    :publishing-directory "~/org/h/"
+    :publishing-directory "/git/org/h/"
     :recursive t
     :publishing-function org-twbs-publish-to-html
     :with-sub-superscript nil
