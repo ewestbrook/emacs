@@ -191,6 +191,8 @@
   (local-set-key (kbd "C-c T") 'org-twbs-export-to-html)
 
   (local-set-key (kbd "C-c C-x h") 'ew-org-publish-current-file)
+
+  (local-set-key (kbd "C-c C-x m") 'org-display-inline-images)
   ;; (turn-on-visual-line-mode)
   )
 
