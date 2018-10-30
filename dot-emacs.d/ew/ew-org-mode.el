@@ -22,8 +22,17 @@
 ;; file apps (launch instead of link)
 (add-to-list 'org-file-apps '("\\.pdf\\'" . "okular %s"))
 ;; -------------------------------------------------------
-;; org-babel
-(setq org-confirm-babel-evaluate nil)
+;; org-babel evaluate with/without confirmation
+(setq org-confirm-babel-evaluate t)
+;; -------------------------------------------------------
+;; mark the above as safe for setting in mode line
+;; note: use # -*- org-confirm-babel-evaluate: nil -*-
+;; at top of files for per-file automatic evaluation
+;; (also note the asterisks will disappear)
+(setq safe-local-variable-values
+      '((org-confirm-babel-evaluate)))
+;; -------------------------------------------------------
+;; org-babel languages
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((shell      . t)
