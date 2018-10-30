@@ -167,7 +167,6 @@
 (defun ew-org-publish-current-file ()
   "Publish current file, forcibly."
   (interactive)
-  (message "hi")
   (let (priorflag)
     (setq priorflag org-publish-use-timestamps-flag)
     (setq org-publish-use-timestamps-flag nil)

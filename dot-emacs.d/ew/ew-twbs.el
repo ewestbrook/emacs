@@ -7,11 +7,12 @@
 ;; head
 (setq
  org-twbs-head
-   "<link rel=\"stylesheet\" href=\"/c/bootstrap-min.css\">
-
+   "
+<link rel=\"stylesheet\" href=\"/c/bootstrap-min.css\">
+<link rel=\"stylesheet\" href=\"c/ew.css\">
 <script src=\"https://westbrook.today/j/jquery-min.js\"></script>
-
-<script src=\"https://westbrook.today/j/bootstrap-min.js\"></script>")
+<script src=\"https://westbrook.today/j/bootstrap-min.js\"></script>
+")
 ;; -------------------------------------------------------
 ;; home / up
 (setq
@@ -34,9 +35,9 @@
 (setq
  org-twbs-postamble-format
  '(("en" "
-<div style=\"display:flex;\">
-  <div style=\"flex: 1; text-align: left;\">%t</div>
-  <div style=\"flex: 1; text-align: right;\">%C</div>
+<div class=\"ewfoot\">
+  <div class=\"ewfootl\">%t</div>
+  <div class=\"ewfootr\">%C</div>
 </div>
 ")))
 ;; -------------------------------------------------------
