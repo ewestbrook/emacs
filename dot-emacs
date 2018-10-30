@@ -30,6 +30,7 @@
 (add-to-list 'load-path "/git/s.el")
 (add-to-list 'load-path "/git/treepy.el")
 (add-to-list 'load-path "/git/web-mode.el")
+(add-to-list 'load-path "/git/graphviz-dot-mode.el")
 ;; -------------------------------------------------------
 (load "/usr/share/emacs/site-lisp/site-gentoo")
 ;; -------------------------------------------------------
@@ -39,14 +40,15 @@
 ;; (require 'cl-generic)
 ;; -------------------------------------------------------
 (require 'uniquify)
-;; (require 'htmlize)
 (require 'gud)
 (require 'package)
+(require 'graphviz-dot-mode)
+;; (require 'htmlize)
+;; (require 'notmuch)
 ;; -------------------------------------------------------
 (require 'ivy)
 (require 'counsel)
 (require 'swiper)
-;; (require 'notmuch)
 ;; -------------------------------------------------------
 (ivy-mode 1)
 (counsel-mode 1)
