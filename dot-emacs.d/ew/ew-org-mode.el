@@ -43,7 +43,29 @@
    (latex      . t)
    (lua        . t)
    (python     . t)
-   (sqlite     . t)))
+   (sqlite     . t)
+   (dot        . t)))
+;; -------------------------------------------------------
+;; org-src-lang-modes
+(custom-set-variables
+ '(org-src-lang-modes
+   '(
+     ("C" . c)
+     ("C++" . c++)
+     ("asymptote" . asy)
+     ("bash" . sh)
+     ("calc" . fundamental)
+     ("cpp" . c++)
+     ("ditaa" . artist)
+     ("dot" . graphviz-dot)
+     ("elisp" . emacs-lisp)
+     ("http" . "ob-http")
+     ("ocaml" . tuareg)
+     ("screen" . shell-script)
+     ("shell" . sh)
+     ("sqlite" . sql)
+     ("lua" . lua)
+     )))
 ;; -------------------------------------------------------
 ;; org-manage
 (setq org-manage-directory-org "~/org")
