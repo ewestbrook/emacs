@@ -8,10 +8,12 @@
 (setq
  org-twbs-head
    "
+<link rel=\"stylesheet\"
+  href=\"https://fonts.googleapis.com/css?family=Roboto+Mono\">
 <link rel=\"stylesheet\" href=\"/c/bootstrap-min.css\">
-<link rel=\"stylesheet\" href=\"c/ew.css\">
-<script src=\"https://westbrook.today/j/jquery-min.js\"></script>
-<script src=\"https://westbrook.today/j/bootstrap-min.js\"></script>
+<link rel=\"stylesheet\" href=\"/c/ew.css\">
+<script src=\"/j/jquery-min.js\"></script>
+<script src=\"/j/bootstrap-min.js\"></script>
 ")
 ;; -------------------------------------------------------
 ;; home / up
