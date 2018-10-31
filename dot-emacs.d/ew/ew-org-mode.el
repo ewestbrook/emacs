@@ -108,7 +108,7 @@
 ;; -------------------------------------------------------
 ;; org-publish
 (setq org-publish-project-alist
- '(("org-notes"
+ '(("git-org"
     :base-directory "/git/org/"
     :base-extension "org"
     :publishing-directory "/git/org/h/"
