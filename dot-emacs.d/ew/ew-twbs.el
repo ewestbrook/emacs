@@ -2,20 +2,21 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+;; scripts overrides
 (setq org-twbs-google-analytics "")
+(setq org-twbs-scripts "")
 ;; -------------------------------------------------------
 (setq org-twbs-link-up ".")
 (setq org-twbs-link-home "/")
+(setq org-twbs-with-latex 'dvipng)
 ;; -------------------------------------------------------
 ;; head
+;; <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Roboto+Mono|Noto+Sans\">
+;; <script src=\"/j/jquery-min.js\"></script>
 (setq
- org-twbs-head
-   "
-<link rel=\"stylesheet\"
-  href=\"https://fonts.googleapis.com/css?family=Roboto+Mono|Noto+Sans\">
+ org-twbs-head "
 <link rel=\"stylesheet\" href=\"/c/bootstrap-min.css\">
 <link rel=\"stylesheet\" href=\"/c/ew.css\">
-<script src=\"/j/jquery-min.js\"></script>
 ")
 ;; <script src=\"/j/bootstrap-min.js\"></script>
 ;; -------------------------------------------------------
@@ -23,17 +24,17 @@
 (setq
  org-twbs-home/up-format
    "
-<ul class=\"ewtop\">
-  <li class=\"ewtopa\">
-    <a accesskey=\"h\" href=\"%s\"> up </a>
-  </li>
-  <li class=\"ewtopa\">
-    <a accesskey=\"H\" href=\"%s\"> home </a>
-  </li>
-  <li class=\"ewtopa ewtopl\">
-    <a accesskey=\"H\" href=\"/about.html\"> about </a>
-  </li>
-</ul>
+  <ul class=\"ewtop\">
+    <li class=\"ewtopa\">
+      <a accesskey=\"h\" href=\"%s\"> up </a>
+    </li>
+    <li class=\"ewtopa\">
+      <a accesskey=\"H\" href=\"%s\"> home </a>
+    </li>
+    <li class=\"ewtopa\">
+      <a href=\"#\">Eric Westbrook</a>
+    </li>
+  </ul>
 ")
 ;; -------------------------------------------------------
 ;; general purpose timestamp format
