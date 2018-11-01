@@ -90,7 +90,7 @@
   (ewtf :background "#282828" 'company-tooltip-selection)
   (ewtf :foreground "#dddd00" 'company-tooltip-selection)
   (ewtf :background "#404040" 'company-scrollbar-bg))
-(add-hook 'web-mode-hook 'ew-company-face-tweaks)
+;; (add-hook 'web-mode-hook 'ew-company-face-tweaks)
 ;; -------------------------------------------------------
 (provide 'ew-faces)
 ;;; ew-faces ends here
