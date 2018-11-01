@@ -47,25 +47,26 @@
    (dot        . t)))
 ;; -------------------------------------------------------
 ;; org-src-lang-modes
-(custom-set-variables
- '(org-src-lang-modes
-   '(
-     ("C" . c)
-     ("C++" . c++)
-     ("asymptote" . asy)
-     ("bash" . sh)
-     ("calc" . fundamental)
-     ("cpp" . c++)
-     ("ditaa" . artist)
-     ("dot" . graphviz-dot)
-     ("elisp" . emacs-lisp)
-     ("http" . "ob-http")
-     ("ocaml" . tuareg)
-     ("screen" . shell-script)
-     ("shell" . sh)
-     ("sqlite" . sql)
-     ("lua" . lua)
-     )))
+(setq
+ org-src-lang-modes
+ '(
+   ("C" . c)
+   ("C++" . c++)
+   ("asymptote" . asy)
+   ("bash" . sh)
+   ("calc" . fundamental)
+   ("cpp" . c++)
+   ("css" . css)
+   ("ditaa" . artist)
+   ("dot" . graphviz-dot)
+   ("elisp" . emacs-lisp)
+   ("html" . web)
+   ("ocaml" . tuareg)
+   ("screen" . shell-script)
+   ("shell" . sh)
+   ("sqlite" . sql)
+   ("lua" . lua)
+   ))
 ;; -------------------------------------------------------
 ;; org-manage
 (setq org-manage-directory-org "~/org")
@@ -109,9 +110,9 @@
 ;; org-publish
 (setq org-publish-project-alist
  '(("git-org"
-    :base-directory "/git/org/"
+    :base-directory "/e1/git/org/"
     :base-extension "org"
-    :publishing-directory "/git/org/h/"
+    :publishing-directory "/e1/git/org/h/"
     :recursive t
     :publishing-function org-twbs-publish-to-html
     :with-sub-superscript nil
