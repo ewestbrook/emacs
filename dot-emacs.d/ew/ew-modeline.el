@@ -67,12 +67,6 @@
 
    (:eval
     (cond
-     ((buffer-modified-p)
-      (propertize "m" 'face 'mode-line-modified-face))
-     (t "")))
-
-   (:eval
-    (cond
      ((ew-modeline-isremote-buffer)
       (propertize "r" 'face 'mode-line-isremote-face))
      (t "")))
@@ -83,7 +77,13 @@
       (propertize "su" 'face 'mode-line-isroot-face))
      (t "")))
 
-   " "
+   (:eval
+    (cond
+     ((buffer-modified-p)
+      (propertize "m" 'face 'mode-line-modified-face))
+     (t "")))
+
+   "  "
 
    (:eval
     (propertize
