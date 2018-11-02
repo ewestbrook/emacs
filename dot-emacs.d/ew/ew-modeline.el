@@ -2,6 +2,14 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+(setq-default
+ ew-modeline-isroot-regexp
+  "^/\\(sudo\\|ssh:root\\)")
+;; -------------------------------------------------------
+(setq-default
+ ew-modeline-isremote-regexp
+  "^/\\(ssh:\\|e1/\\)")
+;; -------------------------------------------------------
 (defun currentbufferfilepath(&optional @dir-path-only-p)
   "Current buffer file path."
   (let (($fpath
@@ -18,10 +26,17 @@
         (file-name-directory $fpath)
       $fpath)))
 ;; -------------------------------------------------------
-(defun ew-modeline-is-root-buffer()
+(defun ew-modeline-isroot-buffer()
   "If a root buffer."
-  (string-match "\\(sudo\\|ssh:root\\)" (currentbufferfilepath))
-  )
+  (string-match
+   ew-modeline-isroot-regexp
+   (currentbufferfilepath)))
+;; -------------------------------------------------------
+(defun ew-modeline-isremote-buffer()
+  "If a remote buffer."
+  (string-match
+   ew-modeline-isremote-regexp
+   (currentbufferfilepath)))
 ;; -------------------------------------------------------
 (cond
  ((string= "p13a" (system-name))
@@ -58,7 +73,13 @@
 
    (:eval
     (cond
-     ((ew-modeline-is-root-buffer)
+     ((ew-modeline-isremote-buffer)
+      (propertize "r" 'face 'mode-line-isremote-face))
+     (t "")))
+
+   (:eval
+    (cond
+     ((ew-modeline-isroot-buffer)
       (propertize "su" 'face 'mode-line-isroot-face))
      (t "")))
 
@@ -67,7 +88,7 @@
    (:eval
     (propertize
      "%b" 'face
-     (if (ew-modeline-is-root-buffer)
+     (if (ew-modeline-isroot-buffer)
          'mode-line-filename-face
        'mode-line-filename-face)))
 
@@ -111,6 +132,7 @@
 (make-face 'mode-line-folder-face)
 (make-face 'mode-line-indicator-face)
 (make-face 'mode-line-isroot-face)
+(make-face 'mode-line-isremote-face)
 (make-face 'mode-line-minor-mode-face)
 (make-face 'mode-line-mode-face)
 (make-face 'mode-line-modified-face)
@@ -191,6 +213,10 @@
 ;; indicator: isroot
 (ewtf :inherit 'mode-line-indicator-face 'mode-line-isroot-face)
 (ewtf :foreground "#ff1010" 'mode-line-isroot-face)
+;; -------------------------------------------------------
+;; indicator: isremote
+(ewtf :inherit 'mode-line-indicator-face 'mode-line-isremote-face)
+(ewtf :foreground "#ff7f00" 'mode-line-isremote-face)
 ;; -------------------------------------------------------
 (provide 'ew-modeline)
 ;;; ew-modeline ends here
