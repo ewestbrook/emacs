@@ -1,4 +1,4 @@
-;;; ew-calc --- Summary
+;;; ew-calc-fns --- Summary
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
@@ -46,5 +46,5 @@
           nv
         (format "*%s*" nr)))))
 ;; -------------------------------------------------------
-(provide 'ew-calc)
-;;; ew-calc ends here
+(provide 'ew-calc-fns)
+;;; ew-calc-fns ends here
