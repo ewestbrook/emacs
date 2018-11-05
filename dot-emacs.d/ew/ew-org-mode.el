@@ -110,9 +110,9 @@
 ;; org-publish
 (setq-default org-publish-project-alist
  '(("git-org"
-    :base-directory "/e1/git/org/"
+    :base-directory "/git/org/"
     :base-extension "org"
-    :publishing-directory "/e1/git/org/h/"
+    :publishing-directory "/git/org/h/"
     :recursive t
     :publishing-function org-twbs-publish-to-html
     :with-sub-superscript nil
