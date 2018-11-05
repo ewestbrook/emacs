@@ -1,3 +1,6 @@
+;;; ew-org-same-window --- Summary
+;;; Commentary:
+;;; Code:
 ;; -------------------------------------------------------
 ;; from https://emacs.stackexchange.com/a/17163
 ;; -------------------------------------------------------
@@ -61,3 +64,5 @@ nonlocal exit."
  :around #'hd/org-todo-same-window)
 
 ;; -------------------------------------------------------
+(provide 'ew-org-same-window)
+;;; ew-org-same-window ends here
