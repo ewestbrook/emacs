@@ -2,8 +2,10 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(setq magit-status-buffer-switch-function 'switch-to-buffer)
-(load "magit-filenotify")
+(setq-default
+ magit-status-buffer-switch-function
+ 'switch-to-buffer)
+;; -------------------------------------------------------
 ;; (add-to-list 'magit-section-initial-visibility-alist '(@{upstream} . show))
 ;; -------------------------------------------------------
 (provide 'ew-magit)
