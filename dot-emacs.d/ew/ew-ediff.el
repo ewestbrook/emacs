@@ -1,6 +1,10 @@
-(setq ediff-split-window-function 'split-window-horizontally)
-(setq ediff-window-setup-function 'ediff-setup-windows-plain)
-(setq ediff-diff-options "-w")
+;;; ew-ediff -- Summary
+;;; Commentary:
+;;; Code:
+;; -------------------------------------------------------
+(setq-default ediff-split-window-function 'split-window-horizontally)
+(setq-default ediff-window-setup-function 'ediff-setup-windows-plain)
+(setq-default ediff-diff-options "-w")
 
 ;; https://oremacs.com/2015/01/17/setting-up-ediff/
 ;; for saving and restoring window configuration
@@ -11,7 +15,10 @@
 ;; suggestions:
 ;;
 ;; (setq-default ediff-highlight-all-diffs nil)
-;; (setq ediff-highlight-all-diffs 't)
-;; (setq ediff-diff-options "-w") ; -w = disable whitespace
+;; (setq-default ediff-highlight-all-diffs 't)
+;; (setq-default ediff-diff-options "-w") ; -w = disable whitespace
 ;; (setq-default ediff-ignore-similar-regions t)
 ;; (setq-default ediff-highlight-all-diffs nil)
+;; -------------------------------------------------------
+(provide 'ew-ediff)
+;;; ew-ediff ends here
