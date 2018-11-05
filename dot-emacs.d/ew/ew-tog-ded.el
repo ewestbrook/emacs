@@ -1,3 +1,6 @@
+;;; ew-tog-ded --- Summary
+;;; Commentary:
+;;; Code:
 ;; -------------------------------------------------------
 ;; tog-ded
 (defun toggle-current-window-dedication ()
@@ -9,3 +12,5 @@
              (if dedicated "no longer " "")
              (buffer-name))))
 ;; -------------------------------------------------------
+(provide 'ew-tog-ded)
+;;; ew-tog-ded ends here
