@@ -3,12 +3,12 @@
 ;;; Code:
 ;; -------------------------------------------------------
 ;; scripts overrides
-(setq org-twbs-google-analytics "")
-(setq org-twbs-scripts "")
+(setq-default org-twbs-google-analytics "")
+(setq-default org-twbs-scripts "")
 ;; -------------------------------------------------------
-(setq org-twbs-link-up ".")
-(setq org-twbs-link-home "/")
-(setq org-twbs-with-latex 'dvipng)
+(setq-default org-twbs-link-up ".")
+(setq-default org-twbs-link-home "/")
+(setq-default org-twbs-with-latex 'dvipng)
 ;; -------------------------------------------------------
 ;; head
 ;; <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Roboto+Mono|Noto+Sans\">
@@ -43,7 +43,7 @@
  "%F %l:%M:%S %p %Z")
 ;; -------------------------------------------------------
 ;; postamble
-(setq org-twbs-postamble t)
+(setq-default org-twbs-postamble t)
 ;; -------------------------------------------------------
 ;; postamble (footer) format
 (setq
@@ -57,4 +57,3 @@
 ;; -------------------------------------------------------
 (provide 'ew-twbs)
 ;;; ew-twbs ends here
-;; -------------------------------------------------------
