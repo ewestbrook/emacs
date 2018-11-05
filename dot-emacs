@@ -102,6 +102,7 @@
 (require 'ew-org-index)
 (require 'ew-org-mode)
 (require 'ew-tog-ded)
+(require 'org-babel-eval-stderr)
 (require 'show-wspace)
 ;; -------------------------------------------------------
 (load "url") (url-handler-mode t)
