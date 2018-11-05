@@ -12,24 +12,24 @@
 (load "ew-org-same-window")
 ;; -------------------------------------------------------
 ;; org generally
-(setq org-hide-emphasis-markers t)
-(setq org-hide-macro-markers t)
-(setq org-edit-src-content-indentation 0)
-(setq org-src-tab-acts-natively t)
-(setq org-src-fontify-natively t)
-(setq org-support-shift-select 'always)
+(setq-default org-hide-emphasis-markers t)
+(setq-default org-hide-macro-markers t)
+(setq-default org-edit-src-content-indentation 0)
+(setq-default org-src-tab-acts-natively t)
+(setq-default org-src-fontify-natively t)
+(setq-default org-support-shift-select 'always)
 ;; -------------------------------------------------------
 ;; file apps (launch instead of link)
 (add-to-list 'org-file-apps '("\\.pdf\\'" . "okular %s"))
 ;; -------------------------------------------------------
 ;; org-babel evaluate with/without confirmation
-(setq org-confirm-babel-evaluate t)
+(setq-default org-confirm-babel-evaluate t)
 ;; -------------------------------------------------------
 ;; mark the above as safe for setting in mode line
 ;; note: use # -*- org-confirm-babel-evaluate: nil -*-
 ;; at top of files for per-file automatic evaluation
 ;; (also note the asterisks will disappear)
-(setq safe-local-variable-values
+(setq-default safe-local-variable-values
       '((org-confirm-babel-evaluate)))
 ;; -------------------------------------------------------
 ;; org-babel languages
@@ -69,29 +69,29 @@
    ))
 ;; -------------------------------------------------------
 ;; org-manage
-(setq org-manage-directory-org "~/org")
+(setq-default org-manage-directory-org "~/org")
 ;; -------------------------------------------------------
 ;; org-reveal
-(setq org-reveal-root "https://org.westbrook.io/revealjs")
-(setq org-reveal-title-slide nil)
-;; (setq org-reveal-title-slide 'auto)
+(setq-default org-reveal-root "https://org.westbrook.io/revealjs")
+(setq-default org-reveal-title-slide nil)
+;; (setq-default org-reveal-title-slide 'auto)
 ;; -------------------------------------------------------
 ;; org-publish
-(setq org-publish-list-skipped-files t)
-(setq org-publish-use-timestamps-flag t)
-;; (setq org-publish-use-timestamps-flag nil)
+(setq-default org-publish-list-skipped-files t)
+(setq-default org-publish-use-timestamps-flag t)
+;; (setq-default org-publish-use-timestamps-flag nil)
 ;; -------------------------------------------------------
 ;; org-agenda
-(setq org-agenda-files '("~/org"))
-;; (setq org-log-done "time")
+(setq-default org-agenda-files '("~/org"))
+;; (setq-default org-log-done "time")
 ;; -------------------------------------------------------
 ;; org-clock
-(setq org-clock-persist 'history)
+(setq-default org-clock-persist 'history)
 (org-clock-persistence-insinuate)
 ;; -------------------------------------------------------
 ;; org-bullets
-(setq org-hide-leading-stars t)
-(setq org-bullets-bullet-list
+(setq-default org-hide-leading-stars t)
+(setq-default org-bullets-bullet-list
       '("✸" "▶" "◆" "◉" "►" "" "•" "⋅"))
 ;; more dots: 🔯 💠 ⸳ ⸱ ⸭ ⟐ ⋅ ⊡ ⊙ ⁛ ·
 ;; display bullet for non-header list items
@@ -105,21 +105,21 @@
           "•"))))))
 ;; -------------------------------------------------------
 ;; org-table
-(setq org-tags-column nil)
+(setq-default org-tags-column nil)
 ;; -------------------------------------------------------
 ;; org-publish
-(setq org-publish-project-alist
+(setq-default org-publish-project-alist
  '(("git-org"
-    :base-directory "/git/org/"
+    :base-directory "/e1/git/org/"
     :base-extension "org"
-    :publishing-directory "/git/org/h/"
+    :publishing-directory "/e1/git/org/h/"
     :recursive t
     :publishing-function org-twbs-publish-to-html
     :with-sub-superscript nil
     :auto-preamble t
     )))
-;; (setq org-export-html-style-include-scripts nil)
-;; (setq org-export-html-style-include-default nil)
+;; (setq-default org-export-html-style-include-scripts nil)
+;; (setq-default org-export-html-style-include-default nil)
 ;; -------------------------------------------------------
 ;; ew functions
 ;; -------------------------------------------------------
