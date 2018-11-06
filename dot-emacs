@@ -34,32 +34,55 @@
 ;; -------------------------------------------------------
 (load "/usr/share/emacs/site-lisp/site-gentoo")
 ;; -------------------------------------------------------
-;; for emacs <25
-;; https://elpa.gnu.org/packages/cl-generic.html
-;; (add-to-list 'load-path "~/.emacs.d/elpa/cl-generic-0.3")
-;; (require 'cl-generic)
-;; -------------------------------------------------------
 (require 'uniquify)
 (require 'gud)
 (require 'package)
 (require 'graphviz-dot-mode)
 (require 'magit-filenotify)
-;; (require 'htmlize)
-;; (require 'notmuch)
-;; -------------------------------------------------------
+(require 'org-bullets)
+(require 'org-manage)
+(require 'ob-http)
+(require 'ox-twbs)
+(require 'ox-reveal)
 (require 'ivy)
 (require 'counsel)
 (require 'swiper)
+(require 'rjsx-mode)
+(require 'web-mode)
+(require 'flycheck)
 ;; -------------------------------------------------------
+(require 'ew-calc-fns)
+(require 'ew-dir-fns)
+(require 'ew-dired)
+(require 'ew-ediff)
+(require 'ew-faces)
+(require 'ew-font)
+(require 'ew-gnus)
+(require 'ew-kill-fns)
+(require 'ew-lua-mode)
+(require 'ew-magit)
+(require 'ew-modeline)
+(require 'ew-org-index)
+(require 'ew-org-mode)
+(require 'ew-tog-ded)
+(require 'ew-twbs)
+(require 'ew-org-same-window)
+(require 'org-babel-eval-stderr)
+(require 'show-wspace)
+;; -------------------------------------------------------
+;; (require 'htmlize)
+;; (require 'notmuch)
+;; -------------------------------------------------------
+;; ivy-mode
 (ivy-mode 1)
 (counsel-mode 1)
 (setq-default ivy-use-virtual-buffers t)
 (setq-default enable-recursive-minibuffers nil)
 ;; -------------------------------------------------------
-(require 'rjsx-mode)
+;; rjsx-mode
 (add-to-list 'auto-mode-alist '("\\.js$" . rjsx-mode))
 ;; -------------------------------------------------------
-(require 'web-mode)
+;; web-mode
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
@@ -87,24 +110,7 @@
 ;;   (add-to-list 'auto-mode-alist moder)
 ;;   (setq moders (cdr moders)))
 ;; -------------------------------------------------------
-;; ew requires
-(require 'ew-calc-fns)
-(require 'ew-dir-fns)
-(require 'ew-dired)
-(require 'ew-ediff)
-(require 'ew-faces)
-(require 'ew-font)
-(require 'ew-gnus)
-(require 'ew-kill-fns)
-(require 'ew-lua-mode)
-(require 'ew-magit)
-(require 'ew-modeline)
-(require 'ew-org-index)
-(require 'ew-org-mode)
-(require 'ew-tog-ded)
-(require 'org-babel-eval-stderr)
-(require 'show-wspace)
-;; -------------------------------------------------------
+;; url-handler-mode
 (load "url") (url-handler-mode t)
 ;; (autoload 'notmuch "notmuch" "notmuch mail" t)
 ;; -------------------------------------------------------
@@ -207,8 +213,8 @@
              (setq python-indent 2)
              (setq py-indent-offset 2)))
 ;; -------------------------------------------------------
-;; flycheck REPLACES flymake
-(require 'flycheck)
+;; flycheck
+;; Note: flycheck REPLACES flymake
 ;; (setq-default flycheck-python-pylint-executable "python3")
 (add-hook 'after-init-hook #'global-flycheck-mode)
 ;; -------------------------------------------------------

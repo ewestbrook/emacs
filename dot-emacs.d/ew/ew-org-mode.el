@@ -2,16 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(require 'org-bullets)
-(require 'org-manage)
-(require 'ob-http)
-(require 'ox-twbs)
-(require 'ox-reveal)
-;; -------------------------------------------------------
-(load "ew-twbs")
-(load "ew-org-same-window")
-;; -------------------------------------------------------
-;; org generally
 (setq-default org-hide-emphasis-markers t)
 (setq-default org-hide-macro-markers t)
 (setq-default org-edit-src-content-indentation 0)
@@ -22,13 +12,13 @@
 ;; file apps (launch instead of link)
 (add-to-list 'org-file-apps '("\\.pdf\\'" . "okular %s"))
 ;; -------------------------------------------------------
-;; org-babel evaluate with/without confirmation
+;; org-babel evaluate with (t) or without (nil) confirming
 (setq-default org-confirm-babel-evaluate t)
 ;; -------------------------------------------------------
 ;; mark the above as safe for setting in mode line
 ;; note: use # -*- org-confirm-babel-evaluate: nil -*-
 ;; at top of files for per-file automatic evaluation
-;; (also note the asterisks will disappear)
+;; (also note the asterisks will disappear in org-mode)
 (setq-default safe-local-variable-values
       '((org-confirm-babel-evaluate)))
 ;; -------------------------------------------------------
