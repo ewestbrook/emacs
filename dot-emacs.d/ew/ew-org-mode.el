@@ -106,6 +106,9 @@
           (match-beginning 1)
           (match-end 1)
           "•"))))))
+(add-to-list
+ 'org-emphasis-alist
+ '("*" (:foreground "red")))
 ;; -------------------------------------------------------
 ;; org-table
 (setq-default org-tags-column nil)
@@ -214,4 +217,3 @@
 ;; -------------------------------------------------------
 (provide 'ew-org-mode)
 ;;; ew-org-mode ends here
-;; -------------------------------------------------------
