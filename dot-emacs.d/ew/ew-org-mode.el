@@ -58,8 +58,9 @@
    ("lua" . lua)
    ))
 ;; -------------------------------------------------------
-;; org-mode html export latex method
+;; org-mode html export
 (setq-default org-html-with-latex `dvipng)
+(setq-default org-html-head-include-default-style nil)
 ;; -------------------------------------------------------
 ;; org-manage
 (setq-default org-manage-directory-org "~/org")
