@@ -27,6 +27,11 @@
   (interactive)
   (kill-buffers-of-mode 'org-mode))
 ;; -------------------------------------------------------
+(defun kill-css-buffers()
+  "Kill buffers of 'css-mode'."
+  (interactive)
+  (kill-buffers-of-mode 'css-mode))
+;; -------------------------------------------------------
 (defun kill-magit-buffers()
   "Kill buffers of 'magit-mode'."
   (interactive)
