@@ -8,11 +8,7 @@
 (setq-default org-html-head-include-default-style t)
 ;; -------------------------------------------------------
 (setq-default org-html-head-extra "
-<link rel=\"stylesheet\" href=\"c/ewoxhtml-general.css\">
-<link rel=\"stylesheet\" href=\"c/ewoxhtml-sitelayout.css\">
-<link rel=\"stylesheet\" href=\"c/ewoxhtml-headfoot.css\">
-<link rel=\"stylesheet\" href=\"c/ewoxhtml-toc.css\">
-<link rel=\"stylesheet\" href=\"c/ewoxhtml-content.css\">
+<link rel=\"stylesheet\" href=\"c/ewoxhtml.css\">
 ")
 ;; -------------------------------------------------------
 (setq-default org-html-home/up-format "")
@@ -20,7 +16,7 @@
 (setq-default
  org-html-preamble-format
  '(("en" "
-<ul class=\"ewheader\">
+<ul>
   <li><a href=\"%H\">home</a></li>
   <li><a href=\"%U\">up</a></li>
   <li>%t</li>
@@ -32,7 +28,7 @@
 (setq-default
  org-html-postamble-format
  '(("en" "
-<ul class=\"ewfooter\">
+<ul>
   <li>%a</li>
   <li>%C</li>
 </ul>
