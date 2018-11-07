@@ -58,10 +58,6 @@
    ("lua" . lua)
    ))
 ;; -------------------------------------------------------
-;; org-mode html export
-(setq-default org-html-with-latex `dvipng)
-(setq-default org-html-head-include-default-style nil)
-;; -------------------------------------------------------
 ;; org-manage
 (setq-default org-manage-directory-org "~/org")
 ;; -------------------------------------------------------
@@ -194,17 +190,6 @@
   )
 
 (add-hook 'org-mode-hook 'ew-org-mode-hook)
-;; -------------------------------------------------------
-;; Export UTF-8 checkboxes
-(defun sacha/org-html-checkbox (checkbox)
-  "Format CHECKBOX into HTML."
-  (case checkbox (on "<span class=\"check\">&#x2611;</span>")
-        ;; checkbox (checked)
-        (off "<span class=\"checkbox\">&#x2610;</span>")
-        (trans "<code>[-]</code>")
-        (t "")))
-(defadvice org-html-checkbox (around sacha activate)
-  (setq ad-return-value (sacha/org-html-checkbox (ad-get-arg 0))))
 ;; -------------------------------------------------------
 (provide 'ew-org-mode)
 ;;; ew-org-mode ends here

@@ -64,6 +64,7 @@
 (require 'ew-modeline)
 (require 'ew-org-index)
 (require 'ew-org-mode)
+(require 'ew-ox-html)
 (require 'ew-tog-ded)
 (require 'ew-twbs)
 (require 'ew-org-same-window)
