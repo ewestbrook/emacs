@@ -1,8 +1,7 @@
 /* --------------------------------------------------- */
 /* globals                                             */
 /* --------------------------------------------------- */
-*      { font-family: "Noto Sans", sans-serif; }
-*      { padding: 0; margin: 0; }
+body   { font-family: "Noto Sans", sans-serif; }
 /* --------------------------------------------------- */
 /* main area, fixed header/footer and scrolling body   */
 /* --------------------------------------------------- */
@@ -65,10 +64,48 @@ caption span          { font-weight: bold; }
 /* --------------------------------------------------- */
 div#documentbody li { margin-left: 24px; }
 /* --------------------------------------------------- */
+/* example, src blocks                                 */
+/* --------------------------------------------------- */
+pre.src, pre.example {
+  font-family:"Roboto Mono",monospace;
+  font-size: smaller;
+  color:#a6a376;
+  background-color:#282828;
+  padding: 8px 16px; margin: 0 64px; border: 0 }
+/* --------------------------------------------------- */
+/* src block tag                                       */
+/* --------------------------------------------------- */
+pre.src:before {
+  display: inline;
+  color: #000;
+  background-color: #ede352;
+  text-transform: lowercase; }
+/* --------------------------------------------------- */
+/* code-formatted                                              */
+/* --------------------------------------------------- */
+code     { font-family:"Roboto Mono",monospace; }
+code     { color: #e8b958; }
+code     { background-color:#282828; }
+div#table-of-contents a code { color: #5888e9; }
+div#table-of-contents a code { background-color: #fff; }
+/* --------------------------------------------------- */
 /* colors                                              */
 /* --------------------------------------------------- */
 th                      { background-color: #f4dff4; }
 tr:nth-child(even)      { background-color: #fff6ff; }
 tr:hover                { background-color: #f4dff4; }
 div#table-of-contents a { color: #999; }
+/* --------------------------------------------------- */
+body       { padding: 0; margin: 0; }
+pre        { padding: 0; margin: 0; }
+div        { padding: 0; margin: 0; }
+div.figure { padding: 0; margin: 0; }
+h1         { padding: 0; margin: 0; }
+h2         { padding: 0; margin: 0; }
+h3         { padding: 0; margin: 0; }
+h4         { padding: 0; margin: 0; }
+p          { padding: 0; margin: 0; }
+ul         { padding: 0; margin: 0; }
+ul.org-ul  { padding: 0; margin: 0; }
+li         { padding: 0; margin: 0; }
 /* --------------------------------------------------- */
