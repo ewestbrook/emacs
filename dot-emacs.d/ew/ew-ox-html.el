@@ -6,13 +6,13 @@
 ;; -------------------------------------------------------
 (setq-default org-html-head-include-scripts nil)
 (setq-default org-html-head-include-default-style t)
+(setq-default org-html-home/up-format "")
+(setq-default org-html-wrap-documentbody t)
 ;; -------------------------------------------------------
 (setq-default org-html-head-extra "
 <link rel=\"stylesheet\" href=\"c/ewoxhtml.css\">
 <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Roboto+Mono|Noto+Sans\">
 ")
-;; -------------------------------------------------------
-(setq-default org-html-home/up-format "")
 ;; -------------------------------------------------------
 (setq-default
  org-html-preamble-format
@@ -20,8 +20,7 @@
 <ul>
   <li><a href=\"%H\">home</a></li>
   <li><a href=\"%U\">up</a></li>
-  <li>%t</li>
-  <li>%a</li>
+  <li><span>%t</span></li>
 </ul>
 ")))
 (setq-default org-html-preamble t)
@@ -30,8 +29,8 @@
  org-html-postamble-format
  '(("en" "
 <ul>
-  <li>%a</li>
-  <li>%C</li>
+  <li><span>%a</span></li>
+  <li><span>%C</span></li>
 </ul>
 ")))
 (setq-default org-html-postamble t)
@@ -180,9 +179,11 @@ holding export options."
    (let ((depth (plist-get info :with-toc)))
      (when depth (org-html-toc depth info)))
    ;; Document contents.
-   "<div class=\"innertemplate\">"
+   (if (bound-and-true-p org-html-wrap-documentbody)
+       "<div id=\"documentbody\">" "")
    contents
-   "</div>"
+   (if (bound-and-true-p org-html-wrap-documentbody)
+       "</div>" "")
    ;; Footnotes section.
    (org-html-footnote-section info)))
 ;; -------------------------------------------------------
