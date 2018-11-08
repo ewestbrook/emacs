@@ -7,7 +7,7 @@
 (setq-default org-html-head-include-scripts nil)
 (setq-default org-html-head-include-default-style t)
 (setq-default org-html-home/up-format "")
-(setq-default org-html-wrap-documentbody t)
+(setq-default org-html-wrap-documentbody "documentbody")
 ;; -------------------------------------------------------
 (setq-default org-html-head-extra "
 <link rel=\"stylesheet\" href=\"c/ewoxhtml.css\">
@@ -180,7 +180,10 @@ holding export options."
      (when depth (org-html-toc depth info)))
    ;; Document contents.
    (if (bound-and-true-p org-html-wrap-documentbody)
-       "<div id=\"documentbody\">" "")
+       (concat
+        "<div class=\""
+        org-html-wrap-documentbody
+        "\">") "")
    contents
    (if (bound-and-true-p org-html-wrap-documentbody)
        "</div>" "")
