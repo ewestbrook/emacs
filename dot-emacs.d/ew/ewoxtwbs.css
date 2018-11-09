@@ -1,0 +1,59 @@
+/* --------------------------------------------------- */
+body { font-family: "Arial", sans-serif; }
+body { padding: 0; margin: 0; overflow: hidden; }
+/* --------------------------------------------------- */
+.img-responsive { display: inline-block; }
+/* --------------------------------------------------- */
+.example, .src, code {
+  font-family:"Ubuntu Mono",monospace; }
+.example, .src, code { font-size: smaller; }
+.example, .src { color:#a6a376; }
+.example, .src { background-color:#282828; }
+code           { color:#e8b958; }
+code           { background-color:#484848; }
+a code         { color:#58e8e9; }
+nav a code     { background-color: #fff; }
+/* --------------------------------------------------- */
+.ewtop { top: 0; }
+.ewtop { width: 100%; }
+.ewtop { margin: 0; padding: 0; overflow: hidden; }
+.ewtop { list-style-type: none; }
+.ewtop { background-color: #202; }
+.ewtopa { float: left; }
+.ewtopa { border-right: 1px solid #bbb; }
+.ewtopa a { display: block; }
+.ewtopa a { text-align: center; }
+.ewtopa a { padding: 0 8px; }
+.ewtopa a { text-decoration: none; }
+.ewtopa a { color: #bbb; }
+.ewtopa a:hover { background-color: #424; }
+.ewtopa:last-child { float: right; border-right: none; }
+/* --------------------------------------------------- */
+.bs-docs-sidebar { position: fixed; top: 32px; }
+/* --------------------------------------------------- */
+.container { overflow-y: scroll; }
+.container { height: calc(100vh - 80px); }
+.container { width: 100%; }
+.container { top: 0; }
+.container { position: fixed; top: 24px; }
+/* --------------------------------------------------- */
+h1#title.title { margin-top: 16; }
+/* --------------------------------------------------- */
+.ewfoot { position: fixed; }
+.ewfoot { width: 100%; }
+.ewfoot { bottom: 0; }
+.ewfoot { padding: 0 12px 0 12px; }
+.ewfoot { color:#bbb; }
+.ewfoot { background-color:#202; }
+.ewfoot { display:flex; }
+.ewfootl { flex:1; }
+.ewfootl { flex-grow: 1; }
+.ewfootl { flex-basis: 0; }
+.ewfootl { text-align:left; }
+.ewfootl { margin-top:auto; }
+.ewfootr { flex:1; }
+.ewfootr { flex-grow: 1; }
+.ewfootr { flex-basis: 0; }
+.ewfootr { text-align:right; }
+.ewfootr { margin-top:auto; }
+/* --------------------------------------------------- */
