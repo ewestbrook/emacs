@@ -16,8 +16,8 @@
 ;; <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Roboto+Mono|Noto+Sans\">
 (setq-default
  org-twbs-head "
-<link rel=\"stylesheet\" href=\"/c/bootstrap-min.css\">
-<link rel=\"stylesheet\" href=\"/c/ewoxtwbs.css\">
+<link rel=\"stylesheet\" href=\"c/bootstrap-min.css\">
+<link rel=\"stylesheet\" href=\"c/ewoxtwbs.css\">
 ")
 ;; <script src=\"/j/bootstrap-min.js\"></script>
 ;; -------------------------------------------------------
