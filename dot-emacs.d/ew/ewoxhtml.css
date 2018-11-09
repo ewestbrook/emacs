@@ -8,7 +8,8 @@ body   { font-family: "Noto Sans", sans-serif; }
 body        { padding: 0; margin: 0; overflow: hidden; }
 body        { box-sizing: border-box; }
 div#content { overflow-y: scroll; }
-div#content { height: calc(100vh - 46px); }
+div#content { height: calc(100vh - 96px); }
+div#content { width: 100%; }
 div.status  { padding: 0; margin: 0; overflow: hidden; }
 /* --------------------------------------------------- */
 /* header and footer                                   */
@@ -31,23 +32,21 @@ div.status a             { text-decoration: none; }
 /* --------------------------------------------------- */
 /* content grid in main area: title, toc, doc body     */
 /* --------------------------------------------------- */
-div#content              { width: 100%; }
-/* --------------------------------------------------- */
-div.documentbody         { width: 100%; }
-div#table-of-contents    { width: 100%; }
 div#content              { padding: 0; }
 div#content              { margin: 0 16px; }
+div.documentbody         { width: 100%; }
+div#table-of-contents    { width: 100%; }
 div#table-of-contents    { position: sticky; }
 /* --------------------------------------------------- */
 @media only screen and (min-width: 601px) {
   div#content            { margin: 0 0 0 64px; }
   div.title              { float: left; }
   div.documentbody       { float: left; }
-  div#table-of-contents  { float: right; }
   div.title              { width: 100%; }
   div.documentbody       { width: 70%; }
   div#table-of-contents  { width: 30%; }
   div#table-of-contents  { top: 0; }
+  div#table-of-contents  { float: right; }
   div#table-of-contents  { position: sticky; }}
 /* --------------------------------------------------- */
 /* title                                               */

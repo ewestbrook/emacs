@@ -8,6 +8,7 @@
 (setq-default org-html-head-include-default-style t)
 (setq-default org-html-home/up-format "")
 (setq-default org-html-wrap-documentbody "documentbody")
+(setq-default org-html--pre/postamble-class "status")
 ;; -------------------------------------------------------
 (setq-default org-html-head-extra "
 <link rel=\"stylesheet\" href=\"c/ewoxhtml.css\">
