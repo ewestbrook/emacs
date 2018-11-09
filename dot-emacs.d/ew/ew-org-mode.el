@@ -101,18 +101,27 @@
 (setq-default org-tags-column nil)
 ;; -------------------------------------------------------
 ;; org-publish
-(setq-default org-publish-project-alist
- '(("git-org"
-    :base-directory "/git/org/"
-    :base-extension "org"
-    :publishing-directory "/git/org/h/"
-    :recursive t
-    :publishing-function org-twbs-publish-to-html
-    :with-sub-superscript nil
-    :auto-preamble t
-    )))
-;; (setq-default org-export-html-style-include-scripts nil)
-;; (setq-default org-export-html-style-include-default nil)
+(if (string= "p13a" (system-name))
+    (setq-default
+     org-publish-project-alist
+     '(("git-org"
+        :base-directory "/e1/git/org"
+        :base-extension "org"
+        :publishing-directory "/e1/git/org/h"
+        :recursive t
+        :publishing-function org-twbs-publish-to-html
+        :with-sub-superscript nil
+        :auto-preamble t)))
+    (setq-default
+     org-publish-project-alist
+     '(("git-org"
+        :base-directory "/git/org"
+        :base-extension "org"
+        :publishing-directory "/git/org/h"
+        :recursive t
+        :publishing-function org-twbs-publish-to-html
+        :with-sub-superscript nil
+        :auto-preamble t))))
 ;; -------------------------------------------------------
 ;; ew functions
 ;; -------------------------------------------------------
