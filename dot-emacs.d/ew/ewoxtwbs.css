@@ -7,6 +7,8 @@ body { padding: 0; margin: 0; overflow: hidden; }
 .example, .src, code {
   font-family:"Ubuntu Mono",monospace; }
 .example, .src, code { font-size: smaller; }
+.example, .src { margin-left: 48px; }
+.example, .src { margin-right: 48px; }
 .example, .src { color:#a6a376; }
 .example, .src { background-color:#282828; }
 code           { color:#e8b958; }
