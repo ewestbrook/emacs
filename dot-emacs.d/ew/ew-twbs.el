@@ -12,12 +12,12 @@
 ;; -------------------------------------------------------
 ;; head
 ;; 
-;; <script src=\"/j/jquery-min.js\"></script>
 ;; <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Roboto+Mono|Noto+Sans\">
 (setq-default
  org-twbs-head "
 <link rel=\"stylesheet\" href=\"c/bootstrap-min.css\">
 <link rel=\"stylesheet\" href=\"c/ewoxtwbs.css\">
+<script src=\"j/jquery-min.js\"></script>
 ")
 ;; <script src=\"/j/bootstrap-min.js\"></script>
 ;; -------------------------------------------------------
@@ -53,7 +53,7 @@
  org-twbs-postamble-format
  '(("en" "
 <div class=\"ewfoot\">
-  <div class=\"ewfootl\">Eric Westbrook</div>
+  <div class=\"ewfootl\">%a</div>
   <div class=\"ewfootr\">%C</div>
 </div>
 ")))
