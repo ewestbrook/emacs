@@ -9,17 +9,22 @@
 (setq-default org-twbs-link-up ".")
 (setq-default org-twbs-link-home "/")
 (setq-default org-twbs-with-latex 'dvipng)
+(setq-default
+ org-twbs-divs
+ '((preamble  "div" "preamble")
+   (content   "div" "content") ;; -= "container"
+   (postamble "footer" "postamble")))
 ;; -------------------------------------------------------
 ;; head
 ;; 
 ;; <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Roboto+Mono|Noto+Sans\">
+;; <link rel=\"stylesheet\" href=\"c/bootstrap.min.css\">
 (setq-default
  org-twbs-head "
-<link rel=\"stylesheet\" href=\"c/bootstrap-min.css\">
 <link rel=\"stylesheet\" href=\"c/ewoxtwbs.css\">
-<script src=\"j/jquery-min.js\"></script>
+<script src=\"j/jquery.min.js\"></script>
 ")
-;; <script src=\"/j/bootstrap-min.js\"></script>
+;; <script src=\"j/bootstrap.min.js\"></script>
 ;; -------------------------------------------------------
 ;; home / up
 (setq-default org-twbs-home/up-format "")
