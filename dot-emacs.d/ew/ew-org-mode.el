@@ -8,6 +8,7 @@
 (setq-default org-src-tab-acts-natively t)
 (setq-default org-src-fontify-natively t)
 (setq-default org-support-shift-select 'always)
+(setq-default org-startup-align-all-tables t)
 ;; -------------------------------------------------------
 ;; file apps (launch instead of link)
 (add-to-list 'org-file-apps '("\\.pdf\\'" . "okular %s"))
