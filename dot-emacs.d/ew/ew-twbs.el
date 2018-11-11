@@ -5,6 +5,8 @@
 ;; scripts overrides
 (setq-default org-twbs-google-analytics "")
 (setq-default org-twbs-scripts "")
+(setq-default org-twbs-style-default "<link rel=\"stylesheet\" href=\"c/oxtwbs.css\">
+")
 ;; -------------------------------------------------------
 (setq-default org-twbs-link-up ".")
 (setq-default org-twbs-link-home "/")
@@ -20,8 +22,7 @@
 ;; <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Roboto+Mono|Noto+Sans\">
 ;; <link rel=\"stylesheet\" href=\"c/bootstrap.min.css\">
 (setq-default
- org-twbs-head "
-<link rel=\"stylesheet\" href=\"c/ewoxtwbs.css\">
+ org-twbs-head "<link rel=\"stylesheet\" href=\"c/ewoxtwbs.css\">
 <script src=\"j/jquery.min.js\"></script>
 ")
 ;; <script src=\"j/bootstrap.min.js\"></script>
