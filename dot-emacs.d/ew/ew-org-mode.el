@@ -171,11 +171,7 @@
 (defun ew-org-publish-current-file ()
   "Publish current file, forcibly."
   (interactive)
-  (let (priorflag)
-    (setq priorflag org-publish-use-timestamps-flag)
-    (setq org-publish-use-timestamps-flag nil)
-    (org-publish-current-file)
-    (setq org-publish-use-timestamps-flag priorflag)))
+  (org-publish-current-file t))
 ;; -------------------------------------------------------
 (defun ew-org-mode-hook ()
   "EW stuff specific to 'org-mode'."
