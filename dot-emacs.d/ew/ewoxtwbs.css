@@ -97,7 +97,10 @@ th.org-center         { text-align: center; }
 th.org-right          { text-align: right;  }
 caption               { text-align: left; }
 caption span          { font-weight: bold; }
-th                      { background-color: #f4dff4; }
-tr:nth-child(even)      { background-color: #fff6ff; }
-tr:hover                { background-color: #f4dff4; }
+th                      { background-color: #ccc; }
+tr:nth-child(even)      { background-color: #eee; }
+tr:hover                { background-color: #ddd; }
+/* --------------------------------------------------- */
+.text-left { text-align: left; }
+.text-right { text-align: right; }
 /* --------------------------------------------------- */
