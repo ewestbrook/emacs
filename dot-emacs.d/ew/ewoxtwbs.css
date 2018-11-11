@@ -42,20 +42,23 @@ p { margin: 0; }
 p { padding: 0; }
 p { box-sizing: border-box; }
 /* --------------------------------------------------- */
+.ewbar { width: 100%; }
+.ewbar { margin: 0; padding: 0; overflow: hidden; }
+.ewbar { list-style-type: none; }
+.ewbar { background-color: #202; }
+.ewbara { float: left; }
+.ewbara { border-right: 1px solid #bbb; }
+.ewbara a { display: block; }
+.ewbara a { text-align: center; }
+.ewbara a { padding: 0 8px; }
+.ewbara a { text-decoration: none; }
+.ewbara a { color: #bbb; }
+.ewbara a:hover { background-color: #424; }
+.ewbara:last-child { float: right; border-right: none; }
+/* --------------------------------------------------- */
 .ewtop { top: 0; }
-.ewtop { width: 100%; }
-.ewtop { margin: 0; padding: 0; overflow: hidden; }
-.ewtop { list-style-type: none; }
-.ewtop { background-color: #202; }
-.ewtopa { float: left; }
-.ewtopa { border-right: 1px solid #bbb; }
-.ewtopa a { display: block; }
-.ewtopa a { text-align: center; }
-.ewtopa a { padding: 0 8px; }
-.ewtopa a { text-decoration: none; }
-.ewtopa a { color: #bbb; }
-.ewtopa a:hover { background-color: #424; }
-.ewtopa:last-child { float: right; border-right: none; }
+.ewbot { bottom: 0; }
+.ewbot>.ewbara { border-right: none; }
 /* --------------------------------------------------- */
 #content { overflow-x: hidden; }
 #content { overflow-y: scroll; }
@@ -63,24 +66,6 @@ p { box-sizing: border-box; }
 #content { width: 100%; }
 #content { top: 0; }
 #content { position: fixed; top: 27px; }
-/* --------------------------------------------------- */
-.ewfoot { position: fixed; }
-.ewfoot { width: 100%; }
-.ewfoot { bottom: 0; }
-.ewfoot { padding: 0 12px 0 12px; }
-.ewfoot { color:#bbb; }
-.ewfoot { background-color:#202; }
-.ewfoot { display:flex; }
-.ewfootl { flex:1; }
-.ewfootl { flex-grow: 1; }
-.ewfootl { flex-basis: 0; }
-.ewfootl { text-align:left; }
-.ewfootl { margin-top:auto; }
-.ewfootr { flex:1; }
-.ewfootr { flex-grow: 1; }
-.ewfootr { flex-basis: 0; }
-.ewfootr { text-align:right; }
-.ewfootr { margin-top:auto; }
 /* --------------------------------------------------- */
 .example, .src { font-family:"Ubuntu Mono",monospace; }
 .example, .src { font-size: smaller; }

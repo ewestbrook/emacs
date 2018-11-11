@@ -34,14 +34,14 @@
 (setq-default
  org-twbs-preamble-format
  '(("en" "
-<ul class=\"ewtop\">
-  <li class=\"ewtopa\">
+<ul class=\"ewbar ewtop\">
+  <li class=\"ewbara\">
     <a accesskey=\"H\" href=\"%H\"> home </a>
   </li>
-  <li class=\"ewtopa\">
+  <li class=\"ewbara\">
     <a accesskey=\"h\" href=\"%U\"> up </a>
   </li>
-  <li class=\"ewtopa\">
+  <li class=\"ewbara\">
     <a href=\"#title\">%t</a>
   </li>
 </ul>
@@ -57,10 +57,14 @@
 (setq-default
  org-twbs-postamble-format
  '(("en" "
-<div class=\"ewfoot\">
-  <div class=\"ewfootl\">%a</div>
-  <div class=\"ewfootr\">%C</div>
-</div>
+<ul class=\"ewbar ewbot\">
+  <li class=\"ewbara\">
+    <a href=\"./index.html\">%a</a>
+  </li>
+  <li class=\"ewbara\">
+    <a href=\"/\">org-mode</a>
+  </li>
+</ul>
 ")))
 ;; -------------------------------------------------------
 (provide 'ew-twbs)
