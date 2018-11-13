@@ -88,6 +88,7 @@ a code               { color:#007bff; }
 /* --------------------------------------------------- */
 .bs-docs-sidebar { position: fixed; top: 32px; }
 /* --------------------------------------------------- */
+table                 { font-size: smaller; }
 table                 { border-collapse: collapse; }
 table, th, td         { border: 1px solid #aaa; }
 th, td                { padding: 1px 8px; }
