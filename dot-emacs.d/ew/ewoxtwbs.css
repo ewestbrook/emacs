@@ -39,8 +39,18 @@ p { margin: 0; }
 p { padding: 0; }
 p { box-sizing: border-box; }
 /* --------------------------------------------------- */
+pre {
+ white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+/* --------------------------------------------------- */
 table                 { font-size: smaller; }
 table                 { border-collapse: collapse; }
+table                 { margin-top: 4px; }
+table                 { margin-bottom: 4px; }
 table, th, td         { border: 1px solid #aaa; }
 th, td                { padding: 1px 8px; }
 th, td                { vertical-align: middle; }
@@ -94,8 +104,7 @@ div#text-table-of-contents>ul.nav { margin-right: 16px; }
 /* --------------------------------------------------- */
 @media only screen and (min-width: 768px) {
   #content                          { width: 100%; }
-  h1                                { width: 70%; }
-  div.ocon                          { width: 70%; }
+  #content>*                        { width: 70%; }
   div#text-table-of-contents>ul.nav { width: 30%; }
   div#text-table-of-contents>ul.nav { top: 44px; }
   div#text-table-of-contents>ul.nav { right: 0; }
@@ -103,10 +112,13 @@ div#text-table-of-contents>ul.nav { margin-right: 16px; }
 /* --------------------------------------------------- */
 .example, .src { font-family:"Ubuntu Mono",monospace; }
 .example, .src { font-size: smaller; }
-.example, .src { margin: 0 36px; }
+.example, .src { margin: 0; }
+.example, .src { margin-top: 4px; }
+.example, .src { margin-bottom: 4px; }
 .example, .src { padding: 4px 16px; }
 .example, .src { color:#e8b958; }
 .example, .src { background-color:#282828; }
+.example, .src { border-radius: 8px; }
 /* --------------------------------------------------- */
 code { font-family:"Ubuntu Mono",monospace; }
 code { font-size: smaller; }
@@ -114,6 +126,11 @@ code { margin: 0; }
 code { padding: 2px 6px; }
 code { color:#e8b958; }
 code { background-color:#484848; }
+code { border-radius: 8px; }
+/* --------------------------------------------------- */
+figure { margin: 0; }
+figure { margin-top: 4px; }
+figure { margin-bottom: 4px; }
 /* --------------------------------------------------- */
 a code               { color:#007bff; }
 .nav a code          { background-color: #fff; }
