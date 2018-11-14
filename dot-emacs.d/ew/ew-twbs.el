@@ -51,7 +51,8 @@
 ;; general purpose timestamp format
 (setq-default
  org-twbs-metadata-timestamp-format
- "%F %l:%M %p %Z")
+ "%s")
+;; "%F %l:%M %p %Z")
 ;; -------------------------------------------------------
 ;; postamble
 (setq-default org-twbs-postamble t)
@@ -63,7 +64,7 @@
     <a href=\"./index.html\">%a</a>
   </li>
   <li class=\"ewbara\">
-    <a href=\"/\">org-mode</a>
+    <a href=\"/\">%T</a>
   </li>
 </ul>
 ")))
