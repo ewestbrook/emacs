@@ -119,6 +119,7 @@ div#text-table-of-contents>ul.nav { margin-right: 16px; }
 .example, .src { color:#e8b958; }
 .example, .src { background-color:#282828; }
 .example, .src { border-radius: 8px; }
+.example, .src { line-height: 1.0; }
 /* --------------------------------------------------- */
 code { font-family:"Ubuntu Mono",monospace; }
 code { font-size: smaller; }
