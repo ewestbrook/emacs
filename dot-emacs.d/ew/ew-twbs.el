@@ -51,8 +51,9 @@
 ;; general purpose timestamp format
 (setq-default
  org-twbs-metadata-timestamp-format
- "%s")
+;; "%s")
 ;; "%F %l:%M %p %Z")
+  "%F")
 ;; -------------------------------------------------------
 ;; postamble
 (setq-default org-twbs-postamble t)
