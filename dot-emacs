@@ -161,6 +161,7 @@
 (set-default-coding-systems 'utf-8)
 ;; -------------------------------------------------------
 (set-fill-column 57)
+(setq-default fill-column 57)
 (ew-set-font-and-stuff)
 ;; -------------------------------------------------------
 (add-to-list 'same-window-regexps "\*eshell\*")
