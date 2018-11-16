@@ -21,15 +21,20 @@ h1, h2, h3, h4, h5, h6 { line-height: 1.2; }
 h2, h3, h4, h5, h6 { margin-top: 8px; }
 h2, h3, h4, h5, h6 { margin-bottom: 8px; }
 h1 { padding-top: 12px; }
-h1 { padding-bottom: 12px; }
+h1 { margin-bottom: 12px; }
 h1 { font-size: 2.5rem; }
 h2 { font-size: 2rem; }
 h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
 /* --------------------------------------------------- */
 ul { list-style-type: disc; }
 ul, ol { margin: 0; }
+ul, ol { margin-top: 12px; }
+ul, ol { margin-bottom: 12px; }
 ul, ol { padding-left: 24px; }
 ul, ol { box-sizing: border-box; }
+li>ul { margin-top: 0; }
+li>ul { margin-bottom: 0; }
 /* --------------------------------------------------- */
 a { color: #007bff; }
 a { text-decoration: none;; }
@@ -37,6 +42,8 @@ a { box-sizing: border-box; }
 a:hover { color: #7b00ff; }
 /* --------------------------------------------------- */
 p { margin: 0; }
+p { margin-top: 12px; }
+p { margin-bottom: 12px; }
 p { padding: 0; }
 p { box-sizing: border-box; }
 /* --------------------------------------------------- */
@@ -50,7 +57,7 @@ pre {
 /* --------------------------------------------------- */
 table                 { font-size: smaller; }
 table                 { border-collapse: collapse; }
-table                 { margin-top: 4px; }
+table                 { table-layout: auto; }
 table                 { margin-bottom: 4px; }
 table, th, td         { border: 1px solid #aaa; }
 th, td                { padding: 1px 8px; }
@@ -89,8 +96,12 @@ div#text-table-of-contents>ul.nav { margin-right: 16px; }
 .ewbara a { padding-right: 8px; }
 .ewbara a { text-decoration: none; }
 .ewbara a { color: #bbb; }
+.ewbara a { white-space: nowrap; }
+.ewbara a { overflow: hidden; }
+.ewbara a { text-overflow: ellipsis; }
 .ewbara a:hover { background-color: #424; }
 .ewbara:last-child { float: right; border-right: none; }
+.ewbara:last-child { max-width: 65%; }
 /* --------------------------------------------------- */
 .ewtop { top: 0; }
 .ewbot { bottom: 0; }
@@ -99,18 +110,25 @@ div#text-table-of-contents>ul.nav { margin-right: 16px; }
 #content { overflow-x: hidden; }
 #content { overflow-y: scroll; }
 #content { position: fixed; top: 33px; }
-#content { height: calc(100vh - 68px); }
+#content { height: calc(100vh - 128px); }
 #content { box-sizing: border-box; }
 #content { padding-left: 8px; }
 #content { width: 100%; }
+#content { max-width: 100vw; }
+#content { padding-right: 24px; }
 /* --------------------------------------------------- */
 @media only screen and (min-width: 768px) {
+  #content               { height: calc(100vh - 64px); }
   #content                        { padding-left: 24px; }
-  #content>*                        { width: 70%; }
+  #content                        { margin-right: 0; }
+  #content>*                        { max-width: 70%; }
   div#text-table-of-contents>ul.nav { width: 30%; }
   div#text-table-of-contents>ul.nav { top: 44px; }
   div#text-table-of-contents>ul.nav { right: 0; }
-  div#text-table-of-contents>ul.nav { position: fixed; }}
+  div#text-table-of-contents>ul.nav { position: fixed; }
+  .ewbara:last-child { max-width: 80%; }
+  #progbox { max-width: 70%; }
+  #progbar { max-width: calc(100% - 8px); }}
 /* --------------------------------------------------- */
 .example, .src { font-family:"Ubuntu Mono",monospace; }
 .example, .src { font-size: smaller; }
