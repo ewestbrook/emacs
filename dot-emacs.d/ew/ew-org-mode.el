@@ -63,7 +63,7 @@
    ))
 ;; -------------------------------------------------------
 ;; org-manage
-(setq-default org-manage-directory-org "~/org")
+(setq-default org-manage-directory-org "/git/org")
 ;; -------------------------------------------------------
 ;; org-reveal
 (setq-default org-reveal-root "https://org.westbrook.io/revealjs")
@@ -76,7 +76,7 @@
 ;; (setq-default org-publish-use-timestamps-flag nil)
 ;; -------------------------------------------------------
 ;; org-agenda
-(setq-default org-agenda-files '("~/org"))
+(setq-default org-agenda-files '("/git/org"))
 ;; (setq-default org-log-done "time")
 ;; -------------------------------------------------------
 ;; org-clock
