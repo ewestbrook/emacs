@@ -125,10 +125,6 @@ div#text-table-of-contents>ul.nav { margin-right: 1rem; }
   div#text-table-of-contents>ul.nav { position: fixed; }
   .ewbara:last-child { max-width: 80%; }}
 /* --------------------------------------------------- */
- @media only screen and (min-width: 768px) {
-   #progbox { max-width: 70%; }
-   #progbar { max-width: calc(100% - 8px); }}
-/* --------------------------------------------------- */
 .example, .src { font-family:"Ubuntu Mono",monospace; }
 .example, .src { font-size: smaller; }
 .example, .src { margin: 0; }
