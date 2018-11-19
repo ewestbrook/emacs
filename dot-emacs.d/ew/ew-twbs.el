@@ -5,8 +5,7 @@
 ;; scripts overrides
 (setq-default org-twbs-google-analytics "")
 (setq-default org-twbs-scripts "")
-(setq-default org-twbs-style-default "<link rel=\"stylesheet\" href=\"c/oxtwbs.css\">
-")
+(setq-default org-twbs-style-default "")
 ;; -------------------------------------------------------
 (setq-default org-twbs-link-up ".")
 (setq-default org-twbs-link-home "/")
