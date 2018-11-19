@@ -1,4 +1,6 @@
 /* --------------------------------------------------- */
+html { font-size: 26px; }
+/* --------------------------------------------------- */
 body { margin: 0; }
 body { padding: 0; }
 body { overflow: hidden; }
@@ -20,10 +22,11 @@ h1, h2, h3, h4, h5, h6 { font-weight: 500; }
 h1, h2, h3, h4, h5, h6 { margin-bottom: 0.75rem; }
 h2, h3, h4, h5, h6 { margin-top: 0.75rem; }
 h1 { padding-top: 0.75rem; }
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.75rem; }
-h4 { font-size: 1.5rem; }
+h1 { font-size: 2.00rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.50rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.10rem; }
 /* --------------------------------------------------- */
 ul { list-style-type: disc; }
 ul, ol { margin: 0; }
@@ -53,7 +56,7 @@ pre {
  word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 /* --------------------------------------------------- */
-table                 { font-size: smaller; }
+table                 { font-size: 0.8rem; }
 table                 { border-collapse: collapse; }
 table                 { table-layout: auto; }
 table                 { margin-bottom: 0.25rem; }
@@ -81,23 +84,33 @@ tr:hover              { background-color: #f0f0f0; }
 .nav a:hover { color: #7b00ff; }
 div#text-table-of-contents>ul.nav { margin-right: 1rem; }
 /* --------------------------------------------------- */
+#preamble, #postamble { position: absolute; }
+#preamble, #postamble { width: 100%; }
+#preamble, #postamble { margin: 0; }
+#preamble, #postamble { padding: 0; }
+#preamble { top: 0; }
+#postamble { bottom: 0; }
+/* --------------------------------------------------- */
 .ewbar { width: 100%; }
 .ewbar { margin: 0; padding: 0; overflow: hidden; }
 .ewbar { list-style-type: none; }
 .ewbar { background-color: #202; }
+.ewbara { line-height: 1.2; }
 .ewbara { font-size: 1.0rem; }
 .ewbara { float: left; }
 .ewbara { border-right: 1px solid #bbb; }
 .ewbara a { display: block; }
 .ewbara a { text-align: center; }
-.ewbara a { padding-left: 0.6rem; }
-.ewbara a { padding-right: 0.6rem; }
+.ewbara a { padding-left: 0.8rem; }
+.ewbara a { padding-right: 0.8rem; }
+.ewbara a { padding-top: 0.25rem; }
+.ewbara a { padding-bottom: 0.25rem; }
 .ewbara a { text-decoration: none; }
 .ewbara a { color: #bbb; }
 .ewbara a { white-space: nowrap; }
 .ewbara a { overflow: hidden; }
 .ewbara a { text-overflow: ellipsis; }
-.ewbara a:hover { background-color: #424; }
+.ewbara a:hover { background-color: #636; }
 .ewbara:last-child { float: right; border-right: none; }
 .ewbara:last-child { max-width: 65%; }
 /* --------------------------------------------------- */
@@ -107,8 +120,14 @@ div#text-table-of-contents>ul.nav { margin-right: 1rem; }
 /* --------------------------------------------------- */
 #content { overflow-x: hidden; }
 #content { overflow-y: scroll; }
-#content { position: fixed; top: 1.5rem; }
-#content { height: calc(100vh - 3rem); }
+#content { position: fixed; }
+#content { top: 1.7rem; }
+#content { height: calc(100vh - 3.4rem); }
+/* topper
+     = ( line-height(font-size) + margin-top + margin-bot)
+     = ( 1.2 ( 1.0rem ) + 0.25rem + 0.25rem )
+     = 1.7rem
+   heighter = 2 * topper = 3.4rem */
 #content { box-sizing: border-box; }
 #content { padding-left: 0.6rem; }
 #content { width: 100%; }
@@ -126,7 +145,7 @@ div#text-table-of-contents>ul.nav { margin-right: 1rem; }
   .ewbara:last-child { max-width: 80%; }}
 /* --------------------------------------------------- */
 .example, .src { font-family:"Ubuntu Mono",monospace; }
-.example, .src { font-size: smaller; }
+.example, .src { font-size: 0.8rem; }
 .example, .src { margin: 0; }
 .example, .src { margin-top: 0.25rem; }
 .example, .src { margin-bottom: 0.25rem; }
