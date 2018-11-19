@@ -10,10 +10,9 @@
 (setq-default org-html-wrap-documentbody "documentbody")
 (setq-default org-html--pre/postamble-class "status")
 ;; -------------------------------------------------------
-(setq-default org-html-head-extra "
-<link rel=\"stylesheet\" href=\"c/ewoxhtml.css\">
-<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Roboto+Mono|Noto+Sans\">
-")
+(setq-default org-html-head-extra "")
+;; <link rel=\"stylesheet\" href=\"c/ewoxhtml.css\">
+;; <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Roboto+Mono|Noto+Sans\">
 ;; -------------------------------------------------------
 (setq-default
  org-html-preamble-format
