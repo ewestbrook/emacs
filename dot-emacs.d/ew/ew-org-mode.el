@@ -181,18 +181,12 @@
 
   (org-bullets-mode 1)
 
+  (local-set-key (kbd "C-c h") 'ew-org-publish-current-file)
+  (local-set-key (kbd "C-c H") 'ew-org-publish-to-browser)
   (local-set-key (kbd "C-c M-h") 'org-publish-all)
-
-  (local-set-key (kbd "C-c h") 'ew-org-html-to-browser)
-  (local-set-key (kbd "C-c H") 'org-html-export-to-html)
 
   (local-set-key (kbd "C-c r") 'ew-org-reveal-to-browser)
   (local-set-key (kbd "C-c R") 'ew-org-reveal-to-html)
-
-  (local-set-key (kbd "C-c t") 'ew-org-publish-to-browser)
-  (local-set-key (kbd "C-c T") 'org-twbs-export-to-html)
-
-  (local-set-key (kbd "C-c C-x h") 'ew-org-publish-current-file)
 
   (local-set-key (kbd "C-c C-x m") 'org-display-inline-images)
   ;; (turn-on-visual-line-mode)
