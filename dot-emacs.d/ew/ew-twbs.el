@@ -18,11 +18,11 @@
 ;; -------------------------------------------------------
 ;; head
 ;; 
-;; <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Roboto+Mono|Noto+Sans\">
-;; <link rel=\"stylesheet\" href=\"c/bootstrap.min.css\">
 (setq-default
- org-twbs-head "<link rel=\"stylesheet\" href=\"c/ewoxtwbs.css\">
-<script src=\"j/jquery.min.js\"></script>
+ org-twbs-head "
+<link rel=\"icon\" type=\"image/png\" href=\"./favicon.ico\">
+<link rel=\"stylesheet\" href=\"c/ew.css\">
+<script src=\"j/ew.js\"></script>
 ")
 ;; <script src=\"j/bootstrap.min.js\"></script>
 ;; -------------------------------------------------------
