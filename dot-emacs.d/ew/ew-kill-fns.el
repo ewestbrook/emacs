@@ -32,6 +32,11 @@
   (interactive)
   (kill-buffers-of-mode 'css-mode))
 ;; -------------------------------------------------------
+(defun kill-eww-buffers()
+  "Kill buffers of 'eww-mode'."
+  (interactive)
+  (kill-buffers-of-mode 'eww-mode))
+;; -------------------------------------------------------
 (defun kill-magit-buffers()
   "Kill buffers of 'magit-mode'."
   (interactive)
