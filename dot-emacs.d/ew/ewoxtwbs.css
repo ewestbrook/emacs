@@ -171,4 +171,5 @@ a code               { color:#007bff; }
 .nav a code          { background-color: #fff; }
 /* --------------------------------------------------- */
 .img-responsive { display: inline-block; }
+.img-responsive { vertical-align: middle; }
 /* --------------------------------------------------- */
