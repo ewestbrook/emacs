@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(setq-default org-hide-emphasis-markers t)
+(setq-default org-hide-emphasis-markers nil)
 (setq-default org-hide-macro-markers t)
 (setq-default org-edit-src-content-indentation 0)
 (setq-default org-src-tab-acts-natively t)
