@@ -172,3 +172,6 @@ a code               { color:#007bff; }
 .img-responsive { display: inline-block; }
 .img-responsive { vertical-align: middle; }
 /* --------------------------------------------------- */
+dl { font-size: 1.1rem; }
+dd { margin-left: 1.5rem; }
+/* --------------------------------------------------- */
