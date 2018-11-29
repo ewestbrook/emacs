@@ -21,7 +21,7 @@
 (setq-default
  org-twbs-head "
 <link rel=\"icon\" type=\"image/png\" href=\"./favicon.ico\">
-<link rel=\"stylesheet\" href=\"c/ew.css\">
+<link rel=\"stylesheet\" href=\"c/ew/ew.css\">
 <script src=\"j/ew.js\"></script>
 ")
 ;; <script src=\"j/bootstrap.min.js\"></script>
