@@ -13,6 +13,9 @@
 (setq-default org-export-with-creator nil)
 (setq-default org-export-with-email nil)
 ;; -------------------------------------------------------
+;; open .org.inc files in org-mode
+(add-to-list 'auto-mode-alist '("\\.org.inc\\'" . org-mode))
+;; -------------------------------------------------------
 ;; file apps (launch instead of link)
 (add-to-list 'org-file-apps '("\\.pdf\\'" . "okular %s"))
 ;; -------------------------------------------------------
