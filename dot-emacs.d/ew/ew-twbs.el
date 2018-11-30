@@ -7,7 +7,7 @@
 (setq-default org-twbs-scripts "")
 (setq-default org-twbs-style-default "")
 ;; -------------------------------------------------------
-(setq-default org-twbs-link-up ".")
+(setq-default org-twbs-link-up "./index.html")
 (setq-default org-twbs-link-home "/")
 (setq-default org-twbs-with-latex 'dvipng)
 (setq-default
