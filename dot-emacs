@@ -81,7 +81,7 @@
 (setq-default enable-recursive-minibuffers nil)
 ;; -------------------------------------------------------
 ;; rjsx-mode
-(add-to-list 'auto-mode-alist '("\\.js$" . rjsx-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
 ;; -------------------------------------------------------
 ;; web-mode
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
