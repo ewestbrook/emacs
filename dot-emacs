@@ -4,7 +4,7 @@
 ;; -------------------------------------------------------
 (package-initialize)
 (add-to-list 'load-path "~/.emacs.d/ew")
-(add-to-list 'load-path "~/.emacs.d/elpa/org-9.1.14")
+(add-to-list 'load-path "/git/org-mode.el/lisp")
 (add-to-list 'load-path "~/.emacs.d/elpa/ivy-0.10.0")
 (add-to-list 'load-path "/git/ctable.el")
 (add-to-list 'load-path "/git/dash.el")
@@ -34,6 +34,7 @@
 ;; -------------------------------------------------------
 (load "/usr/share/emacs/site-lisp/site-gentoo")
 ;; -------------------------------------------------------
+(require 'org)
 (require 'uniquify)
 (require 'gud)
 (require 'package)
