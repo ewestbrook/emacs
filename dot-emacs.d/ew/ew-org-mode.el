@@ -117,7 +117,7 @@
         :publishing-directory "/e1/git/org/h"
         :recursive t
         :publishing-function org-twbs-publish-to-html
-        :with-sub-superscript nil
+        :with-sub-superscript '{}
         :auto-preamble t)))
     (setq-default
      org-publish-project-alist
@@ -127,7 +127,7 @@
         :publishing-directory "/git/org/h"
         :recursive t
         :publishing-function org-twbs-publish-to-html
-        :with-sub-superscript nil
+        :with-sub-superscript '{}
         :auto-preamble t))))
 ;; -------------------------------------------------------
 ;; ew functions
