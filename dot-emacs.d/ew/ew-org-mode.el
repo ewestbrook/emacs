@@ -114,27 +114,18 @@
 (setq-default org-tags-column nil)
 ;; -------------------------------------------------------
 ;; org-publish
-(if (string= "p13a" (system-name))
-    (setq-default
+(setq-default
      org-publish-project-alist
-     '(("git-org"
-        :base-directory "/e1/git/org"
-        :base-extension "org"
-        :publishing-directory "/e1/git/org/h"
-        :recursive t
-        :publishing-function org-twbs-publish-to-html
-        :with-sub-superscript '{}
-        :auto-preamble t)))
-    (setq-default
-     org-publish-project-alist
-     '(("git-org"
+     '(("gitorg"
         :base-directory "/git/org"
         :base-extension "org"
         :publishing-directory "/git/org/h"
         :recursive t
         :publishing-function org-twbs-publish-to-html
-        :with-sub-superscript '{}
-        :auto-preamble t))))
+        :auto-preamble t
+        :auto-sitemap t
+        :sitemap-filename "sitenodes.org"
+        :sitemap-ignore-case t)))
 ;; -------------------------------------------------------
 ;; ew functions
 ;; -------------------------------------------------------
