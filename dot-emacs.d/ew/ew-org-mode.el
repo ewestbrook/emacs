@@ -9,9 +9,15 @@
 (setq-default org-src-fontify-natively t)
 (setq-default org-support-shift-select 'always)
 (setq-default org-startup-align-all-tables t)
+;; -------------------------------------------------------
 (setq-default org-export-with-author nil)
 (setq-default org-export-with-creator nil)
 (setq-default org-export-with-email nil)
+(setq-default org-export-with-latex t)
+(setq-default org-export-with-sub-superscripts '{})
+(setq-default org-export-with-tags t)
+(setq-default org-export-with-title t)
+(setq-default org-export-with-todo-keywords t)
 ;; -------------------------------------------------------
 ;; open .org.inc files in org-mode
 (add-to-list 'auto-mode-alist '("\\.org.inc\\'" . org-mode))
