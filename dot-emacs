@@ -35,6 +35,7 @@
 (load "/usr/share/emacs/site-lisp/site-gentoo")
 ;; -------------------------------------------------------
 (require 'org)
+(require 'org-tempo)
 (require 'uniquify)
 (require 'gud)
 (require 'package)
