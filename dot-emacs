@@ -82,6 +82,9 @@
 (setq-default ivy-use-virtual-buffers t)
 (setq-default enable-recursive-minibuffers nil)
 ;; -------------------------------------------------------
+;; lua-mode
+(add-to-list 'auto-mode-alist '("\\.rockspec\\'" . lua-mode))
+;; -------------------------------------------------------
 ;; rjsx-mode
 (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
 ;; -------------------------------------------------------
