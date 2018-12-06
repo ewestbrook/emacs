@@ -21,7 +21,7 @@
 (add-to-list 'load-path "/git/ob-http.el")
 (add-to-list 'load-path "/git/org-bullets.el")
 (add-to-list 'load-path "/git/org-manage.el")
-(add-to-list 'load-path "/git/ox-reveal.el")
+(add-to-list 'load-path "/git/org-reveal.el")
 (add-to-list 'load-path "/git/ox-twbs.el")
 (add-to-list 'load-path "/git/php-mode.el")
 (add-to-list 'load-path "/git/python-mode.el")
