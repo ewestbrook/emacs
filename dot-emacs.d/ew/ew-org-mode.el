@@ -125,7 +125,19 @@
         :auto-preamble t
         :auto-sitemap t
         :sitemap-filename "sitenodes.org"
-        :sitemap-ignore-case t)))
+        :sitemap-ignore-case t
+        :sitemap-title "All Nodes")
+       ("w"
+        :base-directory "/git/w/src"
+        :base-extension "org"
+        :publishing-directory "/git/w/dist/docs"
+        :recursive t
+        :publishing-function org-twbs-publish-to-html
+        :auto-preamble t
+        :auto-sitemap t
+        :sitemap-filename "sitemap.org"
+        :sitemap-ignore-case t
+        :sitemap-title "Site Map")))
 ;; -------------------------------------------------------
 ;; ew functions
 ;; -------------------------------------------------------
