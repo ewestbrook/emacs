@@ -37,6 +37,11 @@
   (interactive)
   (kill-buffers-of-mode 'eww-mode))
 ;; -------------------------------------------------------
+(defun kill-c-buffers()
+  "Kill buffers of 'c-mode'."
+  (interactive)
+  (kill-buffers-of-mode 'c-mode))
+;; -------------------------------------------------------
 (defun kill-magit-buffers()
   "Kill buffers of 'magit-mode'."
   (interactive)
