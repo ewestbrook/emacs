@@ -216,7 +216,8 @@
 (setq-default py-keep-windows-configuration t)
 (add-hook 'python-mode-hook
           '(lambda ()
-             (setq python-guess-indent nil)
+             (setq python-indent-guess-indent-offset t)
+             (setq python-indent-guess-indent-offset-verbose nil)
              (setq python-indent 2)
              (setq py-indent-offset 2)))
 ;; -------------------------------------------------------
