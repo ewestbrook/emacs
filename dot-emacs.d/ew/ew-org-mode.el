@@ -9,6 +9,7 @@
 (setq-default org-src-fontify-natively t)
 (setq-default org-support-shift-select 'always)
 (setq-default org-startup-align-all-tables t)
+(setq-default org-startup-folded nil)
 ;; -------------------------------------------------------
 (setq-default org-export-with-author nil)
 (setq-default org-export-with-creator nil)
