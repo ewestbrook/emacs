@@ -41,7 +41,8 @@
   (ewtf :height 1.2 'org-level-3)
   (ewtf :height 0.8 'org-block-begin-line))
   ;; ----------------------
-(add-hook 'org-mode-hook 'ew-org-mode-face-tweaks)
+(if (display-graphic-p)
+    (add-hook 'org-mode-hook 'ew-org-mode-face-tweaks))
 ;; -------------------------------------------------------
 (defun ew-ediff-mode-face-tweaks()
   "EW 'ediff-mode' face tweaks."
@@ -60,8 +61,9 @@
   (ewtf :background "#505010" 'ediff-fine-diff-C)
   (ewtf :background "#303030" 'ediff-odd-diff-C)
   (ewtf :background "#383830" 'ediff-even-diff-C))
-  ;; ----------------------
-(add-hook 'ediff-mode-hook 'ew-ediff-mode-face-tweaks)
+;; ----------------------
+(if (display-graphic-p)
+    (add-hook 'ediff-mode-hook 'ew-ediff-mode-face-tweaks))
 ;; -------------------------------------------------------
 (defun ew-magit-mode-face-tweaks()
   "EW 'magit-mode' face tweaks."
@@ -80,8 +82,9 @@
   (ewtf :background "#3a3a3a" 'magit-diff-context-highlight)
   (ewtf :background "#482020" 'magit-diff-removed-highlight)
   (ewtf :background "#204820" 'magit-diff-added-highlight))
-  ;; ----------------------
-(add-hook 'magit-status-mode-hook 'ew-magit-mode-face-tweaks)
+;; ----------------------
+(if (display-graphic-p)
+    (add-hook 'magit-status-mode-hook 'ew-magit-mode-face-tweaks))
 ;; -------------------------------------------------------
 (defun ew-company-face-tweaks()
   "EW 'company-mode' face tweaks."
@@ -90,7 +93,8 @@
   (ewtf :background "#282828" 'company-tooltip-selection)
   (ewtf :foreground "#dddd00" 'company-tooltip-selection)
   (ewtf :background "#404040" 'company-scrollbar-bg))
-;; (add-hook 'web-mode-hook 'ew-company-face-tweaks)
+;; (if (display-graphic-p)
+;; (add-hook 'web-mode-hook 'ew-company-face-tweaks))
 ;; -------------------------------------------------------
 (provide 'ew-faces)
 ;;; ew-faces ends here
