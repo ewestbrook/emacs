@@ -28,6 +28,8 @@
 ;; Testing (set-frame-font "oxygen mono")
 ;; Testing (set-frame-font "-xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1")
 ;; -------------------------------------------------------
+;; Testing (set-frame-font "xos4 terminus 13")
+;; -------------------------------------------------------
 (defun ew-set-font-and-stuff()
   "Set EW default font, dolors, etc."
   (interactive)
