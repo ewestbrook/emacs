@@ -128,6 +128,12 @@
         :sitemap-filename "sitenodes.org"
         :sitemap-ignore-case t
         :sitemap-title "All Nodes")
+       ("gitorg-static"
+        :base-directory "/git/org"
+        :base-extension "pdf\\|mp3\\|mp4\\|mkv\\|txt\\|eml"
+        :publishing-directory "/git/org/h"
+        :recursive t
+        :publishing-function org-publish-attachment)
        ("w"
         :base-directory "/git/w/src"
         :base-extension "org"
