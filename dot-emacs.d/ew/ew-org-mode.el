@@ -209,6 +209,8 @@
 
   (local-set-key (kbd "C-c C-x m") 'org-display-inline-images)
   ;; (turn-on-visual-line-mode)
+
+  (local-set-key (kbd "C-c 1") 'org-time-stamp-inactive)
   )
 
 (add-hook 'org-mode-hook 'ew-org-mode-hook)
