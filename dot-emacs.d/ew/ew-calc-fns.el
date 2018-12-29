@@ -46,5 +46,28 @@
           nv
         (format "*%s*" nr)))))
 ;; -------------------------------------------------------
+(defun ew-calc-timeval-from-string (time-string)
+  "Calculate timeval from TIME-STRING."
+  (let* ((timestr
+          (replace-regexp-in-string
+           "[]<>[]"
+           ""
+           time-string))
+         (timeval (date-to-time timestr)))
+    timeval))
+
+(defun ew-calc-seconds-from-string (time-string)
+  "Calculate seconds from TIME-STRING."
+  (float-time (ew-calc-timeval-from-string time-string)))
+
+(defun ew-calc-secs-diff (t2 t1)
+  "Calculate seconds difference between times T2 and T1."
+  (- (ew-calc-seconds-from-string t2)
+     (ew-calc-seconds-from-string t1)))
+
+(defun ew-calc-minutes-diff (t2 t1)
+  "Calculate minutes difference between times T2 and T1."
+  (/ (ew-calc-secs-diff t2 t1) 60))
+;; -------------------------------------------------------
 (provide 'ew-calc-fns)
 ;;; ew-calc-fns ends here
