@@ -29,6 +29,20 @@
 ;; Testing (set-frame-font "-xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1")
 ;; -------------------------------------------------------
 ;; Testing (set-frame-font "xos4 terminus 13")
+;; Testing (set-frame-font "xos4 terminus 12")
+;; Testing (set-frame-font "xos4 terminus 11")
+;; Testing (set-frame-font "xos4 terminus 10")
+;; Testing (set-frame-font "xos4 terminus 9")
+;; Testing (set-frame-font "Iosevka Term Light 13")
+;; Testing (set-frame-font "Iosevka Term Light 12")
+;; Testing (set-frame-font "Iosevka Term Light 11")
+;; Testing (set-frame-font "Iosevka Term Light 10")
+;; Testing (set-frame-font "Iosevka Term Light 9")
+;; Testing (set-frame-font "Bitstream Vera Sans 13")
+;; Testing (set-frame-font "Bitstream Vera Sans Mono 13")
+;; Testing (set-frame-font "FantasqueSansMono 13")
+;; Testing (set-frame-font "Source Code Pro 13")
+;; Testing (set-frame-font "Source Code Pro 11")
 ;; -------------------------------------------------------
 (defun ew-set-font-and-stuff()
   "Set EW default font, dolors, etc."
