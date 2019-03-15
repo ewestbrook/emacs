@@ -30,6 +30,7 @@
 (add-to-list 'load-path "/git/s.el")
 (add-to-list 'load-path "/git/treepy.el")
 (add-to-list 'load-path "/git/web-mode.el")
+(add-to-list 'load-path "/git/ztree.el")
 (add-to-list 'load-path "/git/graphviz-dot-mode.el")
 ;; -------------------------------------------------------
 (load "/usr/share/emacs/site-lisp/site-gentoo")
@@ -52,6 +53,7 @@
 (require 'rjsx-mode)
 (require 'web-mode)
 (require 'flycheck)
+(require 'ztree)
 ;; -------------------------------------------------------
 (require 'ew-calc-fns)
 (require 'ew-dir-fns)
