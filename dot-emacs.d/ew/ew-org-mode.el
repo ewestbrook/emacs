@@ -137,7 +137,7 @@
        ("w"
         :base-directory "/git/w/src"
         :base-extension "org"
-        :publishing-directory "/git/w/dist/docs"
+        :publishing-directory "/git/w/h"
         :recursive t
         :publishing-function org-twbs-publish-to-html
         :auto-preamble t
