@@ -4,6 +4,7 @@
 ;; -------------------------------------------------------
 (defvar ew-prop-faces
   '(org-default
+    org-document-title
     org-level-1
     org-level-2
     org-level-3
@@ -36,6 +37,7 @@
   (ewtfs :family "Noto Sans"   ew-prop-faces)
   (ewtfs :family "Noto Sans Mono" ew-mono-faces)
   ;; ----------------------
+  (ewtf :height 1.8 'org-document-title)
   (ewtf :height 1.5 'org-level-1)
   (ewtf :height 1.3 'org-level-2)
   (ewtf :height 1.2 'org-level-3)
