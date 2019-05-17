@@ -88,10 +88,15 @@
           (setq sysnam (system-name))
           (cond
 
-           ((string= sysnam "p13a")
+           ((or (string= sysnam "p13a") (string= sysnam "p13b"))
             (add-to-list
              'default-frame-alist
              '(font . "terminus 14")))
+
+           ((or (string= sysnam "viking") (string= sysnam "viking.lcs.net"))
+            (add-to-list
+             'default-frame-alist
+             '(font . "terminus 9")))
 
            ((or (string= sysnam "edoras") (string= sysnam "e1"))
             (add-to-list
