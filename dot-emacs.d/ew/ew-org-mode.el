@@ -37,18 +37,19 @@
       '((org-confirm-babel-evaluate)))
 ;; -------------------------------------------------------
 ;; org-babel languages
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((shell      . t)
-   (org        . t)
-   (http       . t)
-   (emacs-lisp . t)
-   (ruby       . t)
-   (latex      . t)
-   (lua        . t)
-   (python     . t)
-   (sqlite     . t)
-   (dot        . t)))
+(with-eval-after-load 'org
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((shell      . t)
+     (org        . t)
+     (http       . t)
+     (emacs-lisp . t)
+     (ruby       . t)
+     (latex      . t)
+     (lua        . t)
+     (python     . t)
+     (sqlite     . t)
+     (dot        . t))))
 ;; -------------------------------------------------------
 ;; org-src-lang-modes
 (setq
