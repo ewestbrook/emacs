@@ -35,8 +35,12 @@
   (ew-calc-nzdol2 (apply '- (mapcar 'ew-calc-mkfloat r))))
 ;; -------------------------------------------------------
 (defun ew-calc-timesdol2(r)
-  "Format the difference of a range R as dollar or empty string."
+  "Format the product of a range R as dollar or empty string."
   (ew-calc-nzdol2 (apply '* (mapcar 'ew-calc-mkfloat r))))
+;; -------------------------------------------------------
+(defun ew-calc-divdol2(r)
+  "Format the quotient of a range R as dollar or empty string."
+  (ew-calc-nzdol2 (apply '/ (mapcar 'ew-calc-mkfloat r))))
 ;; -------------------------------------------------------
 (defun ew-calc-kvr(v r)
   "Bold if V and R differ, \"\" if either is 0."
