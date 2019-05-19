@@ -184,6 +184,14 @@
         :publishing-function org-twbs-publish-to-html
         :auto-preamble nil)
 
+       ("notes"
+        :base-directory "/git/eo/notes"
+        :base-extension "org"
+        :publishing-directory "/git/eo/h/notes"
+        :recursive t
+        :publishing-function org-twbs-publish-to-html
+        :auto-preamble nil)
+
        ("schnauzers"
         :base-directory "/git/eo/schnauzers"
         :base-extension "org"
