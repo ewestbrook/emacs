@@ -6,7 +6,7 @@
 ;; -------------------------------------------------------
 (add-to-list 'load-path "~/.emacs.d/ew")
 (add-to-list 'load-path "~/git/org-mode.el/lisp")
-(add-to-list 'load-path "~/.emacs.d/elpa/ivy-0.10.0")
+(add-to-list 'load-path "~/.emacs.d/elpa/ivy-0.11.0")
 (add-to-list 'load-path "~/git/ctable.el")
 (add-to-list 'load-path "~/git/dash.el")
 (add-to-list 'load-path "~/git/flycheck.el")
