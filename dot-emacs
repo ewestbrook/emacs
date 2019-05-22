@@ -59,6 +59,7 @@
 (require 'flycheck)
 (require 'ztree)
 ;; -------------------------------------------------------
+(require 'ew-mac-meta)
 (require 'ew-calc-fns)
 (require 'ew-dir-fns)
 (require 'ew-dired)
