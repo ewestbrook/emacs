@@ -9,8 +9,11 @@
    ((string= sysnam "e1")
     (require 'ew-org-mode-targets-e1))
 
-   ((string= sysnam "viking")
-    (require 'ew-org-mode-targets-viking))
+   ((string-match "\\.lcs\\.net$" sysnam)
+    (require 'ew-org-mode-targets-lcs))
+
+   ((string-match "\\.lanl\\.gov$" sysnam)
+    (require 'ew-org-mode-targets-lanl))
 
    ))
 ;; -------------------------------------------------------

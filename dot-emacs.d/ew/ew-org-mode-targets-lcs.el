@@ -1,4 +1,4 @@
-;;; ew-org-mode-targets-viking -- Summary
+;;; ew-org-mode-targets-lcs -- Summary
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
@@ -48,5 +48,5 @@
 
    ))
 ;; -------------------------------------------------------
-(provide 'ew-org-mode-targets-viking)
-;;; ew-org-mode-targets-viking ends here
+(provide 'ew-org-mode-targets-lcs)
+;;; ew-org-mode-targets-lcs ends here
