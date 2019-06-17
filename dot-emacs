@@ -59,6 +59,10 @@
 (require 'flycheck)
 (require 'ztree)
 ;; -------------------------------------------------------
+(require 'ew-pathenv)
+(ew-pathenv-prepend-paths)
+(ew-luapaths-prepend-paths)
+;; -------------------------------------------------------
 (require 'ew-calc-fns)
 (require 'ew-dir-fns)
 (require 'ew-dired)
