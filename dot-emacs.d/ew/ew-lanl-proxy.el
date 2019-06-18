@@ -5,7 +5,7 @@
 (message "loading ew-lanl-proxy")
 ;; -------------------------------------------------------
 (require 's)
-(require 'ew-string)
+(require 'ew-string-fns)
 ;; -------------------------------------------------------
 (setq-default ew-lanl-proxy-client-hosts
               '("viking"

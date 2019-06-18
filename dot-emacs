@@ -169,11 +169,6 @@
 (setq-default user-mail-address "")
 (setq-default user-full-name "")
 ;; -------------------------------------------------------
-;; (setq-default browse-url-browser-function 'browse-url-generic)
-(setq-default browse-url-browser-function 'browse-url-firefox)
-(setq-default browse-url-new-window-flag  t)
-(setq-default browse-url-firefox-new-window-is-tab t)
-;; -------------------------------------------------------
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
 (setq-default default-tab-width 2)

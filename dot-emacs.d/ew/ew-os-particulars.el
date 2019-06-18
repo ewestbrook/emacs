@@ -26,6 +26,9 @@
 
  ((equal system-type 'gnu/linux) ; linux
   (progn
+    (setq-default browse-url-browser-function 'browse-url-firefox)
+    (setq-default browse-url-new-window-flag  t)
+    (setq-default browse-url-firefox-new-window-is-tab t)
     (message "ew-os-particulars: Linux"))))
 ;; -------------------------------------------------------
 (provide 'ew-os-particulars)
