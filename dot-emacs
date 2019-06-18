@@ -64,6 +64,7 @@
 (ew-luapaths-prepend-paths)
 ;; -------------------------------------------------------
 (require 'ew-calc-fns)
+(require 'ew-string-fns)
 (require 'ew-dir-fns)
 (require 'ew-dired)
 (require 'ew-ediff)
