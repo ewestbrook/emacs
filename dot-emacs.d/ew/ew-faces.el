@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+(message "loading ew-faces")
+;; -------------------------------------------------------
 (defvar ew-prop-faces
   '(org-default
     org-document-title

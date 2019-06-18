@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+(message "loading ew-kill-fns")
+;; -------------------------------------------------------
 (defun kill-buffers-of-mode(mode)
   "Kill buffers of mode MODE."
   (interactive)

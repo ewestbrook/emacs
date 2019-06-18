@@ -3,11 +3,14 @@
 ;;; Code:
 ;; -------------------------------------------------------
 ;; see https://apple.stackexchange.com/questions/12087/emacs-on-mac-os-x-to-alt-or-command
+;; -------------------------------------------------------
+(message "loading ew-os-particulars")
+;; -------------------------------------------------------
 (cond
 
  ((equal system-type 'windows-nt) ; Microsoft Windows
   (progn
-    (message "Microsoft Windows")))
+    (message "ew-os-particulars: Microsoft Windows")))
 
  ((equal system-type 'darwin) ; Mac OS X
   (progn
@@ -19,11 +22,11 @@
     (setq-default browse-url-browser-function
                   (quote browse-url-generic))
     (setq-default browse-url-generic-program "open")
-    (message "Mac OS X")))
+    (message "ew-os-particulars: Mac OS X")))
 
  ((equal system-type 'gnu/linux) ; linux
   (progn
-    (message "Linux"))))
+    (message "ew-os-particulars: Linux"))))
 ;; -------------------------------------------------------
 (provide 'ew-os-particulars)
 ;;; ew-os-particulars ends here

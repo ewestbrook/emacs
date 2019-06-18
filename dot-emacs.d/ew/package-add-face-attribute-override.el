@@ -1,4 +1,11 @@
+;;; package-add-face-attribute-override --- Summary
+;;; Commentary:
+;;; Code:
+;; -------------------------------------------------------
 ;; https://emacs.stackexchange.com/questions/38437/org-mode-batch-export-missing-syntax-highlighting
+;; -------------------------------------------------------
+(message "package-add-face-attribute-override")
+;; -------------------------------------------------------
 
 (package-initialize)
 
@@ -88,3 +95,6 @@ with class 'color and highest min-color value."
 ;; (print-args-and-ret face-foreground)
 ;; (print-args-and-ret face-background)
 ;; (print-args-and-ret face-attribute)
+;; -------------------------------------------------------
+(provide 'package-add-face-attribute-override)
+;;; package-add-face-attribute-override ends here

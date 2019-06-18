@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+(message "loading ew-tog-ded")
+;; -------------------------------------------------------
 ;; tog-ded
 (defun toggle-current-window-dedication ()
   (interactive)

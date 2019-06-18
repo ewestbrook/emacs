@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "ew-global-keys")
+(message "loading ew-global-keys")
 ;; -------------------------------------------------------
 ;; keys
 (global-set-key "\C-cl" 'org-store-link)

@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+(message "loading ew-org-mode")
+;; -------------------------------------------------------
 (require 'ew-org-mode-settings)
 (require 'ew-babel-settings)
 (require 'ew-org-mode-fns)

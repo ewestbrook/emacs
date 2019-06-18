@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+(message "loading ew-twbs")
+;; -------------------------------------------------------
 ;; scripts overrides
 (setq-default org-twbs-google-analytics "")
 (setq-default org-twbs-scripts "")

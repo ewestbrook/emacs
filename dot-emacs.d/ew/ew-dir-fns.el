@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+(message "loading ew-dir-fns")
+;; -------------------------------------------------------
 (defun ew-dir-cwd-bns-except (exceptbns)
   "Basenames in current directory, except `EXCEPTBNS`."
   (seq-filter

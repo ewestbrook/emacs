@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+(message "loading ew-org-index")
+;; -------------------------------------------------------
 (setq-default
  ew-org-index-except-bns
  ["index.org" "." ".." "c" "i" "j"])

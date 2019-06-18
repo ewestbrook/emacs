@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+(message "loading ew-package-fns")
+;; -------------------------------------------------------
 (defun list-packages-and-versions ()
   "Returns a list of all installed packages and their versions"
   (mapcar

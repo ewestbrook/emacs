@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+(message "loading ew-ediff")
+;; -------------------------------------------------------
 (setq-default ediff-split-window-function 'split-window-horizontally)
 (setq-default ediff-window-setup-function 'ediff-setup-windows-plain)
 (setq-default ediff-diff-options "-w")

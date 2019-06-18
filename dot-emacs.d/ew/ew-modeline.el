@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+(message "loading ew-modeline")
+;; -------------------------------------------------------
 (setq-default
  ew-modeline-isroot-regexp
   "^/\\(sudo\\|ssh:root\\)")

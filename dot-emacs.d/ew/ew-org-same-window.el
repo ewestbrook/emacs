@@ -4,6 +4,8 @@
 ;; -------------------------------------------------------
 ;; from https://emacs.stackexchange.com/a/17163
 ;; -------------------------------------------------------
+(message "loading ew-org-same-window")
+;; -------------------------------------------------------
 
 ;; Macro which creates advice 'template'
 

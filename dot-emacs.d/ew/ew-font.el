@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+(message "loading ew-font")
+;; -------------------------------------------------------
 ;; check current with (face-attribute 'default :font)
 ;; get avaialble with (print (font-family-list))
 ;; set default with (set-frame-font "lucidatypewriter")

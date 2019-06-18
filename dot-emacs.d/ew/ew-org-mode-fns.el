@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+(message "loading ew-org-mode-fns")
+;; -------------------------------------------------------
 (defun ew-org-publish-to-browser ()
   "Export an 'org-mode' file to twbs html, then open the html file in a browser."
   (interactive)

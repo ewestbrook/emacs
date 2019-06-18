@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "ew-lanl-proxy")
+(message "loading ew-lanl-proxy")
 ;; -------------------------------------------------------
 (require 's)
 (require 'ew-string)
@@ -47,7 +47,7 @@
             (concat "\\." (regexp-quote s) "$"))
           ew-lanl-proxy-client-nets)))
   (progn
-    (message "ew-lanl-proxy: Setting LANL proxy")
+    (message "loading ew-lanl-proxy: Setting LANL proxy")
     (setenv "HTTP_PROXY"  ew-lanl-proxy-url)
     (setenv "HTTPS_PROXY" ew-lanl-proxy-url)
     (setenv "FTP_PROXY"   ew-lanl-proxy-url)

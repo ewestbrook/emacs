@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+(message "loading ew-org-mode-targets-lcs")
+;; -------------------------------------------------------
 (setq-default
  org-publish-project-alist
  '(

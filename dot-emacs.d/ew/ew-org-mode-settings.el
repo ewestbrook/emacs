@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+(message "loading ew-org-mode-settings")
+;; -------------------------------------------------------
 (setq-default org-hide-emphasis-markers nil)
 (setq-default org-hide-macro-markers nil)
 (setq-default org-edit-src-content-indentation 0)

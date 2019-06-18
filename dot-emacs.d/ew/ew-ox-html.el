@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+(message "loading ew-ox-html")
+;; -------------------------------------------------------
 (setq-default org-html-with-latex `dvipng)
 ;; -------------------------------------------------------
 (setq-default org-html-head-include-scripts nil)

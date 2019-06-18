@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+(message "loading ew-babel-settings")
+;; -------------------------------------------------------
 ;; org-babel evaluate with (t) or without (nil) confirming
 (setq-default org-confirm-babel-evaluate t)
 ;; -------------------------------------------------------

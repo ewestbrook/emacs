@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "ew-string-fns")
+(message "loading ew-string-fns")
 ;; -------------------------------------------------------
 (defun ew-string-matches-one-of(str pats)
   "Return first match of STR against any regular expression in PATS."

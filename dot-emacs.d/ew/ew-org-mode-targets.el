@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+(message "loading ew-org-mode-targets")
+;; -------------------------------------------------------
 (let (sysnam)
   (setq sysnam (system-name))
   (cond
