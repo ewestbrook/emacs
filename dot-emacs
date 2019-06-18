@@ -37,7 +37,7 @@
 ;; -------------------------------------------------------
 ;; (load "/usr/share/emacs/site-lisp/site-gentoo")
 ;; -------------------------------------------------------
-(require 'ew-proxy-lanl)
+(require 'ew-lanl-proxy)
 ;; -------------------------------------------------------
 (require 'org)
 (require 'org-tempo)
