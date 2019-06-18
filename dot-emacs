@@ -2,8 +2,10 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+(message "dot-emacs: package-initialize")
 (package-initialize)
 ;; -------------------------------------------------------
+(message "dot-emacs: add load paths")
 (add-to-list 'load-path "~/.emacs.d/ew")
 (add-to-list 'load-path "~/git/org-mode.el/lisp")
 (add-to-list 'load-path "~/.emacs.d/elpa/ivy-0.11.0")
@@ -35,7 +37,10 @@
 (add-to-list 'load-path "~/git/ztree.el")
 (add-to-list 'load-path "~/git/graphviz-dot-mode.el")
 ;; -------------------------------------------------------
+;; (message "dot-emacs: load gentoo site-lisp")
 ;; (load "/usr/share/emacs/site-lisp/site-gentoo")
+;; -------------------------------------------------------
+(message "dot-emacs: requiring packages")
 ;; -------------------------------------------------------
 (require 'ew-lanl-proxy)
 ;; -------------------------------------------------------
@@ -61,6 +66,8 @@
 ;; -------------------------------------------------------
 (require 'ew-pathenv)
 (ew-pathenv-prepend-paths)
+;; -------------------------------------------------------
+(require 'ew-luapaths)
 (ew-luapaths-prepend-paths)
 ;; -------------------------------------------------------
 (require 'ew-calc-fns)
