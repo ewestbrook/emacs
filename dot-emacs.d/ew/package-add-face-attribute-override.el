@@ -4,7 +4,7 @@
 ;; -------------------------------------------------------
 ;; https://emacs.stackexchange.com/questions/38437/org-mode-batch-export-missing-syntax-highlighting
 ;; -------------------------------------------------------
-(message "package-add-face-attribute-override")
+(message "loading package-add-face-attribute-override")
 ;; -------------------------------------------------------
 
 (package-initialize)
