@@ -8,10 +8,6 @@
  ew-modeline-isroot-regexp
   "^/\\(sudo\\|ssh:root\\)")
 ;; -------------------------------------------------------
-(setq-default
- ew-modeline-isremote-regexp
-  "^/\\(ssh:\\|e1/\\)")
-;; -------------------------------------------------------
 (defun currentbufferfilepath(&optional @dir-path-only-p)
   "Current buffer file path."
   (let (($fpath
@@ -36,9 +32,7 @@
 ;; -------------------------------------------------------
 (defun ew-modeline-isremote-buffer()
   "If a remote buffer."
-  (string-match
-   ew-modeline-isremote-regexp
-   (currentbufferfilepath)))
+  (file-remote-p (currentbufferfilepath)))
 ;; -------------------------------------------------------
 (cond
  ((string= "p13a" (system-name))
