@@ -52,31 +52,31 @@
    (:eval
     (cond
      ((window-dedicated-p)
-      (propertize "d" 'face 'mode-line-dedicated-face))
+      (propertize " pin " 'face 'mode-line-dedicated-face))
      (t "")))
 
    (:eval
     (cond
      (buffer-read-only
-      (propertize "ro" 'face 'mode-line-read-only-face))
+      (propertize " read " 'face 'mode-line-read-only-face))
      (t "")))
 
    (:eval
     (cond
      ((ew-modeline-isremote-buffer)
-      (propertize "r" 'face 'mode-line-isremote-face))
+      (propertize " net " 'face 'mode-line-isremote-face))
      (t "")))
 
    (:eval
     (cond
      ((ew-modeline-isroot-buffer)
-      (propertize "su" 'face 'mode-line-isroot-face))
+      (propertize " priv " 'face 'mode-line-isroot-face))
      (t "")))
 
    (:eval
     (cond
      ((buffer-modified-p)
-      (propertize "m" 'face 'mode-line-modified-face))
+      (propertize " m " 'face 'mode-line-modified-face))
      (t "")))
 
    "  "
