@@ -72,6 +72,12 @@
 ;; Testing (set-frame-font "Source Code Pro 13")
 ;; Testing (set-frame-font "Source Code Pro 11")
 ;; -------------------------------------------------------
+;; Testing (set-frame-font "Menlo 13")
+;; Testing (set-frame-font "Menlo 12")
+;; Testing (set-frame-font "Menlo 11")
+;; Testing (set-frame-font "Menlo 10")
+;; Testing (set-frame-font "Menlo 9")
+;; -------------------------------------------------------
 (defun ew-set-font-and-stuff()
   "Set EW default font, dolors, etc."
   (interactive)
@@ -89,6 +95,11 @@
         (let (sysnam)
           (setq sysnam (system-name))
           (cond
+
+           ((or (string-match "^a1\\." sysnam))
+            (add-to-list
+             'default-frame-alist
+             '(font . "Menlo 10")))
 
            ((or (string= sysnam "p13a") (string= sysnam "p13b"))
             (add-to-list
