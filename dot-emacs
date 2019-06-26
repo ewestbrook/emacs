@@ -47,7 +47,7 @@
 (require 'ew-lanl-proxy)
 ;; -------------------------------------------------------
 (require 'org)
-;; (require 'org-tempo)
+(require 'org-tempo)
 (require 'uniquify)
 (require 'gud)
 (require 'package)
