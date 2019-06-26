@@ -7,6 +7,7 @@
 ;; misc
 (global-set-key (kbd "M-S-SPC") 'set-mark)
 (global-set-key (kbd "C-x M-e") 'eval-buffer)
+(global-set-key (kbd "C-x M-u") 'revert-buffer)
 ;; -------------------------------------------------------
 ;; viking hack for magit+tramp
 (defun ew-viking-tramp-remote-path()
