@@ -76,7 +76,7 @@
    (:eval
     (cond
      ((buffer-modified-p)
-      (propertize " m " 'face 'mode-line-modified-face))
+      (propertize " mod " 'face 'mode-line-modified-face))
      (t "")))
 
    "  "
