@@ -56,11 +56,13 @@
 ;; Testing (set-frame-font "xos4 terminus 11")
 ;; Testing (set-frame-font "xos4 terminus 10")
 ;; Testing (set-frame-font "xos4 terminus 9")
+;; -------------------------------------------------------
 ;; Testing (set-frame-font "terminus 13")
 ;; Testing (set-frame-font "terminus 12")
 ;; Testing (set-frame-font "terminus 11")
 ;; Testing (set-frame-font "terminus 10")
 ;; Testing (set-frame-font "terminus 9")
+;; -------------------------------------------------------
 ;; Testing (set-frame-font "Iosevka Term Light 13")
 ;; Testing (set-frame-font "Iosevka Term Light 12")
 ;; Testing (set-frame-font "Iosevka Term Light 11")
@@ -77,6 +79,10 @@
 ;; Testing (set-frame-font "Menlo 11")
 ;; Testing (set-frame-font "Menlo 10")
 ;; Testing (set-frame-font "Menlo 9")
+;; -------------------------------------------------------
+;; Testing (set-frame-font "Menlo")
+;; Testing (set-frame-font "Terminus (TTF)")
+;; Testing (set-frame-font "TerminessTTF Nerd Font Mono")
 ;; -------------------------------------------------------
 (defun ew-set-font-and-stuff()
   "Set EW default font, dolors, etc."
@@ -96,22 +102,30 @@
           (setq sysnam (system-name))
           (cond
 
-           ((or (string-match "^a1\\." sysnam))
+           ((string-match "^a1\\." sysnam)
             (add-to-list
              'default-frame-alist
-             '(font . "Menlo 10")))
+             '(font . "Menlo 9")))
 
-           ((or (string= sysnam "p13a") (string= sysnam "p13b"))
+           ((string-match "^pn1248518\\." sysnam)
+            (add-to-list
+             'default-frame-alist
+             '(font . "Menlo 12")))
+
+           ((or (string= sysnam "p13a")
+                (string= sysnam "p13b"))
             (add-to-list
              'default-frame-alist
              '(font . "terminus 14")))
 
-           ((or (string= sysnam "viking") (string= sysnam "viking.lcs.net"))
+           ((or (string= sysnam "viking")
+                (string= sysnam "viking.lcs.net"))
             (add-to-list
              'default-frame-alist
              '(font . "terminus 9")))
 
-           ((or (string= sysnam "edoras") (string= sysnam "e1"))
+           ((or (string= sysnam "edoras")
+                (string= sysnam "e1"))
             (add-to-list
              'default-frame-alist
              '(font . "xos4 terminus 9"))))))))
