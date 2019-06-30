@@ -74,6 +74,8 @@
 ;; Testing (set-frame-font "Source Code Pro 13")
 ;; Testing (set-frame-font "Source Code Pro 11")
 ;; -------------------------------------------------------
+;; Testing (set-frame-font "Menlo 15")
+;; Testing (set-frame-font "Menlo 14")
 ;; Testing (set-frame-font "Menlo 13")
 ;; Testing (set-frame-font "Menlo 12")
 ;; Testing (set-frame-font "Menlo 11")
@@ -83,6 +85,30 @@
 ;; Testing (set-frame-font "Menlo")
 ;; Testing (set-frame-font "Terminus (TTF)")
 ;; Testing (set-frame-font "TerminessTTF Nerd Font Mono")
+;; -------------------------------------------------------
+(setq-default
+ ew-host-font-map
+ (list
+  (cons "^a1\\."        "Menlo 15")
+  (cons "^pn1248518\\." "Menlo 12")
+  (cons "^viking\\."    "terminus 9")
+  (cons "^p13[ab]"      "terminus 14")
+  (cons "^e1\\."        "xos4 terminus 9")
+  (cons "^edoras\\."    "xos4 terminus 9")
+  )
+ )
+;; -------------------------------------------------------
+(defun ew-get-font-by-host-list()
+  "Set system font by host name."
+  (catch 'found
+    (let (sysnam)
+      (setq sysnam (system-name))
+      (loop for (k . v) in ew-host-font-map do
+            (cond
+             ((string-match k sysnam)
+              (progn
+                (message "Host \"%s\" gets font \"%s\"" sysnam v)
+                (throw 'found v))))))))
 ;; -------------------------------------------------------
 (defun ew-set-font-and-stuff()
   "Set EW default font, dolors, etc."
@@ -98,37 +124,11 @@
            (foreground-color . "#a6a376")
            (background-color . "#181818")))
 
-        (let (sysnam)
-          (setq sysnam (system-name))
-          (cond
-
-           ((string-match "^a1\\." sysnam)
-            (add-to-list
+        (add-to-list
              'default-frame-alist
-             '(font . "Menlo 9")))
-
-           ((string-match "^pn1248518\\." sysnam)
-            (add-to-list
-             'default-frame-alist
-             '(font . "Menlo 12")))
-
-           ((or (string= sysnam "p13a")
-                (string= sysnam "p13b"))
-            (add-to-list
-             'default-frame-alist
-             '(font . "terminus 14")))
-
-           ((or (string= sysnam "viking")
-                (string= sysnam "viking.lcs.net"))
-            (add-to-list
-             'default-frame-alist
-             '(font . "terminus 9")))
-
-           ((or (string= sysnam "edoras")
-                (string= sysnam "e1"))
-            (add-to-list
-             'default-frame-alist
-             '(font . "xos4 terminus 9"))))))))
+             (cons
+              'font
+              (ew-get-font-by-host-list))))))
 ;; -------------------------------------------------------
 (provide 'ew-font)
 ;;; ew-font ends here
