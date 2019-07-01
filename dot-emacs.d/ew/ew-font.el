@@ -89,12 +89,12 @@
 (setq-default
  ew-host-font-map
  (list
-  (cons "^a1\\."        "Menlo 15")
-  (cons "^pn1248518\\." "Menlo 12")
-  (cons "^viking\\."    "terminus 9")
   (cons "^p13[ab]"      "terminus 14")
+  (cons "^a1\\."        "Menlo 12")
+  (cons "^viking\\."    "terminus 9")
   (cons "^e1\\."        "xos4 terminus 9")
   (cons "^edoras\\."    "xos4 terminus 9")
+  (cons "^pn1248518\\." "Menlo 12")
   )
  )
 ;; -------------------------------------------------------
