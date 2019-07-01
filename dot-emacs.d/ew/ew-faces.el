@@ -100,6 +100,8 @@
 ;; (if (display-graphic-p)
 ;; (add-hook 'web-mode-hook 'ew-company-face-tweaks))
 ;; -------------------------------------------------------
+(ewtf :foreground "#a6a376" 'default)
+;; (ewtf :background "#181818" 'default)
 (provide 'ew-faces)
 ;;; ew-faces ends here
 ;; -------------------------------------------------------
