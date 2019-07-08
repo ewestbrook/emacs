@@ -70,7 +70,7 @@
    (:eval
     (cond
      ((ew-modeline-isroot-buffer)
-      (propertize " priv " 'face 'mode-line-isroot-face))
+      (propertize " root " 'face 'mode-line-isroot-face))
      (t "")))
 
    (:eval
