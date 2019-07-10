@@ -8,6 +8,14 @@
  org-publish-project-alist
  '(
 
+   ("mgmt"
+    :base-directory "~/git/eew-mgmt"
+    :base-extension "org"
+    :publishing-directory "~/git/eew-mgmt-h"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
    ))
 (provide 'ew-org-mode-targets-lanl)
 ;;; ew-org-mode-targets-lanl ends here
