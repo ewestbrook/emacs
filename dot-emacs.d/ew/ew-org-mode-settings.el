@@ -17,8 +17,11 @@
 (setq-default org-export-with-creator nil)
 (setq-default org-export-with-email nil)
 (setq-default org-export-with-latex t)
+(setq-default org-export-with-planning t)
+(setq-default org-export-with-priority t)
 (setq-default org-export-with-sub-superscripts '{})
 (setq-default org-export-with-tags t)
+(setq-default org-export-with-tasks t)
 (setq-default org-export-with-title t)
 (setq-default org-export-with-todo-keywords t)
 ;; -------------------------------------------------------
