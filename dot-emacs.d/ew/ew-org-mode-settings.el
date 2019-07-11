@@ -25,6 +25,10 @@
 (setq-default org-export-with-title t)
 (setq-default org-export-with-todo-keywords t)
 ;; -------------------------------------------------------
+(setq-default
+ org-todo-keywords
+ '((sequence "TODO" "INPROGRESS" "|" "DONE")))
+;; -------------------------------------------------------
 ;; open .org.inc files in org-mode
 (add-to-list 'auto-mode-alist '("\\.org.inc\\'" . org-mode))
 ;; -------------------------------------------------------
