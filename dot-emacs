@@ -106,9 +106,6 @@
 ;; gc
 (setq gc-cons-threshold 20000000)
 ;; -------------------------------------------------------
-;; dired-mode
-(put 'dired-find-alternate-file 'disabled nil)
-;; -------------------------------------------------------
 ;; lua-mode
 (add-to-list 'auto-mode-alist '("\\.rockspec\\'" . lua-mode))
 ;; -------------------------------------------------------
