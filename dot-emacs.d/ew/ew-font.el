@@ -74,6 +74,7 @@
 ;; Testing (set-frame-font "Source Code Pro 13")
 ;; Testing (set-frame-font "Source Code Pro 11")
 ;; -------------------------------------------------------
+;; Testing (set-frame-font "Menlo 16")
 ;; Testing (set-frame-font "Menlo 15")
 ;; Testing (set-frame-font "Menlo 14")
 ;; Testing (set-frame-font "Menlo 13")
@@ -90,7 +91,7 @@
  ew-host-font-map
  (list
   (cons "^p13[ab]"      "terminus 14")
-  (cons "^a1\\."        "Menlo 12")
+  (cons "^a1\\."        "Menlo 16")
   (cons "^viking\\."    "terminus 9")
   (cons "^e1\\."        "xos4 terminus 9")
   (cons "^edoras\\."    "xos4 terminus 9")
