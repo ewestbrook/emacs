@@ -7,7 +7,7 @@
 (setq-default
  magit-status-buffer-switch-function
  'switch-to-buffer)
-(setq-default magit-diff-refine-hunk all)
+(setq-default magit-diff-refine-hunk 'all)
 (setq-default magit-diff-paint-whitespace t)
 (setq-default magit-diff-highlight-trailing t)
 (setq-default magit-diff-hide-trailing-cr-characters t)
