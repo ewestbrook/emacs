@@ -3,21 +3,33 @@
 ;;; Code:
 ;; -------------------------------------------------------
 (message "loading ew-org-mode-targets")
+(setq-default eomstbhmsg "Host \"%s\" gets org-mode targets module \"%s\"")
 ;; -------------------------------------------------------
-(let (sysnam)
-  (setq sysnam (system-name))
-  (cond
-
-   ((string= sysnam "e1")
-    (require 'ew-org-mode-targets-e1))
-
-   ((string-match "\\.lcs\\.net$" sysnam)
-    (require 'ew-org-mode-targets-lcs))
-
-   ((string-match "\\.lanl\\.gov$" sysnam)
-    (require 'ew-org-mode-targets-lanl))
-
-   ))
+(setq-default
+ ew-org-mode-target-module-map
+ (list
+  (cons "^e1$"                   'ew-org-mode-targets-e1)
+  (cons "^a1\\.local$"           'ew-org-mode-targets-a1)
+  (cons "^a1\\.westbrook\\.com$" 'ew-org-mode-targets-a1)
+  (cons "\\.lcs\\.net$"          'ew-org-mode-targets-lcs)
+  (cons "\\.lanl\\.gov$"         'ew-org-mode-targets-lanl)
+  )
+ )
+;; -------------------------------------------------------
+(defun ew-org-mode-set-targets-by-host()
+  "Get target module by host string."
+  (catch 'found
+    (let (sysnam)
+      (setq sysnam (system-name))
+      (loop for (k . v) in ew-org-mode-target-module-map do
+            (cond
+             ((string-match k sysnam)
+              (progn
+                (message eomstbhmsg sysnam v)
+                (require v)
+                (throw 'found v))))))))
+;; -------------------------------------------------------
+(ew-org-mode-set-targets-by-host)
 ;; -------------------------------------------------------
 (provide 'ew-org-mode-targets)
 ;;; ew-org-mode-targets ends here
