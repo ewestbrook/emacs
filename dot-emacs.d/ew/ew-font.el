@@ -91,7 +91,7 @@
  ew-host-font-map
  (list
   (cons "^p13[ab]"      "terminus 14")
-  (cons "^a1\\."        "Menlo 16")
+  (cons "^a1\\."        "Menlo 13")
   (cons "^viking\\."    "terminus 9")
   (cons "^e1\\."        "xos4 terminus 9")
   (cons "^edoras\\."    "xos4 terminus 9")
