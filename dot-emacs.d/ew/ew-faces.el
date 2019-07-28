@@ -84,11 +84,14 @@
   (ewtf :foreground "#cccccc" 'magit-diff-removed)
   ;; ----------------------
   (ewtf :background "#3a3a3a" 'magit-diff-context-highlight)
-  (ewtf :background "#482020" 'magit-diff-removed-highlight)
-  (ewtf :background "#204820" 'magit-diff-added-highlight))
+  (ewtf :background "#633f3e" 'magit-diff-removed-highlight)
+  (ewtf :background "#3a5c40" 'magit-diff-added-highlight))
 ;; ----------------------
 (if (display-graphic-p)
     (add-hook 'magit-status-mode-hook 'ew-magit-mode-face-tweaks))
+;; -------------------------------------------------------
+(ewtf :background "#a04247" 'diff-refine-removed)
+(ewtf :background "#378446" 'diff-refine-added)
 ;; -------------------------------------------------------
 (defun ew-company-face-tweaks()
   "EW 'company-mode' face tweaks."
