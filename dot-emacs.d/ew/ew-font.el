@@ -120,7 +120,7 @@
 
         (setq
          default-frame-alist
-         '((cursor-color . "Red")
+         '((cursor-color . "Yellow")
            (mouse-color . "Yellow")
            (foreground-color . "#a6a376")
            (background-color . "#181818")))
