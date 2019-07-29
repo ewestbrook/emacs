@@ -16,6 +16,14 @@
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
+   ("w"
+    :base-directory "~/git/w/src"
+    :base-extension "org"
+    :publishing-directory "~/git/w-h"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
    ))
 (provide 'ew-org-mode-targets-lanl)
 ;;; ew-org-mode-targets-lanl ends here
