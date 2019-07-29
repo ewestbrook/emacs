@@ -10,13 +10,16 @@
  ew-luapaths-lua-paths
  (list
   (concat (getenv "HOME") "/share/lua/5.1/?.lua")
-  (concat (getenv "HOME") "/git/w/src/?.lua")))
+  (concat (getenv "HOME") "/git/w/src/?.lua")
+  (concat (getenv "HOME") "/git/w/src/share/lua/5.1/?.lua")))
 ;; -------------------------------------------------------
 (setq-default
  ew-luapaths-lua-cpaths
  (list
   (concat (getenv "HOME") "/lib/lua/5.1/?.so")
-  (concat (getenv "HOME") "/git/w/src/?.so")))
+  (concat (getenv "HOME") "/git/w/src/?.so")
+  (concat (getenv "HOME") "/git/w/src/lib/lua/5.1/?.so")
+  (concat (getenv "HOME") "/git/w/src/lib/lua/5.1/?.dylib")))
 ;; -------------------------------------------------------
 (defun ew-luapaths-prepend-paths()
   "Prepend paths in 'ew-pathenv-lua-paths' to env's LUA_PATH uniquely, and similarly with ew-pathenv-clua-paths and LUA_CPATH, retaining trailing semicolons or adding them if the path was originally empty."
