@@ -16,7 +16,8 @@
     "/Applications/Firefox.app/Contents/MacOS"
     "/usr/local/bin"
     "/usr/local/sbin")
-  (list (concat ew-pathenv-home "/bin"))))
+  (list (concat ew-pathenv-home "/bin"))
+  (list (concat ew-pathenv-home "/git/w/bin"))))
 ;; -------------------------------------------------------
 (defun ew-pathenv-prepend-paths()
   "Prepend paths in 'ew-pathenv-paths' to env's PATH and 'exec-path' uniquely, for each element that exists as a directory."
@@ -37,9 +38,12 @@
   "Prepend V to environment variable E (separated by SEP) uniquely."
   (let* ((s (if sep sep ":"))
         (sv (split-string v s t)))
-    (car (last (mapcar (lambda(arg)
-              (ew-pathenv-prepend-env-path-single e arg sep))
-            (split-string v s t))))))
+    (car
+     (last
+      (mapcar
+       (lambda(arg)
+         (ew-pathenv-prepend-env-path-single e arg sep))
+       (split-string v s t))))))
 ;; -------------------------------------------------------
 (defun ew-pathenv-prepend-env-path-single(e v &optional sep)
   "Prepend V to environment variable E (separated by SEP) uniquely; V must already be separated by SEP."
