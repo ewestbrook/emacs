@@ -34,12 +34,6 @@
 
     ))
 ;; -------------------------------------------------------
-(defun ew-org-reveal-to-browser ()
-  "Call org-reveal-export-to-html-and-browse."
-  (interactive)
-  (save-buffer)
-  (org-reveal-export-to-html-and-browse))
-;; -------------------------------------------------------
 (defun ew-org-html-to-browser ()
   "Call org-html-export-to-html and browse."
   (interactive)
