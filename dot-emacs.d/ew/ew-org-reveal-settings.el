@@ -5,7 +5,8 @@
 ;; see also
 ;; https://github.com/yjwen/org-reveal/
 ;; -------------------------------------------------------
-;; (setq org-reveal-root "./reveal.js")
+(setq-default org-reveal-root "./reveal.js")
+(setq-default org-reveal-title-slide 'auto)
 ;; -------------------------------------------------------
 (defun ew-org-reveal-to-browser ()
   "Call org-reveal-export-to-html-and-browse."
