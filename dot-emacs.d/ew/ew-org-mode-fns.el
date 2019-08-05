@@ -45,5 +45,27 @@
   (interactive)
   (org-publish-current-file t))
 ;; -------------------------------------------------------
+(defun ew-org-mode-noindex (L)
+  "Remove index.org from a list L of cwd files."
+  (cond
+
+   ((null L) nil)
+
+   ((string-match "index\\.org$" (car L))
+    (noindex (cdr L)))
+
+   (t
+    (cons (car L) (noindex (cdr L))))))
+;; -------------------------------------------------------
+(defun ew-org-mode-cwd-org-files ()
+  "Return a list of the org files in the current directory."
+  (ew-org-mode-noindex
+   (directory-files "." nil "^[^.].*\\.org$")))
+;; -------------------------------------------------------
+(defun ew-org-mode-cwd-org-files-tree ()
+  "Return a list of the org files in the current directory, recursively."
+  (ew-org-mode-noindex
+   (directory-files-recursively "." "^[^.].*\\.org$")))
+;; -------------------------------------------------------
 (provide 'ew-org-mode-fns)
 ;;; ew-org-mode-fns ends here
