@@ -8,10 +8,26 @@
  org-publish-project-alist
  '(
 
+   ("budget"
+    :base-directory "~/git/eew-budget"
+    :base-extension "org"
+    :publishing-directory "~/git/eew-budget-h"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
    ("cv"
     :base-directory "~/git/eew-cv"
     :base-extension "org"
     :publishing-directory "~/git/eew-cv-h"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
+   ("expert"
+    :base-directory "~/git/eew-expert"
+    :base-extension "org"
+    :publishing-directory "~/git/eew-expert-h"
     :recursive t
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
