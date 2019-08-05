@@ -49,7 +49,7 @@
     :auto-preamble nil)
 
    ("w"
-    :base-directory "~/git/w"
+    :base-directory "~/git/w/src"
     :base-extension "org"
     :publishing-directory "~/git/w-h"
     :recursive t
