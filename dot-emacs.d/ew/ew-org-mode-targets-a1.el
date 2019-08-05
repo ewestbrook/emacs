@@ -32,6 +32,14 @@
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
+   ("minme"
+    :base-directory "~/git/eew-minme"
+    :base-extension "org"
+    :publishing-directory "~/git/eew-minme-h"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
    ("today"
     :base-directory "~/git/eew-today"
     :base-extension "org"
