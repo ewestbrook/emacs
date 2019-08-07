@@ -92,6 +92,7 @@
 (require 'ew-tog-ded)
 (require 'ew-twbs)
 (require 'ew-org-same-window)
+(require 'ew-org-reveal-settings)
 (require 'org-babel-eval-stderr)
 (require 'show-wspace)
 (require 'ew-os-particulars)
