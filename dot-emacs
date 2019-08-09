@@ -54,7 +54,6 @@
 (require 'graphviz-dot-mode)
 (require 'magit-filenotify)
 (require 'org-bullets)
-(require 'org-manage)
 (require 'ob-http)
 (require 'ox-twbs)
 (require 'ox-reveal)
