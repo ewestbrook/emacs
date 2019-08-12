@@ -40,6 +40,14 @@
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
+   ("teambest"
+    :base-directory "~/git/eewa-teambest"
+    :base-extension "org"
+    :publishing-directory "~/git/eewa-teambest-h"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
    ("today"
     :base-directory "~/git/eew-today"
     :base-extension "org"
