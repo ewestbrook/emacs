@@ -52,10 +52,10 @@
    ((null L) nil)
 
    ((string-match "index\\.org$" (car L))
-    (noindex (cdr L)))
+    (ew-org-mode-noindex (cdr L)))
 
    (t
-    (cons (car L) (noindex (cdr L))))))
+    (cons (car L) (ew-org-mode-noindex (cdr L))))))
 ;; -------------------------------------------------------
 (defun ew-org-mode-cwd-org-files ()
   "Return a list of the org files in the current directory."
