@@ -11,7 +11,7 @@
 
   (local-set-key (kbd "C-c h") 'ew-org-publish-current-file)
   (local-set-key (kbd "C-c H") 'ew-org-publish-to-browser)
-  (local-set-key (kbd "C-c M-h") 'org-publish-all)
+  (local-set-key (kbd "C-c M-h") 'org-publish-current-project)
 
   (local-set-key (kbd "C-c r") 'ew-org-reveal-to-browser)
   (local-set-key (kbd "C-c R") 'ew-org-reveal-to-html)
