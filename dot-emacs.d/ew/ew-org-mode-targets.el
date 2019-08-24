@@ -8,9 +8,9 @@
 (setq-default
  ew-org-mode-target-module-map
  (list
-  (cons "^e1$"                   'ew-org-mode-targets-e1)
-  (cons "^a1\\.local$"           'ew-org-mode-targets-a1)
-  (cons "^a1\\.westbrook\\.com$" 'ew-org-mode-targets-a1)
+  (cons "^e1$"                   'ew-org-mode-targets-ew)
+  (cons "^a1\\.local$"           'ew-org-mode-targets-ew)
+  (cons "^a1\\.westbrook\\.com$" 'ew-org-mode-targets-ew)
   (cons "\\.lcs\\.net$"          'ew-org-mode-targets-lcs)
   (cons "\\.lanl\\.gov$"         'ew-org-mode-targets-lanl)
   )
