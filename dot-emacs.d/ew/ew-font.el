@@ -57,6 +57,9 @@
 ;; Testing (set-frame-font "xos4 terminus 10")
 ;; Testing (set-frame-font "xos4 terminus 9")
 ;; -------------------------------------------------------
+;; Testing (set-frame-font "terminus 16")
+;; Testing (set-frame-font "terminus 15")
+;; Testing (set-frame-font "terminus 14")
 ;; Testing (set-frame-font "terminus 13")
 ;; Testing (set-frame-font "terminus 12")
 ;; Testing (set-frame-font "terminus 11")
