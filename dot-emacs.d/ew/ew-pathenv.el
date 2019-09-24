@@ -11,9 +11,11 @@
 (setq-default
  ew-pathenv-paths
  (append
-  '("/usr/local/opt/gnu-sed/libexec/gnubin"
+  '("/opt/X11/bin"
+    "/usr/local/opt/gnu-sed/libexec/gnubin"
     "/usr/local/opt/texinfo/bin"
     "/Applications/Firefox.app/Contents/MacOS"
+    "/Applications/Wireshark.app/Contents/MacOS"
     "/usr/local/texlive/2019/bin/x86_64-darwin"
     "/usr/local/bin"
     "/usr/local/sbin")
