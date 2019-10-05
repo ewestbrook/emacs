@@ -64,6 +64,14 @@
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
+   ("manuals"
+    :base-directory "~/git/eew-manuals"
+    :base-extension "org"
+    :publishing-directory "~/git/eew-manuals-h"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
    ("minme"
     :base-directory "~/git/eew-minme"
     :base-extension "org"
