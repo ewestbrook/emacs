@@ -97,9 +97,9 @@
     :auto-preamble nil)
 
    ("teambest"
-    :base-directory "~/git/eewa-teambest"
+    :base-directory "~/git/eew-teambest"
     :base-extension "org"
-    :publishing-directory "~/git/eewa-teambest-h"
+    :publishing-directory "~/git/eew-teambest-h"
     :recursive t
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
