@@ -81,6 +81,7 @@
 (require 'ew-faces)
 (require 'ew-font)
 (require 'ew-gnus)
+(require 'ew-hs-minor-mode-settings)
 (require 'ew-kill-fns)
 (require 'ew-lua-mode)
 (require 'ew-magit)
