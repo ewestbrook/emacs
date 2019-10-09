@@ -10,6 +10,7 @@
   (interactive)
   (hs-minor-mode 1))
 ;; -------------------------------------------------------
+;; https://emacs.stackexchange.com/a/5364
 (add-hook 'python-mode-hook 'hs-minor-mode-on)
 ;; -------------------------------------------------------
 (provide 'ew-hs-minor-mode-settings)
