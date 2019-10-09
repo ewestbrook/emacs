@@ -4,6 +4,8 @@
 ;; -------------------------------------------------------
 (message "loading ew-hs-minor-mode-settings")
 ;; -------------------------------------------------------
+;; reference URL: https://stackoverflow.com/a/17775868
+;; -------------------------------------------------------
 (define-key hs-minor-mode-map (kbd "C-c TAB") 'hs-toggle-hiding)
 ;; -------------------------------------------------------
 (defun hs-minor-mode-on()
