@@ -26,10 +26,12 @@
 (global-set-key "\C-xg" 'magit-status)
 ;; -------------------------------------------------------
 ;; ew
-(global-set-key "\C-x\C-t" 'toggle-truncate-lines)
-(global-set-key "\C-x\C-u" 'toggle-current-window-dedication)
-(global-set-key [pause] 'toggle-current-window-dedication)
+(global-set-key "\C-x\C-t"  'toggle-truncate-lines)
+(global-set-key "\C-x\C-u"  'toggle-current-window-dedication)
+(global-set-key [pause]     'toggle-current-window-dedication)
 (global-set-key (kbd "M-p") 'ew-toggle-clipboard-mode)
+(global-set-key "\C-cd"     'remove-dos-eol)
+(global-set-key "\C-xL"     'display-line-numbers-mode)
 ;; -------------------------------------------------------
 ;; embiggen/enshrinken
 (global-set-key (kbd "C-+") 'text-scale-increase)
