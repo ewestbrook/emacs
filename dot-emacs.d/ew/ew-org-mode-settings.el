@@ -33,7 +33,9 @@
 (add-to-list 'auto-mode-alist '("\\.org.inc\\'" . org-mode))
 ;; -------------------------------------------------------
 ;; file apps (launch instead of link)
-(add-to-list 'org-file-apps '("\\.pdf\\'" . "okular %s"))
+(cond
+ ((equal system-type 'gnu/linux)
+  (add-to-list 'org-file-apps '("\\.pdf\\'" . "okular %s"))))
 ;; -------------------------------------------------------
 ;; org-manage
 (setq-default org-manage-directory-org "/git/org")

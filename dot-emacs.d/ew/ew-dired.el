@@ -19,12 +19,14 @@
 (add-hook 'dired-mode-hook 'ew-dired-mode-setup)
 ;; -------------------------------------------------------
 ;; open files with certain applications
-(defvar dired-guess-shell-alist-user
-      '(("\\.pdf\\'" "okular ? &")
-        ("\\.mp4\\'" "mpv ? &")
-        ("\\.mkv\\'" "mpv ? &")
-        ("\\.avi\\'" "mpv ? &")
-        ("\\.flv\\'" "mpv ? &")))
+(cond
+ ((equal system-type 'gnu/linux)
+  (defvar dired-guess-shell-alist-user
+    '(("\\.pdf\\'" "okular ? &")
+      ("\\.mp4\\'" "mpv ? &")
+      ("\\.mkv\\'" "mpv ? &")
+      ("\\.avi\\'" "mpv ? &")
+      ("\\.flv\\'" "mpv ? &")))))
 ;; -------------------------------------------------------
 (provide 'ew-dired)
 ;;; ew-dired ends here
