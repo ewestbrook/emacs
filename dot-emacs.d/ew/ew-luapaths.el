@@ -12,6 +12,8 @@
   (concat (getenv "HOME") "/share/lua/5.1/?.lua")
   (concat (getenv "HOME") "/git/w/src/share/lua/5.1/?.lua")
   (concat (getenv "HOME") "/git/w/src/?.lua")
+  (concat (getenv "HOME") "/git/ewl/lua/?.lua")
+  (concat (getenv "HOME") "/git/vxl/lua/?.lua")
   (concat (getenv "HOME") "/git/aot-ic/l/src/?.lua")))
 ;; -------------------------------------------------------
 (setq-default
@@ -20,6 +22,8 @@
   (concat (getenv "HOME") "/lib/lua/5.1/?.so")
   (concat (getenv "HOME") "/git/w/src/lib/lua/5.1/?.so")
   (concat (getenv "HOME") "/git/w/src/?.so")
+  (concat (getenv "HOME") "/git/ewl/?.so")
+  (concat (getenv "HOME") "/git/vxl/?.so")
   (concat (getenv "HOME") "/git/aot-ic/l/src/?.so")))
 ;; -------------------------------------------------------
 (defun ew-luapaths-prepend-paths()
