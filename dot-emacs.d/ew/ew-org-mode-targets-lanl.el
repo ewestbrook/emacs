@@ -32,6 +32,14 @@
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
+   ("lcsdemo"
+    :base-directory "~/git/eew-lcsdemo"
+    :base-extension "org"
+    :publishing-directory "~/git/eew-lcsdemo-h"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
    ))
 (provide 'ew-org-mode-targets-lanl)
 ;;; ew-org-mode-targets-lanl ends here
