@@ -27,6 +27,7 @@
     (setq n (ew-calc-mkfloat v))
     (setq n (/ (round (* n 100.0)) 100.0))
     (if (= 0.0 n) "" (format "%.2f" (ew-calc-mkfloat v)))))
+(defalias 'ewnz2 'ew-calc-nzdol2)
 ;; -------------------------------------------------------
 (defun ew-calc-plusdol2(r)
   "Format the sum of a range R as dollar or empty string."
