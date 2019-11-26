@@ -26,7 +26,8 @@
    (lua        . t)
    (python     . t)
    (sqlite     . t)
-   (dot        . t)))
+   (dot        . t)
+   (ditaa      . t)))
 ;; -------------------------------------------------------
 ;; org-src-lang-modes
 (setq
