@@ -85,16 +85,24 @@
 ;; Testing (set-frame-font "Menlo 11")
 ;; Testing (set-frame-font "Menlo 10")
 ;; Testing (set-frame-font "Menlo 9")
+;; Testing (set-frame-font "JetBrains Mono 10")
+;; Testing (set-frame-font "JetBrains Mono 11")
+;; Testing (set-frame-font "JetBrains Mono 12")
+;; Testing (set-frame-font "JetBrains Mono 13")
+;; Testing (set-frame-font "JetBrains Mono 14")
+;; Testing (set-frame-font "JetBrains Mono 15")
+;; Testing (set-frame-font "JetBrains Mono 16")
 ;; -------------------------------------------------------
 ;; Testing (set-frame-font "Menlo")
 ;; Testing (set-frame-font "Terminus (TTF)")
 ;; Testing (set-frame-font "TerminessTTF Nerd Font Mono")
+;; Testing (set-frame-font "JetBrains Mono")
 ;; -------------------------------------------------------
 (setq-default
  ew-host-font-map
  (list
   (cons "^p13[ab]"      "terminus 14")
-  (cons "^a1\\."        "Menlo 13")
+  (cons "^a1\\."        "JetBrains Mono 15")
   (cons "^viking\\."    "terminus 9")
   (cons "^e1\\."        "xos4 terminus 9")
   (cons "^edoras\\."    "xos4 terminus 9")
