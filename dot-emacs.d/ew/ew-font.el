@@ -106,7 +106,7 @@
   (cons "^viking\\."    "terminus 9")
   (cons "^e1\\."        "xos4 terminus 9")
   (cons "^edoras\\."    "xos4 terminus 9")
-  (cons "^pn1248518\\." "Menlo 12")
+  (cons "^pn1248518\\." "JetBrains Mono 12")
   )
  )
 ;; -------------------------------------------------------
