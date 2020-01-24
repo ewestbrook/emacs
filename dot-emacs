@@ -38,6 +38,11 @@
 (add-to-list 'load-path "~/git/graphviz-dot-mode.el")
 (add-to-list 'load-path "~/git/smex.el")
 (add-to-list 'load-path "~/git/flx.el")
+(add-to-list 'load-path "~/git/popup.el")
+(add-to-list 'load-path "~/git/emacs-async.el")
+(add-to-list 'load-path "~/git/helm.el")
+(add-to-list 'load-path "~/git/projectile.el")
+(add-to-list 'load-path "~/git/helm-projectile.el")
 ;; -------------------------------------------------------
 ;; (message "dot-emacs: load gentoo site-lisp")
 ;; (load "/usr/share/emacs/site-lisp/site-gentoo")
@@ -66,6 +71,10 @@
 (require 'ztree)
 (require 'smex)
 (require 'flx-ido)
+(require 'helm-config)
+(require 'helm)
+(require 'projectile)
+(require 'helm-projectile)
 ;; -------------------------------------------------------
 (require 'ew-pathenv)
 (ew-pathenv-prepend-paths)
@@ -100,9 +109,16 @@
 (require 'ew-ivy-mode-settings)
 (require 'ew-smex-mode-settings)
 (require 'ew-flx-mode-settings)
+(require 'ew-helm-settings)
 ;; -------------------------------------------------------
 ;; (require 'htmlize)
 ;; (require 'notmuch)
+;; -------------------------------------------------------
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+;; -------------------------------------------------------
+(helm-projectile-on)
 ;; -------------------------------------------------------
 ;; gc
 (setq gc-cons-threshold 20000000)

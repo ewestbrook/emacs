@@ -12,3 +12,4 @@ dot-emacs.d/session.*
 dot-emacs.d/tramp
 dot-emacs.d/transient/
 dot-emacs.d/url/
+projectile-bookmarks.eld
