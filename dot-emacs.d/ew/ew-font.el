@@ -103,7 +103,7 @@
  (list
   (cons "^p13[ab]"      "terminus 14")
   (cons "^a1\\."        "JetBrains Mono 15")
-  (cons "^viking\\."    "terminus 9")
+  (cons "^viking\\."    "terminus 12")
   (cons "^e1\\."        "xos4 terminus 9")
   (cons "^edoras\\."    "xos4 terminus 9")
   (cons "^pn1248518\\." "JetBrains Mono 12")
