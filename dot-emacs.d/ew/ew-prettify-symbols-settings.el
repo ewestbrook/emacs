@@ -5,6 +5,7 @@
 ;; see
 ;; https://emacsredux.com/blog/2014/08/25/a-peek-at-emacs-24-dot-4-prettify-symbols-mode/
 ;; https://github.com/tonsky/FiraCode/wiki/Emacs-instructions
+;; https://emacs.stackexchange.com/questions/55059/ligatures-with-the-jetbrains-mono-font
 ;; -------------------------------------------------------
 (defconst lisp--prettify-symbols-alist
   '(("lambda"  . ?λ)))
