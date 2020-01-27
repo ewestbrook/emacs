@@ -111,6 +111,10 @@
 (require 'ew-flx-mode-settings)
 (require 'ew-helm-settings)
 ;; -------------------------------------------------------
+(require 'ew-unicode)
+(require 'ew-prettify-symbols-settings)
+(global-prettify-symbols-mode)
+;; -------------------------------------------------------
 ;; (require 'htmlize)
 ;; (require 'notmuch)
 ;; -------------------------------------------------------
