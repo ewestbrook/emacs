@@ -110,6 +110,7 @@
 (require 'ew-smex-mode-settings)
 (require 'ew-flx-mode-settings)
 (require 'ew-helm-settings)
+(require 'ew-flycheck-settings)
 ;; -------------------------------------------------------
 (require 'ew-unicode)
 (require 'ew-prettify-symbols-settings)
@@ -263,11 +264,6 @@
              (setq python-indent-guess-indent-offset-verbose nil)
              (setq python-indent 2)
              (setq py-indent-offset 2)))
-;; -------------------------------------------------------
-;; flycheck
-;; Note: flycheck REPLACES flymake
-;; (setq-default flycheck-python-pylint-executable "python3")
-(add-hook 'after-init-hook #'global-flycheck-mode)
 ;; -------------------------------------------------------
 ;; markdown-mode
 (autoload 'markdown-mode "markdown-mode"
