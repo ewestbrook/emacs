@@ -79,5 +79,8 @@
 ;; org-table
 (setq-default org-tags-column nil)
 ;; -------------------------------------------------------
+;; variable-pitch-mode
+(add-hook 'org-mode-hook (lambda() (variable-pitch-mode t)))
+;; -------------------------------------------------------
 (provide 'ew-org-mode-settings)
 ;;; ew-org-mode-settings ends here
