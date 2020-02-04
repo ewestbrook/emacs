@@ -19,7 +19,8 @@
 (defvar ew-mono-faces
       '(org-block-begin-line
         org-meta-line
-        org-code))
+        org-code
+        org-table))
 ;; -------------------------------------------------------
 (defvar ew-nevermind-faces '(org-link org-verbatim))
 ;; -------------------------------------------------------
@@ -37,7 +38,7 @@
   "EW 'org-mode' face tweaks."
   ;; ----------------------
   (ewtfs :family "Noto Sans"   ew-prop-faces)
-  (ewtfs :family "Noto Sans Mono" ew-mono-faces)
+  (ewtfs :family "JetBrains Mono" ew-mono-faces)
   ;; ----------------------
   (ewtf :height 1.8 'org-document-title)
   (ewtf :height 1.5 'org-level-1)
