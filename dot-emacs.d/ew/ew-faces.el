@@ -20,6 +20,7 @@
       '(org-block-begin-line
         org-meta-line
         org-code
+        org-block
         org-table))
 ;; -------------------------------------------------------
 (defvar ew-nevermind-faces '(org-link org-verbatim))
