@@ -9,6 +9,7 @@
  ew-org-mode-target-module-map
  (list
   (cons "^e1$"                   'ew-org-mode-targets-ew)
+  (cons "^p13b$"                 'ew-org-mode-targets-ew)
   (cons "^ce2496b$"              'ew-org-mode-targets-ew)
   (cons "^a1\\.local$"           'ew-org-mode-targets-ew)
   (cons "^a1\\.westbrook\\.com$" 'ew-org-mode-targets-ew)
