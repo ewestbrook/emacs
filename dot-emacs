@@ -74,6 +74,8 @@
 (require 'flx-ido)
 (require 'helm-config)
 (require 'helm)
+(require 'helm-mode)
+(require 'helm-command)
 (require 'projectile)
 (require 'helm-projectile)
 (require 'mmm-mode)
