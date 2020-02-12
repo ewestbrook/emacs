@@ -3,6 +3,7 @@
 ;;; Code:
 ;; -------------------------------------------------------
 (message "loading ew-org-mode-targets")
+;; -------------------------------------------------------
 (setq-default eomstbhmsg "Host \"%s\" gets org-mode targets module \"%s\"")
 ;; -------------------------------------------------------
 (setq-default

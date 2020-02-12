@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+(message "loading remove-dos-eol")
+;; -------------------------------------------------------
 ;; see also
 ;; https://stackoverflow.com/a/750933
 (defun remove-dos-eol()

@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+(message "loading ew-mmm-mode-settings")
+;; -------------------------------------------------------
 (setq-default mmm-global-mode 'maybe)
 (mmm-add-mode-ext-class 'html-mode "\\.php\\'" 'html-php)
 ;; -------------------------------------------------------

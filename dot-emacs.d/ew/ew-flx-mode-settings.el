@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+(message "loading ew-flx-mode-settings")
+;; -------------------------------------------------------
 ;; see also
 ;; https://github.com/lewang/flx
 ;; https://www.youtube.com/watch?v=d-nxFHYsxN0
