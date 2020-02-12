@@ -102,11 +102,11 @@
  ew-host-font-map
  (list
   (cons "^p13[ab]"      "JetBrains Mono 13")
-  (cons "^a1\\."        "JetBrains Mono 16")
-  (cons "^viking\\."    "terminus 12")
-  (cons "^e1\\."        "xos4 terminus 9")
-  (cons "^edoras\\."    "xos4 terminus 9")
-  (cons "^pn1248518\\." "JetBrains Mono 12")
+  (cons "^a1\\b"        "JetBrains Mono 16")
+  (cons "^viking\\b"    "terminus 12")
+  (cons "^e1\\b"        "JetBrains Mono 10")
+  (cons "^edoras\\b"    "xos4 terminus 9")
+  (cons "^pn1248518\\b" "JetBrains Mono 12")
   )
  )
 ;; -------------------------------------------------------
@@ -115,13 +115,14 @@
   (catch 'found
     (let (sysnam)
       (setq sysnam (system-name))
-      (message "Host \"%s\" checking for desired EW font" sysnam)
       (loop for (k . v) in ew-host-font-map do
+            ;; (message "Check EW font \"%s\" for host \"%s\"" v k)
             (cond
              ((string-match k sysnam)
               (progn
                 (message "Host \"%s\" gets EW font \"%s\"" sysnam v)
-                (throw 'found v))))))))
+                (throw 'found v)))))
+    (message "Warning: No EW font for host \"%s\"" sysnam))))
 ;; -------------------------------------------------------
 (defun ew-set-font-and-stuff()
   "Set EW default font, colors, etc."
