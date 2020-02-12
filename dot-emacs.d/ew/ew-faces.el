@@ -21,6 +21,7 @@
         org-meta-line
         org-code
         org-block
+        org-date
         org-table))
 ;; -------------------------------------------------------
 (defvar ew-nevermind-faces '(org-link org-verbatim))
