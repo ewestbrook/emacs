@@ -116,6 +116,7 @@
 (require 'ew-helm-settings)
 (require 'ew-flycheck-settings)
 (require 'ew-mmm-mode-settings)
+(require 'ew-tramp-settings)
 ;; -------------------------------------------------------
 (require 'ew-unicode)
 (require 'ew-prettify-symbols-settings)
@@ -254,9 +255,6 @@
 (setq-default c-offsets-alist
       '((case-label . +)
         (statement-case-intro . +)))
-;; -------------------------------------------------------
-;; tramp
-(setq-default tramp-default-method "ssh")
 ;; -------------------------------------------------------
 ;; perl
 (defalias 'perl-mode 'cperl-mode)
