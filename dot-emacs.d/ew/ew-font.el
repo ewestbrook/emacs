@@ -111,6 +111,7 @@
   (cons "^e1\\b"        "JetBrains Mono 10")
   (cons "^edoras\\b"    "xos4 terminus 9")
   (cons "^pn1248518\\b" "JetBrains Mono 12")
+  (cons "^pn2001140\\b" "JetBrains Mono 12")
   )
  )
 ;; -------------------------------------------------------
