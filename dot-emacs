@@ -215,6 +215,7 @@
 ;; -------------------------------------------------------
 (set-fill-column 57)
 (setq-default fill-column 57)
+(setq-default truncate-partial-width-windows 64)
 (ew-set-font-and-stuff)
 ;; -------------------------------------------------------
 (add-to-list 'same-window-regexps "\*eshell\*")
