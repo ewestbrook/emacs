@@ -9,17 +9,17 @@
  '(
 
    ("budget"
-    :base-directory "~/git/eew-budget"
+    :base-directory "~/git/eew/budget"
     :base-extension "org"
-    :publishing-directory "~/git/eew-budget-h"
+    :publishing-directory "~/git/eew/budget-h"
     :recursive t
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
    ("cv"
-    :base-directory "~/git/eew-cv"
+    :base-directory "~/git/eew/cv"
     :base-extension "org"
-    :publishing-directory "~/git/eew-cv-h"
+    :publishing-directory "~/git/eew/cv-h"
     :recursive t
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
@@ -49,65 +49,65 @@
     :auto-preamble nil)
 
    ("expert"
-    :base-directory "~/git/eew-expert"
+    :base-directory "~/git/eew/expert"
     :base-extension "org"
-    :publishing-directory "~/git/eew-expert-h"
+    :publishing-directory "~/git/eew/expert-h"
     :recursive t
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
    ("guru"
-    :base-directory "~/git/eew-guru"
+    :base-directory "~/git/eew/guru"
     :base-extension "org"
-    :publishing-directory "~/git/eew-guru-h"
+    :publishing-directory "~/git/eew/guru-h"
     :recursive t
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
    ("manuals"
-    :base-directory "~/git/eew-manuals"
+    :base-directory "~/git/eew/manuals"
     :base-extension "org"
-    :publishing-directory "~/git/eew-manuals-h"
+    :publishing-directory "~/git/eew/manuals-h"
     :recursive t
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
    ("minme"
-    :base-directory "~/git/eew-minme"
+    :base-directory "~/git/eew/minme"
     :base-extension "org"
-    :publishing-directory "~/git/eew-minme-h"
+    :publishing-directory "~/git/eew/minme-h"
     :recursive t
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
    ("schnauzers"
-    :base-directory "~/git/eew-schnauzers"
+    :base-directory "~/git/eew/schnauzers"
     :base-extension "org"
-    :publishing-directory "~/git/eew-schnauzers-h"
+    :publishing-directory "~/git/eew/schnauzers-h"
     :recursive t
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
    ("smd"
-    :base-directory "~/git/eew-smd"
+    :base-directory "~/git/eew/smd"
     :base-extension "org"
-    :publishing-directory "~/git/eew-smd-h"
+    :publishing-directory "~/git/eew/smd-h"
     :recursive t
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
    ("teambest"
-    :base-directory "~/git/eew-teambest"
+    :base-directory "~/git/eew/teambest"
     :base-extension "org"
-    :publishing-directory "~/git/eew-teambest-h"
+    :publishing-directory "~/git/eew/teambest-h"
     :recursive t
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
    ("today"
-    :base-directory "~/git/eew-today"
+    :base-directory "~/git/eew/today"
     :base-extension "org"
-    :publishing-directory "~/git/eew-today-h"
+    :publishing-directory "~/git/eew/today-h"
     :recursive t
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
@@ -121,9 +121,9 @@
     :auto-preamble nil)
 
    ("wwwwc"
-    :base-directory "~/git/eew-wwwwc"
+    :base-directory "~/git/eew/wwwwc"
     :base-extension "org"
-    :publishing-directory "~/git/eew-wwwwc-h"
+    :publishing-directory "~/git/eew/wwwwc-h"
     :recursive t
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
