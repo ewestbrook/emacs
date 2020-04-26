@@ -10,11 +10,11 @@
 (global-set-key (kbd "C-x M-u") 'revert-buffer)
 ;; -------------------------------------------------------
 ;; viking hack for magit+tramp
-(defun ew-viking-tramp-remote-path()
-  "Hack to help magit+tramp use the right path to git."
-  (interactive)
-  (push "/export/home/eric/bin" tramp-remote-path))
-(global-set-key (kbd "C-M-?") 'ew-viking-tramp-remote-path)
+;; (defun ew-viking-tramp-remote-path()
+;;   "Hack to help magit+tramp use the right path to git."
+;;   (interactive)
+;;   (push "/export/home/eric/bin" tramp-remote-path))
+;; (global-set-key (kbd "C-M-?") 'ew-viking-tramp-remote-path)
 ;; -------------------------------------------------------
 ;; org
 (global-set-key "\C-cl" 'org-store-link)
