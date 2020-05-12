@@ -22,6 +22,7 @@
         org-code
         org-block
         org-date
+        org-link
         org-table))
 ;; -------------------------------------------------------
 (defvar ew-nevermind-faces '(org-link org-verbatim))
