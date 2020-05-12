@@ -12,6 +12,9 @@
 (setq-default magit-diff-highlight-trailing t)
 (setq-default magit-diff-hide-trailing-cr-characters t)
 ;; -------------------------------------------------------
+;; (setq-default magit-git-executable "/usr/local/bin/git")
+;; (setq-default magit-git-executable "git")
+;; -------------------------------------------------------
 ;; (add-to-list 'magit-section-initial-visibility-alist '(@{upstream} . show))
 ;; -------------------------------------------------------
 (provide 'ew-magit)
