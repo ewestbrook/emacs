@@ -67,5 +67,11 @@
   (ew-org-mode-noindex
    (directory-files-recursively "." "^[^.].*\\.org$")))
 ;; -------------------------------------------------------
+(defun ew-org-make-all ()
+  "Remove all timestamps and then publish current project."
+  (interactive)
+  (org-publish-remove-all-timestamps)
+  (org-publish-current-project))
+;; -------------------------------------------------------
 (provide 'ew-org-mode-fns)
 ;;; ew-org-mode-fns ends here

@@ -20,7 +20,7 @@
     "/usr/local/bin"
     "/usr/local/sbin")
   (list (concat ew-pathenv-home "/bin"))
-  (list (concat ew-pathenv-home "/git/w/bin"))))
+  (list (concat ew-pathenv-home "/git/eew/w/bin"))))
 ;; -------------------------------------------------------
 (defun ew-pathenv-prepend-paths()
   "Prepend paths in 'ew-pathenv-paths' to env's PATH and 'exec-path' uniquely, for each element that exists as a directory."
