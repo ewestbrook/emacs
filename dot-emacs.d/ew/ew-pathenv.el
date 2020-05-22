@@ -16,7 +16,7 @@
     "/usr/local/opt/texinfo/bin"
     "/Applications/Firefox.app/Contents/MacOS"
     "/Applications/Wireshark.app/Contents/MacOS"
-    "/usr/local/texlive/2019/bin/x86_64-darwin"
+    "/usr/local/texlive/2020/bin/x86_64-darwin"
     "/usr/local/bin"
     "/usr/local/sbin")
   (list (concat ew-pathenv-home "/bin"))
