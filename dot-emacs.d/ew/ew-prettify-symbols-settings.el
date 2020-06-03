@@ -19,5 +19,16 @@
    (push '("<=" . ?≤) prettify-symbols-alist)
    ))
 ;; -------------------------------------------------------
+(add-hook
+ 'python-mode-hook
+ (lambda ()
+   (push '("def" . ?ƒ) prettify-symbols-alist)
+   (push '("class" . ?¶) prettify-symbols-alist)
+   (push '("self" . ?●) prettify-symbols-alist)
+   (push '("__init__" . ?§) prettify-symbols-alist)
+   (push '("pass" . ?—) prettify-symbols-alist)
+   (push '("None" . ?∅) prettify-symbols-alist)
+   ))
+;; -------------------------------------------------------
 (provide 'ew-prettify-symbols-settings)
 ;;; ew-prettify-symbols-settings ends here
