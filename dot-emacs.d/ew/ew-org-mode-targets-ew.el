@@ -8,7 +8,7 @@
  org-publish-project-alist
  '(
 
-   ("budget"
+   ("budget-home"
     :base-directory "~/git/eew/budget"
     :base-extension "org"
     :publishing-directory "~/git/eew/budget-h"
@@ -16,7 +16,15 @@
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
-   ("cv"
+   ("budget-volgit"
+    :base-directory "/Volumes/git/eew/budget"
+    :base-extension "org"
+    :publishing-directory "/Volumes/git/eew/budget-h"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
+   ("cv-home"
     :base-directory "~/git/eew/cv"
     :base-extension "org"
     :publishing-directory "~/git/eew/cv-h"
@@ -24,7 +32,15 @@
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
-   ("eewa"
+   ("cv-volgit"
+    :base-directory "/Volumes/git/eew/cv"
+    :base-extension "org"
+    :publishing-directory "/Volumes/git/eew/cv-h"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
+   ("eewa-home"
     :base-directory "~/git/eo/eewa"
     :base-extension "org"
     :publishing-directory "~/git/eo/h/ew"
@@ -32,7 +48,15 @@
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
-   ("eng"
+   ("eewa-volgit"
+    :base-directory "/Volumes/git/eo/eewa"
+    :base-extension "org"
+    :publishing-directory "/Volumes/git/eo/h/ew"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
+   ("eng-home"
     :base-directory "~/git/eo/eng"
     :base-extension "org"
     :publishing-directory "~/git/eo/h/eng"
@@ -40,7 +64,15 @@
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
-   ("ew"
+   ("eng-volgit"
+    :base-directory "/Volumes/git/eo/eng"
+    :base-extension "org"
+    :publishing-directory "/Volumes/git/eo/h/eng"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
+   ("ew-home"
     :base-directory "~/git/eo/ew"
     :base-extension "org"
     :publishing-directory "~/git/eo/h/ew"
@@ -48,7 +80,15 @@
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
-   ("expert"
+   ("ew-volgit"
+    :base-directory "/Volumes/git/eo/ew"
+    :base-extension "org"
+    :publishing-directory "/Volumes/git/eo/h/ew"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
+   ("expert-home"
     :base-directory "~/git/eew/expert"
     :base-extension "org"
     :publishing-directory "~/git/eew/expert-h"
@@ -56,7 +96,15 @@
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
-   ("guru"
+   ("expert-volgit"
+    :base-directory "/Volumes/git/eew/expert"
+    :base-extension "org"
+    :publishing-directory "/Volumes/git/eew/expert-h"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
+   ("guru-home"
     :base-directory "~/git/eew/guru"
     :base-extension "org"
     :publishing-directory "~/git/eew/guru-h"
@@ -64,7 +112,15 @@
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
-   ("manuals"
+   ("guru-volgit"
+    :base-directory "/Volumes/git/eew/guru"
+    :base-extension "org"
+    :publishing-directory "/Volumes/git/eew/guru-h"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
+   ("manuals-home"
     :base-directory "~/git/eew/manuals"
     :base-extension "org"
     :publishing-directory "~/git/eew/manuals-h"
@@ -72,7 +128,15 @@
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
-   ("minme"
+   ("manuals-volgit"
+    :base-directory "/Volumes/git/eew/manuals"
+    :base-extension "org"
+    :publishing-directory "/Volumes/git/eew/manuals-h"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
+   ("minme-home"
     :base-directory "~/git/eew/minme"
     :base-extension "org"
     :publishing-directory "~/git/eew/minme-h"
@@ -80,7 +144,15 @@
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
-   ("schnauzers"
+   ("minme-volgit"
+    :base-directory "/Volumes/git/eew/minme"
+    :base-extension "org"
+    :publishing-directory "/Volumes/git/eew/minme-h"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
+   ("schnauzers-home"
     :base-directory "~/git/eew/schnauzers"
     :base-extension "org"
     :publishing-directory "~/git/eew/schnauzers-h"
@@ -88,7 +160,15 @@
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
-   ("smd"
+   ("schnauzers-volgit"
+    :base-directory "/Volumes/git/eew/schnauzers"
+    :base-extension "org"
+    :publishing-directory "/Volumes/git/eew/schnauzers-h"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
+   ("smd-home"
     :base-directory "~/git/eew/smd"
     :base-extension "org"
     :publishing-directory "~/git/eew/smd-h"
@@ -96,7 +176,15 @@
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
-   ("teambest"
+   ("smd-volgit"
+    :base-directory "/Volumes/git/eew/smd"
+    :base-extension "org"
+    :publishing-directory "/Volumes/git/eew/smd-h"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
+   ("teambest-home"
     :base-directory "~/git/eew/teambest"
     :base-extension "org"
     :publishing-directory "~/git/eew/teambest-h"
@@ -104,7 +192,15 @@
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
-   ("today"
+   ("teambest-volgit"
+    :base-directory "/Volumes/git/eew/teambest"
+    :base-extension "org"
+    :publishing-directory "/Volumes/git/eew/teambest-h"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
+   ("today-home"
     :base-directory "~/git/eew/today"
     :base-extension "org"
     :publishing-directory "~/git/eew/today-h"
@@ -112,7 +208,15 @@
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
-   ("w"
+   ("today-volgit"
+    :base-directory "/Volumes/git/eew/today"
+    :base-extension "org"
+    :publishing-directory "/Volumes/git/eew/today-h"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
+   ("w-home"
     :base-directory "~/git/eew/w/src"
     :base-extension "org"
     :publishing-directory "~/git/w-h"
@@ -120,10 +224,26 @@
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
-   ("wwwwc"
+   ("w-volgit"
+    :base-directory "/Volumes/git/eew/w/src"
+    :base-extension "org"
+    :publishing-directory "/Volumes/git/w-h"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
+   ("wwwwc-home"
     :base-directory "~/git/eew/wwwwc"
     :base-extension "org"
     :publishing-directory "~/git/eew/wwwwc-h"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
+   ("wwwwc-volgit"
+    :base-directory "/Volumes/git/eew/wwwwc"
+    :base-extension "org"
+    :publishing-directory "/Volumes/git/eew/wwwwc-h"
     :recursive t
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
