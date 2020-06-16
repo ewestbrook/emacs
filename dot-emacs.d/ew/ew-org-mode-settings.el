@@ -14,6 +14,7 @@
 (setq-default org-startup-folded nil)
 ;; -------------------------------------------------------
 (setq-default org-export-with-author nil)
+(setq-default org-export-with-broken-links 'mark)
 (setq-default org-export-with-creator nil)
 (setq-default org-export-with-email nil)
 (setq-default org-export-with-latex t)
