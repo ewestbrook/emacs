@@ -97,6 +97,7 @@
 ;; Testing (set-frame-font "JetBrains Mono 15")
 ;; Testing (set-frame-font "JetBrains Mono 16")
 ;; Testing (set-frame-font "JetBrains Mono 18")
+;; Testing (set-frame-font "JetBrains Mono 20")
 ;; -------------------------------------------------------
 ;; Testing (set-frame-font "Menlo")
 ;; Testing (set-frame-font "Terminus (TTF)")
