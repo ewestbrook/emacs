@@ -1,9 +1,3 @@
-*#
-*-
-*.bak
-*~
-.DS_Store
-._*
 auto-save-list
 dot-emacs.d/.cask/
 dot-emacs.d/elpa/archives/
