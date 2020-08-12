@@ -108,7 +108,7 @@
  ew-host-font-map
  (list
   (cons "^p13[ab]"      "JetBrains Mono 13")
-  (cons "^a1\\b"        "JetBrains Mono 16")
+  (cons "^a1\\b"        "JetBrains Mono 14")
   (cons "^viking\\b"    "terminus 12")
   (cons "^e1\\b"        "JetBrains Mono 10")
   (cons "^edoras\\b"    "xos4 terminus 9")
