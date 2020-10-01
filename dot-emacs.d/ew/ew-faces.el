@@ -20,6 +20,7 @@
       '(org-block-begin-line
         org-meta-line
         org-code
+        org-verbatim
         org-block
         org-date
         org-link
