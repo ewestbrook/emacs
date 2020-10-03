@@ -110,7 +110,7 @@
   (cons "^p13[ab]"      "JetBrains Mono 13")
   (cons "^a1\\b"        "JetBrains Mono 14")
   (cons "^viking\\b"    "terminus 12")
-  (cons "^e1\\b"        "JetBrains Mono 10")
+  (cons "^e1\\b"        "JetBrains Mono 8")
   (cons "^edoras\\b"    "xos4 terminus 9")
   (cons "^pn1248518\\b" "JetBrains Mono 12")
   (cons "^pn2001140\\b" "JetBrains Mono 12")
