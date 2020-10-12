@@ -109,19 +109,23 @@
  (list
   (cons "^p13[ab]"      "JetBrains Mono 13")
   (cons "^a1\\b"        "JetBrains Mono 14")
-  (cons "^viking\\b"    "terminus 12")
   (cons "^e1\\b"        "JetBrains Mono 8")
-  (cons "^edoras\\b"    "xos4 terminus 9")
-  (cons "^pn1248518\\b" "JetBrains Mono 12")
-  (cons "^pn2001140\\b" "JetBrains Mono 12")
-  )
- )
+  ))
+;; -------------------------------------------------------
+(setq-default
+ ew-domain-font-map
+ (list
+  (cons "westbrook\.com$" "JetBrains Mono 8")
+  (cons "lcs\.lanl\.gov$" "JetBrains Mono 11")
+  (cons "lanl\.gov$"      "JetBrains Mono 12")
+  ))
 ;; -------------------------------------------------------
 (defun ew-get-font-by-host-list()
   "Set system font by host name."
   (catch 'found
     (let (sysnam)
       (setq sysnam (system-name))
+      ;; (message "System hostname: \"%s\"" sysnam)
       (loop for (k . v) in ew-host-font-map do
             ;; (message "Check EW font \"%s\" for host \"%s\"" v k)
             (cond
@@ -129,7 +133,19 @@
               (progn
                 (message "Host \"%s\" gets EW font \"%s\"" sysnam v)
                 (throw 'found v)))))
-    (message "Warning: No EW font for host \"%s\"" sysnam))))
+      (message "Warning: No EW font for host \"%s\"" sysnam))
+    (let (domnam)
+      (setq domnam (car (split-string (shell-command-to-string "hostname -f"))))
+      ;; (message "System domain name: \"%s\"" domnam)
+      (loop for (k . v) in ew-domain-font-map do
+            ;; (message "Check EW font \"%s\" for domain \"%s\"" v k)
+            (cond
+             ((string-match k domnam)
+              (progn
+                (message "FQDN \"%s\" gets EW font \"%s\"" domnam v)
+                (throw 'found v)))))
+      (message "Warning: No EW font for FQDN \"%s\"" domnam))
+    ))
 ;; -------------------------------------------------------
 (defun ew-set-font-and-stuff()
   "Set EW default font, colors, etc."
