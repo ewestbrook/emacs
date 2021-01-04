@@ -46,6 +46,7 @@
 (add-to-list 'load-path "~/git/emacs/mmm-mode.el")
 (add-to-list 'load-path "~/git/emacs/mac-print-mode.el")
 (add-to-list 'load-path "~/git/emacs/ebuild-mode.el")
+(add-to-list 'load-path "~/git/emacs/emacs-libvterm.el")
 ;; -------------------------------------------------------
 ;; (message "dot-emacs: load gentoo site-lisp")
 ;; (load "/usr/share/emacs/site-lisp/site-gentoo")
@@ -83,6 +84,7 @@
 (require 'mmm-mode)
 (require 'mac-print-mode)
 (require 'ebuild-mode)
+(require 'vterm)
 ;; -------------------------------------------------------
 (require 'ew-pathenv)
 (ew-pathenv-prepend-paths)
