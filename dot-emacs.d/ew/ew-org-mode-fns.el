@@ -73,5 +73,16 @@
   (org-publish-remove-all-timestamps)
   (org-publish-current-project))
 ;; -------------------------------------------------------
+(defun ew-org-publish-open-buffers()
+  "Publish open 'org-mode' buffers."
+  (interactive)
+  (mapc (lambda (buffer)
+          (when (eq 'org-mode
+                    (buffer-local-value
+                     'major-mode buffer))
+            (switch-to-buffer buffer)
+            (org-publish-current-file t)))
+        (buffer-list)))
+;; -------------------------------------------------------
 (provide 'ew-org-mode-fns)
 ;;; ew-org-mode-fns ends here
