@@ -117,7 +117,7 @@
  (list
   (cons "westbrook\.com$" "JetBrains Mono 8")
   (cons "lcs\.lanl\.gov$" "JetBrains Mono 11")
-  (cons "lanl\.gov$"      "JetBrains Mono 12")
+  (cons "lanl\.gov$"      "JetBrains Mono 14")
   ))
 ;; -------------------------------------------------------
 (defun ew-get-font-by-host-list()
