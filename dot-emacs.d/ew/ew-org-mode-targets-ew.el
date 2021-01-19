@@ -40,6 +40,14 @@
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
+   ("eew-lanl"
+    :base-directory "~/git/eew/lanl"
+    :base-extension "org"
+    :publishing-directory "~/git/eew/lanl-h"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
    ("eewa-home"
     :base-directory "~/git/eo/eewa"
     :base-extension "org"
