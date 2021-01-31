@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "dot-emacs: package-initialize")
+(message "dot-emacs: invoke package-initialize")
 (package-initialize)
 ;; -------------------------------------------------------
 (message "dot-emacs: add load paths")
