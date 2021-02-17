@@ -8,6 +8,14 @@
  org-publish-project-alist
  '(
 
+   ("eew-lanl"
+    :base-directory "~/git/eew/lanl"
+    :base-extension "org"
+    :publishing-directory "~/git/eew/lanl-h"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
    ("lanlpres-home"
     :base-directory "~/git/eew/lanlpres"
     :base-extension "org"
