@@ -16,6 +16,14 @@
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
+   ("aotic-mediawikifiles"
+    :base-directory "~/git/aot-ic/mediawikifiles"
+    :base-extension "org"
+    :publishing-directory "~/git/aot-ic/mediawikifiles-h"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
    ("lanlpres-home"
     :base-directory "~/git/eew/lanlpres"
     :base-extension "org"
