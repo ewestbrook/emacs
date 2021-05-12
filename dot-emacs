@@ -314,6 +314,9 @@
     (expand-file-name
      (concat "#%" (buffer-name) "#"))))
 ;; -------------------------------------------------------
+;; (setq default-frame-alist '((left . 0) (top . 26) (height . 49) (width . 193)))
+;; (set-frame-position (selected-frame) 0 26)
+;; -------------------------------------------------------
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
