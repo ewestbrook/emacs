@@ -216,6 +216,14 @@
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
+   ("today-git"
+    :base-directory "/git/eew/today"
+    :base-extension "org"
+    :publishing-directory "/git/eew/today-h"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
    ("today-volgit"
     :base-directory "/Volumes/git/eew/today"
     :base-extension "org"
