@@ -47,6 +47,7 @@
 (add-to-list 'load-path "~/git/emacs/mac-print-mode.el")
 (add-to-list 'load-path "~/git/emacs/ebuild-mode.el")
 (add-to-list 'load-path "~/git/emacs/emacs-libvterm.el")
+(add-to-list 'load-path "~/git/emacs/bazel-mode.el")
 ;; -------------------------------------------------------
 ;; (message "dot-emacs: load gentoo site-lisp")
 ;; (load "/usr/share/emacs/site-lisp/site-gentoo")
