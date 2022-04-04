@@ -12,7 +12,6 @@
 (add-to-list 'load-path "~/git/emacs/ctable.el")
 (add-to-list 'load-path "~/git/emacs/dash.el")
 (add-to-list 'load-path "~/git/emacs/flycheck.el")
-(add-to-list 'load-path "~/git/emacs/graphql.el")
 (add-to-list 'load-path "~/git/emacs/htmlize.el")
 (add-to-list 'load-path "~/git/emacs/lua-mode.el")
 (add-to-list 'load-path "~/git/emacs/magit-filenotify.el")
