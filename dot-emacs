@@ -17,7 +17,7 @@
 (add-to-list 'load-path "~/git/emacs/magit-filenotify.el")
 (add-to-list 'load-path "~/git/emacs/magit-ghub.el")
 (add-to-list 'load-path "~/git/emacs/magit-popup.el")
-(add-to-list 'load-path "~/git/emacs/magit-with-editor.el")
+(add-to-list 'load-path "~/git/emacs/magit-with-editor.el/lisp")
 (add-to-list 'load-path "~/git/emacs/magit-transient.el/lisp")
 (add-to-list 'load-path "~/git/emacs/magit.el/lisp")
 (add-to-list 'load-path "~/git/emacs/markdown-mode.el")
@@ -48,6 +48,7 @@
 (add-to-list 'load-path "~/git/emacs/emacs-libvterm.el")
 (add-to-list 'load-path "~/git/emacs/bazel-mode.el")
 (add-to-list 'load-path "~/git/emacs/yaml-mode.el")
+(add-to-list 'load-path "~/git/emacs/compat.el")
 ;; -------------------------------------------------------
 ;; (message "dot-emacs: load gentoo site-lisp")
 ;; (load "/usr/share/emacs/site-lisp/site-gentoo")
