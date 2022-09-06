@@ -134,6 +134,7 @@
 (require 'ew-twbs)
 (require 'ew-unicode)
 (require 'ew-vc)
+(require 'ew-viking)
 (require 'ew-web-mode)
 (require 'ew-window)
 (require 'show-wspace)
