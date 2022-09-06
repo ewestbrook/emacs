@@ -1,0 +1,134 @@
+/* --------------------------------------------------- */
+/* globals                                             */
+/* --------------------------------------------------- */
+body   { font-family: "Noto Sans", sans-serif; }
+/* --------------------------------------------------- */
+/* main area, fixed header/footer and scrolling body   */
+/* --------------------------------------------------- */
+body        { padding: 0; margin: 0; overflow: hidden; }
+body        { box-sizing: border-box; }
+div#content { overflow-y: scroll; }
+div#content { height: calc(100vh - 96px); }
+div#content { width: 100%; }
+div.status  { padding: 0; margin: 0; overflow: hidden; }
+/* --------------------------------------------------- */
+/* header and footer                                   */
+/* --------------------------------------------------- */
+div.status ul            { list-style-type: none; }
+div.status li            { margin: 0; }
+div.status li            { padding: 0; }
+div.status span          { padding: 0 12px; }
+div.status a             { padding: 0 12px; }
+div.status li            { float: left; }
+div.status li:last-child { float: right; }
+div.status li            { border-right: 1px solid #bbb; }
+div.status li:last-child { border-right: none; }
+div#postamble li         { border-right: none; }
+div.status               { color: #bbb; }
+div.status a             { color: #bbb; }
+div.status               { background-color: #202; }
+div.status a:hover       { background-color: #424; }
+div.status a             { text-decoration: none; }
+/* --------------------------------------------------- */
+/* content grid in main area: title, toc, doc body     */
+/* --------------------------------------------------- */
+div#content              { padding: 0; }
+div#content              { margin: 0 16px; }
+div.documentbody         { width: 100%; }
+div#table-of-contents    { width: 100%; }
+div#table-of-contents    { position: sticky; }
+/* --------------------------------------------------- */
+@media only screen and (min-width: 601px) {
+  div#content            { margin: 0 0 0 64px; }
+  div.title              { float: left; }
+  div.documentbody       { float: left; }
+  div.title              { width: 100%; }
+  div.documentbody       { width: 70%; }
+  div#table-of-contents  { width: 30%; }
+  div#table-of-contents  { top: 0; }
+  div#table-of-contents  { float: right; }
+  div#table-of-contents  { position: sticky; }}
+/* --------------------------------------------------- */
+/* title                                               */
+/* --------------------------------------------------- */
+/* .title { padding: 0; margin: 0; } */
+.title { text-align: left; }
+/* --------------------------------------------------- */
+/* table of contents                                   */
+/* --------------------------------------------------- */
+div#table-of-contents h2 { display: none; }
+div#table-of-contents ul { list-style-type: none; }
+div#table-of-contents a  { text-decoration: none; }
+/* --------------------------------------------------- */
+/* tables                                              */
+/* --------------------------------------------------- */
+table                 { border-collapse: collapse; }
+table, th, td         { border: 1px solid #aaa; }
+th, td                { padding: 1px 8px; }
+th, td                { vertical-align: middle; }
+th.org-left           { text-align: left;   }
+th.org-center         { text-align: center; }
+th.org-right          { text-align: right;  }
+caption               { text-align: left; }
+caption span          { font-weight: bold; }
+/* --------------------------------------------------- */
+/* lists                                               */
+/* --------------------------------------------------- */
+div.documentbody li { margin-left: 24px; }
+/* --------------------------------------------------- */
+/* example, src blocks                                 */
+/* --------------------------------------------------- */
+pre.src          { font-family:"Roboto Mono",monospace; }
+pre.example      { font-family:"Roboto Mono",monospace; }
+pre.src, pre.example { font-size: smaller; }
+pre.src, pre.example { color:#a6a376; }
+pre.src, pre.example { background-color:#282828; }
+pre.src, pre.example { padding: 8px 16px; }
+pre.src, pre.example { border: 0 }
+pre.src, pre.example { margin: 0 8px; }
+@media only screen and (min-width: 601px) {
+  pre.src, pre.example { margin: 0 32px; }}
+/* --------------------------------------------------- */
+/* src block tag                                       */
+/* --------------------------------------------------- */
+pre.src:before { display: inline; }
+pre.src:before { text-transform: lowercase; }
+pre.src:before { color:            #000; }
+pre.src:before { background-color: #ede352; }
+/* --------------------------------------------------- */
+/* code-formatted                                              */
+/* --------------------------------------------------- */
+code            { font-family:"Roboto Mono",monospace; }
+code                         { font-size: smaller; }
+code                         { padding: 0 4px; }
+code                         { color:           #e8b958;}
+code                         { background-color:#282828;}
+div#table-of-contents a code { color:           #5888e9;}
+div#table-of-contents a code { background-color:#fff;   }
+/* --------------------------------------------------- */
+/* colors                                              */
+/* --------------------------------------------------- */
+th                      { background-color: #f4dff4; }
+tr:nth-child(even)      { background-color: #fff6ff; }
+tr:hover                { background-color: #f4dff4; }
+div#table-of-contents a { color: #999; }
+/* --------------------------------------------------- */
+/* boxes                                               */
+/* --------------------------------------------------- */
+body       { padding: 0; margin: 0; }
+pre        { padding: 0; margin: 0; }
+div        { padding: 0; margin: 0; }
+div.figure { padding: 0; margin: 0; }
+h1         { padding: 0; margin: 0; }
+h2         { padding: 0; margin: 0; }
+h3         { padding: 0; margin: 0; }
+h4         { padding: 0; margin: 0; }
+p          { padding: 0; margin: 0; }
+ul         { padding: 0; margin: 0; }
+ul.org-ul  { padding: 0; margin: 0; }
+li         { padding: 0; margin: 0; }
+/* --------------------------------------------------- */
+/* boxes                                               */
+/* --------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 { font-weight: 500; }
+/* --------------------------------------------------- */

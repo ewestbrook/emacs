@@ -2,337 +2,157 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+;; packages required
+;; -----------------
+;; company
+;; graphviz-dot-mode
+;; org-bullets
+;; ob-http
+;; ivy
+;; web-mode
+;; flycheck
+;; ztree
+;; smex
+;; flx-ido
+;; helm (melpa)
+;; projectile
+;; helm-projectile
+;; mmm-mode
+;; htmlize
+;; vterm
+;; yaml-mode
+;; lua-mode
+;; magit
+;; -------------------------------------------------------
+(message "setq url-proxy-services")
+(setq url-proxy-services
+      '(("no_proxy" . "^\\(localhost\\|10.*\\|192.168.29.*\\|172.55.*\\)")
+        ("http" . "proxyout.lanl.gov:8080")
+        ("https" . "proxyout.lanl.gov:8080")))
+;; -------------------------------------------------------
 (message "dot-emacs: package-initialize")
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 ;; -------------------------------------------------------
-(message "dot-emacs: add load paths")
-(add-to-list 'load-path "~/.emacs.d/ew")
-(add-to-list 'load-path "~/git/emacs/org-mode.el/lisp")
-(add-to-list 'load-path "~/.emacs.d/elpa/ivy-0.11.0")
-(add-to-list 'load-path "~/git/emacs/ctable.el")
-(add-to-list 'load-path "~/git/emacs/dash.el")
-(add-to-list 'load-path "~/git/emacs/flycheck.el")
-(add-to-list 'load-path "~/git/emacs/htmlize.el")
-(add-to-list 'load-path "~/git/emacs/lua-mode.el")
-(add-to-list 'load-path "~/git/emacs/magit-filenotify.el")
-(add-to-list 'load-path "~/git/emacs/magit-ghub.el")
-(add-to-list 'load-path "~/git/emacs/magit-popup.el")
-(add-to-list 'load-path "~/git/emacs/magit-with-editor.el/lisp")
-(add-to-list 'load-path "~/git/emacs/magit-transient.el/lisp")
-(add-to-list 'load-path "~/git/emacs/magit.el/lisp")
-(add-to-list 'load-path "~/git/emacs/markdown-mode.el")
-(add-to-list 'load-path "~/git/emacs/ob-http.el")
-(add-to-list 'load-path "~/git/emacs/org-bullets.el")
-(add-to-list 'load-path "~/git/emacs/org-manage.el")
-(add-to-list 'load-path "~/git/emacs/org-reveal.el")
-(add-to-list 'load-path "~/git/emacs/ox-twbs.el")
-(add-to-list 'load-path "~/git/emacs/php-mode.el")
-(add-to-list 'load-path "~/git/emacs/python-mode.el")
-(add-to-list 'load-path "~/git/emacs/js2-mode.el")
-(add-to-list 'load-path "~/git/emacs/rjsx-mode.el")
-(add-to-list 'load-path "~/git/emacs/s.el")
-(add-to-list 'load-path "~/git/emacs/treepy.el")
-(add-to-list 'load-path "~/git/emacs/web-mode.el")
-(add-to-list 'load-path "~/git/emacs/ztree.el")
-(add-to-list 'load-path "~/git/emacs/graphviz-dot-mode.el")
-(add-to-list 'load-path "~/git/emacs/smex.el")
-(add-to-list 'load-path "~/git/emacs/flx.el")
-(add-to-list 'load-path "~/git/emacs/popup.el")
-(add-to-list 'load-path "~/git/emacs/emacs-async.el")
-(add-to-list 'load-path "~/git/emacs/helm.el")
-(add-to-list 'load-path "~/git/emacs/projectile.el")
-(add-to-list 'load-path "~/git/emacs/helm-projectile.el")
-(add-to-list 'load-path "~/git/emacs/mmm-mode.el")
-(add-to-list 'load-path "~/git/emacs/mac-print-mode.el")
-(add-to-list 'load-path "~/git/emacs/ebuild-mode.el")
-(add-to-list 'load-path "~/git/emacs/emacs-libvterm.el")
-(add-to-list 'load-path "~/git/emacs/bazel-mode.el")
-(add-to-list 'load-path "~/git/emacs/yaml-mode.el")
-(add-to-list 'load-path "~/git/emacs/compat.el")
-;; -------------------------------------------------------
+;; (message "dot-emacs: add load paths")
+(add-to-list 'load-path "~/git/eew/emacs")
+;; ;; -------------------------------------------------------
 ;; (message "dot-emacs: load gentoo site-lisp")
 ;; (load "/usr/share/emacs/site-lisp/site-gentoo")
 ;; -------------------------------------------------------
 (message "dot-emacs: requiring packages")
 ;; -------------------------------------------------------
-(require 'ew-lanl-proxy)
+;; (require 'ew-lanl-proxy)
 ;; -------------------------------------------------------
-(require 'org)
-(require 'org-tempo)
-(require 'uniquify)
-(require 'gud)
-(require 'package)
-(require 'graphviz-dot-mode)
-(require 'magit-filenotify)
-(require 'org-bullets)
-(require 'ob-http)
-(require 'ox-twbs)
-(require 'ox-reveal)
-(require 'ivy)
 (require 'counsel)
-(require 'swiper)
-(require 'rjsx-mode)
-(require 'web-mode)
-(require 'flycheck)
-(require 'ztree)
-(require 'smex)
+;; (require 'ebuild-mode)
 (require 'flx-ido)
-(require 'helm-config)
+(require 'flycheck)
+(require 'graphviz-dot-mode)
+(require 'gud)
 (require 'helm)
-(require 'helm-mode)
 (require 'helm-command)
-(require 'projectile)
+(require 'helm-config)
+(require 'helm-mode)
 (require 'helm-projectile)
+(require 'ivy)
+(require 'lua-mode)
+;; (require 'mac-print-mode)
+(require 'magit)
 (require 'mmm-mode)
-(require 'mac-print-mode)
-(require 'ebuild-mode)
+(require 'ob-http)
+(require 'org)
+(require 'org-bullets)
+(require 'org-tempo)
+(require 'ox-reveal)
+(require 'ox-twbs)
+(require 'projectile)
+(require 'python-mode)
+(require 'rjsx-mode)
+(require 'smex)
+(require 'swiper)
+(require 'uniquify)
 (require 'vterm)
+(require 'web-mode)
 (require 'yaml-mode)
+(require 'ztree)
 ;; -------------------------------------------------------
-(require 'ew-pathenv)
-(ew-pathenv-prepend-paths)
-;; -------------------------------------------------------
-(require 'ew-luapaths)
-(ew-luapaths-prepend-paths)
-;; -------------------------------------------------------
-(require 'ew-calc-fns)
-(require 'ew-string-fns)
-(require 'ew-dir-fns)
+(require 'ew-autosave)
+(require 'ew-babel)
+(require 'ew-c)
+(require 'ew-calc)
+(require 'ew-clipboard)
+(require 'ew-company)
+(require 'ew-dir)
 (require 'ew-dired)
 (require 'ew-ediff)
-(require 'ew-faces)
+(require 'ew-elisp)
+(require 'ew-flx)
+(require 'ew-flycheck)
 (require 'ew-font)
-(require 'ew-gnus)
-(require 'ew-hs-minor-mode-settings)
-(require 'ew-kill-fns)
-(require 'ew-lua-mode)
-(require 'ew-magit)
-(require 'ew-modeline)
-(require 'ew-org-index)
-(require 'ew-org-mode)
-(require 'ew-ox-html)
-(require 'ew-tog-ded)
-(require 'ew-twbs)
-(require 'ew-org-same-window)
-(require 'ew-org-reveal-settings)
-(require 'org-babel-eval-stderr)
-(require 'show-wspace)
-(require 'ew-os-particulars)
+;; (require 'ew-font-test)
 (require 'ew-global-keys)
-(require 'ew-ivy-mode-settings)
-(require 'ew-smex-mode-settings)
-(require 'ew-flx-mode-settings)
-(require 'ew-helm-settings)
-(require 'ew-flycheck-settings)
-(require 'ew-mmm-mode-settings)
-(require 'ew-tramp-settings)
-;; -------------------------------------------------------
+(require 'ew-gnus)
+(require 'ew-helm)
+(require 'ew-hs-minor-mode)
+(require 'ew-indent)
+(require 'ew-ivy)
+(require 'ew-kill)
+;; (require 'ew-lanl-proxy)
+(require 'ew-lua)
+(require 'ew-magit)
+(require 'ew-markdown)
+(require 'ew-misc)
+(require 'ew-mmm)
+(require 'ew-modeline)
+(require 'ew-org)
+(require 'ew-org-faces)
+(require 'ew-org-fns)
+(require 'ew-org-index)
+(require 'ew-org-keys)
+(require 'ew-org-reveal)
+(require 'ew-org-same-window)
+(require 'ew-org-targets)
+(require 'ew-os-linux)
+(require 'ew-os-windows)
+(require 'ew-os-macos)
+;; (require 'ew-ox-html)
+(require 'ew-path)
+(require 'ew-perl)
+(require 'ew-prettify-symbols)
+(require 'ew-projectile)
+(require 'ew-python)
+(require 'ew-rjsx)
+(require 'ew-sh)
+(require 'ew-smex)
+(require 'ew-string)
+(require 'ew-tog-ded)
+(require 'ew-tramp)
+(require 'ew-twbs)
 (require 'ew-unicode)
-(require 'ew-prettify-symbols-settings)
-(global-prettify-symbols-mode)
-;; -------------------------------------------------------
-;; (require 'htmlize)
-;; (require 'notmuch)
-;; -------------------------------------------------------
-(projectile-mode +1)
-(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
-(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-;; -------------------------------------------------------
-(helm-projectile-on)
-;; -------------------------------------------------------
-;; gc
-(setq gc-cons-threshold 20000000)
-;; -------------------------------------------------------
-;; lua-mode
-(add-to-list 'auto-mode-alist '("\\.rockspec\\'" . lua-mode))
-;; -------------------------------------------------------
-;; rjsx-mode
-(add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
-;; -------------------------------------------------------
-;; web-mode
-(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
-(defun ew-web-mode-hook ()
-  "EW hooks for web-mode."
-  (setq web-mode-markup-indent-offset 2)
-  (setq web-mode-css-indent-offset 2)
-  (setq web-mode-code-indent-offset 2)
-  (setq web-mode-indent-style 2))
-(add-hook 'web-mode-hook 'ew-web-mode-hook)
-;; (setq ew-web-moders
-;;       '("\\.phtml\\'"
-;;         "\\.tpl\\.php\\'"
-;;         "\\.html\\.twig\\'"
-;;         "\\.html?\\'"))
-;; (setq moders ew-web-moders)
-;; (while moders
-;;   (setq moder (car moders))
-;;   (add-to-list 'auto-mode-alist moder)
-;;   (setq moders (cdr moders)))
-;; -------------------------------------------------------
-;; url-handler-mode
-(load "url") (url-handler-mode t)
-;; (autoload 'notmuch "notmuch" "notmuch mail" t)
-;; -------------------------------------------------------
-(tool-bar-mode -1)
-(show-paren-mode t)
-(line-number-mode 1)
-(column-number-mode 1)
-(global-font-lock-mode t)
-(global-auto-revert-mode 1)
-(put 'downcase-region 'disabled nil)
-;; -------------------------------------------------------
-(setq-default buffers-menu-max-size nil)
-(setq-default default-major-mode 'text-mode)
-(setq-default exec-path (append exec-path '("/usr/local/texlive/2018/bin")))
-(setq-default font-lock-maximum-decoration t)
-(setq-default inhibit-splash-screen t)
-(setq-default large-file-warning-threshold 50000000)
-(setq-default lpr-command "xpp")
-(setq-default make-backup-files nil)
-(setq-default mouse-buffer-menu-mode-mult 0)
-(setq-default next-line-add-newlines nil)
-(setq-default ps-lpr-command "xpp")
-(setq-default require-final-newline t)
-(setq-default scroll-step 1)
-(setq-default transient-mark-mode t)
-(setq-default uniquify-buffer-name-style 'post-forward)
-(setq-default user-mail-address "")
-(setq-default user-full-name "")
-;; -------------------------------------------------------
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 2)
-(setq-default default-tab-width 2)
-(setq-default column-number-mode t)
-(setq-default default-tab-width 2)
-(setq-default standard-indent 2)
-(setq-default javascript-indent-level 2)
-(setq-default js-indent-level 2)
-(setq-default css-indent-offset 2)
-(setq-default c-basic-offset 2)
-(setq-default cperl-indent-level 2)
-(setq-default tex-indent-arg 2)
-;; -------------------------------------------------------
-(set-default-coding-systems 'utf-8)
-;; -------------------------------------------------------
-(set-fill-column 57)
-(setq-default fill-column 57)
-(setq-default truncate-partial-width-windows 80)
-(ew-set-font-and-stuff)
-;; -------------------------------------------------------
-(add-to-list 'same-window-regexps "\*eshell\*")
-(add-to-list 'same-window-regexps "\*shell\*")
-(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
-;; -------------------------------------------------------
-(add-to-list 'auto-mode-alist '("/db\\." . dns-mode))
-;; -------------------------------------------------------
-;; (add-hook 'after-init-hook 'global-company-mode)
-;; -------------------------------------------------------
-(defun no-split-window ()
-  "Function for preference of not splitting window."
-  (interactive) nil)
-(setq-default split-window-preferred-function 'no-split-window)
-;; -------------------------------------------------------
-(setq-default vc-handled-backends nil)
-(add-to-list 'vc-handled-backends 'CVS)
-(add-to-list 'vc-handled-backends 'RCS)
-(add-to-list 'vc-handled-backends 'SVN)
-(add-to-list 'vc-handled-backends 'GIT)
-;; -------------------------------------------------------
-;; git
-;; (add-to-list 'load-path "/usr/share/emacs/site-lisp/git")
-;; (autoload 'git-status "git"
-;;   "Entry point into git-status mode." t)
-;; (autoload 'git-blame-mode "git-blame"
-;;   "Minor mode for incremental blame for Git." t)
-;; -------------------------------------------------------
-;; sh
-(defun ew-setup-sh-mode ()
-  "EW shell prefs."
-  (interactive)
-  (setq sh-basic-offset 2
-        sh-indentation 2))
-(add-hook 'sh-mode-hook 'ew-setup-sh-mode)
-;; -------------------------------------------------------
-;; c
-(setq-default c-offsets-alist
-      '((case-label . +)
-        (statement-case-intro . +)))
-;; -------------------------------------------------------
-;; perl
-(defalias 'perl-mode 'cperl-mode)
-;; -------------------------------------------------------
-;; python
-(setq-default py-keep-windows-configuration t)
-(add-hook 'python-mode-hook
-          '(lambda ()
-             (setq python-indent-guess-indent-offset t)
-             (setq python-indent-guess-indent-offset-verbose nil)
-             (setq python-indent 2)
-             (setq py-indent-offset 2)))
-;; -------------------------------------------------------
-;; markdown-mode
-(autoload 'markdown-mode "markdown-mode"
-  "Major mode for editing Markdown files" t)
-(add-to-list 'auto-mode-alist
-             '("\\.markdown\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist
-             '("\\.md\\'" . markdown-mode))
-;; ----------------------
-(autoload 'gfm-mode "markdown-mode"
-  "Major mode for GitHub Flavored Markdown files" t)
-(add-to-list 'auto-mode-alist
-             '("README\\.md\\'" . gfm-mode))
-;; -------------------------------------------------------
-;; clipboard
-(defun ew-toggle-clipboard-mode ()
-  "Toggle clipboard mode."
-  (interactive)
-  (if (eq x-select-enable-clipboard 't)
-      (setq x-select-enable-clipboard nil)
-    (setq x-select-enable-clipboard 't))
-  (message "x-select-enable-clipboard is now %s" x-select-enable-clipboard))
-(setq-default x-select-enable-clipboard t)
-;; -------------------------------------------------------
-;; local autosaves
-(defun make-auto-save-file-name ()
-  "Return file name to use for auto-saves of current buffer.."
-  (if buffer-file-name
-      (if (file-exists-p "~/.emacs_autosaves/")
-          (concat (expand-file-name "~/.emacs_autosaves/") "#"
-                  (replace-regexp-in-string "/" "!" buffer-file-name)
-                  "#")
-        (concat
-         (file-name-directory buffer-file-name)
-         "#"
-         (file-name-nondirectory buffer-file-name)
-         "#"))
-    (expand-file-name
-     (concat "#%" (buffer-name) "#"))))
-;; -------------------------------------------------------
-;; (setq default-frame-alist '((left . 0) (top . 26) (height . 49) (width . 193)))
-;; (set-frame-position (selected-frame) 0 26)
-;; -------------------------------------------------------
+(require 'ew-vc)
+(require 'ew-web-mode)
+(require 'ew-window)
+(require 'show-wspace)
+;; (require 'org-babel-eval-stderr)
+;; ;; -------------------------------------------------------
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(ivy)))
+ '(package-selected-packages
+   '(magit async company flx-ido flycheck graphviz-dot-mode helm
+           (melpa)
+           helm-projectile htmlize ivy ivy lua-mode mmm-mode ob-http org-bullets projectile python-mode smex smex vterm web-mode yaml-mode ztree)))
+;; -------------------------------------------------------
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-;; -------------------------------------------------------
 ;; Local Variables:
 ;; mode: emacs-lisp
 ;; End:
