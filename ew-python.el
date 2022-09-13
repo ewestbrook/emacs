@@ -11,10 +11,13 @@
 (add-hook
  'python-mode-hook
  '(lambda ()
-    (setq python-indent-guess-indent-offset t)
-    (setq python-indent-guess-indent-offset-verbose nil)
-    (setq python-indent 2)
-    (setq py-indent-offset 2)))
+    (setq-default python-indent-guess-indent-offset nil)
+    (setq-default python-indent-guess-indent-offset-verbose nil)
+    (setq-default tab-width 2)
+    (setq-default python-indent 2)
+    (setq-default py-indent-offset 2)
+    (setq-default py-indent-tabs-mode nil)
+	  (add-to-list 'write-file-functions 'delete-trailing-whitespace)))
 
 ;; -------------------------------------------------------
 ;; Local Variables:
