@@ -15,6 +15,7 @@
        (set-face-attribute 'company-tooltip-selection nil :foreground "#dddd00")
        (set-face-attribute 'company-scrollbar-bg      nil :background "#404040"))))
 
+(setq company-global-modes '(not org-mode))
 (add-hook 'after-init-hook 'global-company-mode)
 
 ;; -------------------------------------------------------
