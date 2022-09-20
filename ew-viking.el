@@ -9,6 +9,7 @@
 (if (and (display-graphic-p) (equal "viking" (system-name)))
     (if (equal (getenv "DISPLAY") ":0.0")
         (progn
+          (add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/"))
           (add-to-list 'default-frame-alist '(width . 174))
           (add-to-list 'default-frame-alist '(height . 48))
           (add-to-list 'default-frame-alist '(left . 0))
