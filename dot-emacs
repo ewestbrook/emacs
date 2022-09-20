@@ -92,6 +92,7 @@
 (require 'ew-elisp)
 (require 'ew-flx)
 (require 'ew-flycheck)
+(require 'ew-flyspell)
 (require 'ew-font)
 ;; (require 'ew-font-test)
 (require 'ew-global-keys)

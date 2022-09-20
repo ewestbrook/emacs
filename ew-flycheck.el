@@ -2,6 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+
 (message "loading ew-flycheck")
 
 ;; flycheck
@@ -14,7 +15,6 @@
 ;; -------------------------------------------------------
 ;; Local Variables:
 ;; mode: emacs-lisp
-;; read-symbol-shorthands: (("ewf-" . "ew-flycheck-"))
 ;; End:
 (provide 'ew-flycheck)
 ;;; ew-flycheck.el ends here
