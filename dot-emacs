@@ -23,6 +23,7 @@
 ;; yaml-mode
 ;; lua-mode
 ;; magit
+;; markdown-mode
 ;; -------------------------------------------------------
 (if (string-match "\\.lanl\\.gov$" (system-name))
     (progn
@@ -147,9 +148,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(magit async company flx-ido flycheck graphviz-dot-mode helm
-           (melpa)
-           helm-projectile htmlize ivy ivy lua-mode mmm-mode ob-http org-bullets projectile python-mode smex smex vterm web-mode yaml-mode ztree)))
+   '(markdown-mode magit async company flx-ido flycheck graphviz-dot-mode helm
+                   (melpa)
+                   helm-projectile htmlize ivy ivy lua-mode mmm-mode ob-http org-bullets projectile python-mode smex smex vterm web-mode yaml-mode ztree)))
 ;; -------------------------------------------------------
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
