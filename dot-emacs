@@ -24,6 +24,7 @@
 ;; lua-mode
 ;; magit
 ;; markdown-mode
+;; org-donwload
 ;; -------------------------------------------------------
 (if (string-match "\\.lanl\\.gov$" (system-name))
     (progn
@@ -67,6 +68,7 @@
 (require 'ob-http)
 (require 'org)
 (require 'org-bullets)
+(require 'org-download)
 (require 'org-tempo)
 (require 'ox-reveal)
 (require 'ox-twbs)
@@ -148,9 +150,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(markdown-mode magit async company flx-ido flycheck graphviz-dot-mode helm
-                   (melpa)
-                   helm-projectile htmlize ivy ivy lua-mode mmm-mode ob-http org-bullets projectile python-mode smex smex vterm web-mode yaml-mode ztree)))
+   '(org-download markdown-mode magit async company flx-ido flycheck graphviz-dot-mode helm
+                  (melpa)
+                  helm-projectile htmlize ivy ivy lua-mode mmm-mode ob-http org-bullets projectile python-mode smex smex vterm web-mode yaml-mode ztree)))
 ;; -------------------------------------------------------
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
