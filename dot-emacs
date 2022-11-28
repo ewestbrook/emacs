@@ -25,6 +25,7 @@
 ;; magit
 ;; markdown-mode
 ;; org-donwload
+;; imenu-anywhere
 ;; -------------------------------------------------------
 (if (string-match "\\.lanl\\.gov$" (system-name))
     (progn
@@ -102,6 +103,7 @@
 (require 'ew-gnus)
 (require 'ew-helm)
 (require 'ew-hs-minor-mode)
+(require 'ew-imenu)
 (require 'ew-indent)
 (require 'ew-ivy)
 (require 'ew-kill)
@@ -150,9 +152,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(org-download markdown-mode magit async company flx-ido flycheck graphviz-dot-mode helm
-                  (melpa)
-                  helm-projectile htmlize ivy ivy lua-mode mmm-mode ob-http org-bullets projectile python-mode smex smex vterm web-mode yaml-mode ztree)))
+   '(imenu-anywhere visible-mark org-download markdown-mode magit async company flx-ido flycheck graphviz-dot-mode helm
+                    (melpa)
+                    helm-projectile htmlize ivy ivy lua-mode mmm-mode ob-http org-bullets projectile python-mode smex smex vterm web-mode yaml-mode ztree)))
 ;; -------------------------------------------------------
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
