@@ -2,10 +2,11 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-mmm")
 
-(setq-default mmm-global-mode 'maybe)
-(mmm-add-mode-ext-class 'html-mode "\\.php\\'" 'html-php)
+(use-package mmm-mode
+  :config
+  (setq mmm-global-mode 'maybe)
+  (mmm-add-mode-ext-class 'html-mode "\\.php\\'" 'html-php))
 
 ;; -------------------------------------------------------
 ;; Local Variables:

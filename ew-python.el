@@ -2,22 +2,29 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-python")
 
-(setq-default py-keep-windows-configuration t)
+(use-package python
 
-(add-to-list 'auto-mode-alist '("\\.py" . python-mode))
+  :mode ("\\.py" . python-mode)
+  
+  :preface
+  (defun ew-python-init()
+    "EW Python init."
+    (setq python-indent-guess-indent-offset nil)
+    (setq python-indent-guess-indent-offset-verbose nil)
+    (setq tab-width 2)
+    (setq python-indent 2)
+    (setq py-indent-offset 2)
+    (setq py-indent-tabs-mode nil)
+	  (add-to-list 'write-file-functions 'delete-trailing-whitespace)
+    (hs-minor-mode 1)
+    (define-key hs-minor-mode-map (kbd "C-c TAB") 'hs-toggle-hiding)
+    (hs-minor-mode-on))
 
-(add-hook
- 'python-mode-hook
- '(lambda ()
-    (setq-default python-indent-guess-indent-offset nil)
-    (setq-default python-indent-guess-indent-offset-verbose nil)
-    (setq-default tab-width 2)
-    (setq-default python-indent 2)
-    (setq-default py-indent-offset 2)
-    (setq-default py-indent-tabs-mode nil)
-	  (add-to-list 'write-file-functions 'delete-trailing-whitespace)))
+  :hook (python-mode . ew-python-init)
+
+  :config
+  (setq py-keep-windows-configuration t))
 
 ;; -------------------------------------------------------
 ;; Local Variables:

@@ -2,7 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-os-macos")
 
 (if (equal system-type 'darwin)
     (progn

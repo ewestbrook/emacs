@@ -2,7 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-tramp")
 
 (setq-default tramp-default-method "ssh")
 (setq-default tramp-change-syntax 'simplified)

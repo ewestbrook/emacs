@@ -2,9 +2,13 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-perl")
 
 (defalias 'perl-mode 'cperl-mode)
+
+(use-package cperl-mode
+  :ensure nil
+  :config
+  (setq cperl-indent-level 2))
 
 ;; -------------------------------------------------------
 ;; Local Variables:

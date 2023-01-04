@@ -2,7 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-font")
 
 (if (display-graphic-p)
     (progn
@@ -25,11 +24,10 @@
                          ("\\.lcs\\.lanl\\.gov$" . "JetBrains Mono 11")
                          ("\\.lanl\\.gov$"       . "JetBrains Mono 14")))
                   (a (cdr (assoc (system-name) map 'string-match))))
-               (if a
-                   a
-                 (cdr
-                  (assoc (car (split-string (shell-command-to-string "hostname -f")))
-                         map 'string-match))))))))
+               (or a
+                   (cdr
+                    (assoc (car (split-string (shell-command-to-string "hostname -f")))
+                           map 'string-match))))))))
 
 (set-face-attribute 'default nil :foreground "#a6a376")
 ;; (set-face-attribute 'default nil :background "#181818")

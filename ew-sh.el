@@ -2,7 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-sh")
 
 (add-hook
  'sh-mode-hook
@@ -15,7 +14,6 @@
 ;; -------------------------------------------------------
 ;; Local Variables:
 ;; mode: emacs-lisp
-;; read-symbol-shorthands: (("ewsh-" . "ew-sh-"))
 ;; End:
 (provide 'ew-sh)
 ;;; ew-sh.el ends here

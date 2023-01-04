@@ -2,11 +2,10 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-path")
 
 (require 's)
 
-(defun ewp-prependable-paths()
+(defun ew-path-prependable-paths()
   "Get the list of prepependable paths."
   (let ((home (getenv "HOME")))
     (append
@@ -22,24 +21,24 @@
 	     '("/bin"
 	       "/git/eew/w/bin")))))
 
-(defun ewp-prepend-paths()
-  "Prepend paths in 'ewp-paths' to env's PATH and 'exec-path' uniquely.
+(defun ew-path-prepend-paths()
+  "Prepend paths in 'ew-path-paths' to env's PATH and 'exec-path' uniquely.
 For each element that exists as a directory, that is."
-  (mapcar 'ewp-prepend-path-dirs (ewp-prependable-paths)))
+  (mapcar 'ew-path-prepend-path-dirs (ew-path-prependable-paths)))
 
-(defun ewp-prepend-path-dirs(v)
+(defun ew-path-prepend-path-dirs(v)
   "Prepend path V to env's PATH and 'exec-path' uniquely.
 If V exists as a directory, that is."
   (cond
    ((file-directory-p v)
-    (ewp-prepend-path v))))
+    (ew-path-prepend-path v))))
 
-(defun ewp-prepend-path(v)
+(defun ew-path-prepend-path(v)
   "Prepend path V to env's PATH and 'exec-path' uniquely."
-  (ewp-prepend-env-path "PATH" v)
-  (ewp-prepend-exec-path v))
+  (ew-path-prepend-env-path "PATH" v)
+  (ew-path-prepend-exec-path v))
 
-(defun ewp-prepend-env-path(e v &optional sep)
+(defun ew-path-prepend-env-path(e v &optional sep)
   "Prepend V to environment variable E (separated by SEP) uniquely."
   (let* ((s (if sep sep ":"))
         (sv (split-string v s t)))
@@ -47,27 +46,26 @@ If V exists as a directory, that is."
      (last
       (mapcar
        (lambda (arg)
-         (ewp-prepend-env-path-single e arg sep))
+         (ew-path-prepend-env-path-single e arg sep))
        (split-string v s t))))))
 
-(defun ewp-prepend-env-path-single(e v &optional sep)
+(defun ew-path-prepend-env-path-single(e v &optional sep)
   "Prepend V to environment variable E (separated by SEP) uniquely;
 V must already be separated by SEP."
   (let ((s (if sep sep ":"))
         (ev (getenv e)))
     (setenv e (if (s-blank? ev) v (s-join s (cons v (delete v (split-string ev s t))))))))
 
-(defun ewp-prepend-exec-path(v)
+(defun ew-path-prepend-exec-path(v)
   "Prepend path V to 'exec-path' uniquely."
   (delete v exec-path)
   (add-to-list 'exec-path v))
 
-(ewp-prepend-paths)
+(ew-path-prepend-paths)
 
 ;; -------------------------------------------------------
 ;; Local Variables:
 ;; mode: emacs-lisp
-;; read-symbol-shorthands: (("ewp-" . "ew-path-"))
 ;; End:
 (provide 'ew-path)
 ;;; ew-path.el ends here

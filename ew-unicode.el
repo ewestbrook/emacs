@@ -2,7 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-unicode")
 
 ;; set up unicode
 (prefer-coding-system        'utf-8)

@@ -1,10 +1,9 @@
-;;; ew-org-fns -- Summary
+;;; ew-fns-org -- Summary
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-org-fns")
 
-(defun ewo-publish-to-browser ()
+(defun ew-org-publish-to-browser ()
   "Export an 'org-mode' file to twbs html, then open the html file in a browser."
   (interactive)
   (save-buffer)
@@ -34,46 +33,46 @@
 
     ))
 
-(defun ewo-html-to-browser ()
+(defun ew-org-html-to-browser ()
   "Call org-html-export-to-html and browse."
   (interactive)
   (save-buffer)
   (browse-url (org-html-export-to-html)))
 
-(defun ewo-publish-current-file ()
+(defun ew-org-publish-current-file ()
   "Publish current file, forcibly."
   (interactive)
   (org-publish-current-file t))
 
-(defun ewo-mode-noindex (L)
+(defun ew-org-mode-noindex (L)
   "Remove index.org from a list L of cwd files."
   (cond
 
    ((null L) nil)
 
    ((string-match "index\\.org$" (car L))
-    (ewo-mode-noindex (cdr L)))
+    (ew-org-mode-noindex (cdr L)))
 
    (t
-    (cons (car L) (ewo-mode-noindex (cdr L))))))
+    (cons (car L) (ew-org-mode-noindex (cdr L))))))
 
-(defun ewo-mode-cwd-org-files ()
+(defun ew-org-mode-cwd-org-files ()
   "Return a list of the org files in the current directory."
-  (ewo-mode-noindex
+  (ew-org-mode-noindex
    (directory-files "." nil "^[^.].*\\.org$")))
 
-(defun ewo-mode-cwd-org-files-tree ()
+(defun ew-org-mode-cwd-org-files-tree ()
   "Return a list of the org files in the current directory, recursively."
-  (ewo-mode-noindex
+  (ew-org-mode-noindex
    (directory-files-recursively "." "^[^.].*\\.org$")))
 
-(defun ewo-make-all ()
+(defun ew-org-make-all ()
   "Remove all timestamps and then publish current project."
   (interactive)
   (org-publish-remove-all-timestamps)
   (org-publish-current-project))
 
-(defun ewo-publish-open-buffers()
+(defun ew-org-publish-open-buffers()
   "Publish open 'org-mode' buffers."
   (interactive)
   (mapc (lambda (buffer)
@@ -87,7 +86,6 @@
 ;; -------------------------------------------------------
 ;; Local Variables:
 ;; mode: emacs-lisp
-;; read-symbol-shorthands: (("ewo-" . "ew-org-"))
 ;; End:
-(provide 'ew-org-fns)
-;;; ew-org-fns.el ends here
+(provide 'ew-fns-org)
+;;; ew-fns-org.el ends here

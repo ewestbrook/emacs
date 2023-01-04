@@ -2,7 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-org-targets-ew")
 
 (setq-default
  org-publish-project-alist

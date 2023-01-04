@@ -1,20 +1,19 @@
-;;; ew-dir --- Summary
+;;; ew-fns-dir --- Summary
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-dir")
 
-(defun ewd-cwd-bns-except (exceptbns)
+(defun ew-dir-cwd-bns-except (exceptbns)
   "Basenames in current directory, except `EXCEPTBNS`."
   (seq-filter
    (lambda (path)
      (not (seq-contains-p exceptbns path)))
    (directory-files "." nil nil t)))
 
-(defun ewd-find-org-file-recursively (&optional directory filext)
+(defun ew-dir-find-org-file-recursively (&optional directory filext)
   "Find files in DIRECTORY recursively by extension FILEXT."
 
-  (interactive "DDirectory: ")
+  (interactive "Directory: ")
 
   (let*
       (org-file-list
@@ -49,7 +48,6 @@
 ;; -------------------------------------------------------
 ;; Local Variables:
 ;; mode: emacs-lisp
-;; read-symbol-shorthands: (("ewd-" . "ew-dir-"))
 ;; End:
-(provide 'ew-dir)
-;;; ew-dir.el ends here
+(provide 'ew-fns-dir)
+;;; ew-fns-dir.el ends here

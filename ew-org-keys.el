@@ -2,7 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-org-keys")
 
 (defun ew-org-hook ()
   "EW stuff specific to 'org-mode'."

@@ -1,8 +1,7 @@
-;;; ew-flx -- Summary
+;;; ew-flx-ido -- Summary
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-flx")
 
 ;; see also
 ;; https://github.com/lewang/flx
@@ -19,7 +18,6 @@
 ;; -------------------------------------------------------
 ;; Local Variables:
 ;; mode: emacs-lisp
-;; read-symbol-shorthands: (("ewf-" . "ew-flx-"))
 ;; End:
-(provide 'ew-flx)
-;;; ew-flx.el ends here
+(provide 'ew-flx-ido)
+;;; ew-flx-ido.el ends here

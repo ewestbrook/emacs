@@ -2,7 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-org-targets-lanl")
 
 (setq-default
  org-publish-project-alist

@@ -1,8 +1,7 @@
-;;; ew-clipboard --- Summary
+;;; ew-fns-clipboard --- Summary
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-clipboard")
 
 (defun ew-toggle-clipboard-mode ()
   "Toggle clipboard mode."
@@ -18,5 +17,5 @@
 ;; Local Variables:
 ;; mode: emacs-lisp
 ;; End:
-(provide 'ew-clipboard)
-;;; ew-clipboard.el ends here
+(provide 'ew-fns-clipboard)
+;;; ew-fns-clipboard.el ends here

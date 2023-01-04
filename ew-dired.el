@@ -2,31 +2,34 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-dired")
 
-(defvar dired-auto-revert-buffer t)
-(put 'dired-find-alternate-file 'disabled nil)
+(use-package dired
 
-(setq-default dired-use-ls-dired 'unspecified)
-(setq-default ls-lisp-use-insert-directory-program nil)
-(require 'ls-lisp)
+  :ensure nil
 
-;; dired mode hook
-(declare-function dired-hide-details-mode "dired")
-(defun ew-dired-mode-setup ()
-  "EW Dired hook stuff."
-  (dired-hide-details-mode t))
-(add-hook 'dired-mode-hook 'ew-dired-mode-setup)
+  :preface
+  (defun ew-dired-mode-setup ()
+    "EW Dired hook stuff."
+    (dired-hide-details-mode t))
 
-;; open files with certain applications
-(cond
- ((equal system-type 'gnu/linux)
-  (defvar dired-guess-shell-alist-user
-    '(("\\.pdf\\'" "okular ? &")
-      ("\\.mp4\\'" "mpv ? &")
-      ("\\.mkv\\'" "mpv ? &")
-      ("\\.avi\\'" "mpv ? &")
-      ("\\.flv\\'" "mpv ? &")))))
+  :hook (dired-mode . ew-dired-mode-setup)
+
+  :config
+  (setq dired-auto-revert-buffer t)
+  (put 'dired-find-alternate-file 'disabled nil)
+  (setq dired-use-ls-dired 'unspecified)
+  (setq ls-lisp-use-insert-directory-program nil)
+  (declare-function dired-hide-details-mode "dired")
+
+  ;; open files with certain applications
+  (cond
+   ((equal system-type 'gnu/linux)
+    (setq dired-guess-shell-alist-user
+      '(("\\.pdf\\'" "okular ? &")
+        ("\\.mp4\\'" "mpv ? &")
+        ("\\.mkv\\'" "mpv ? &")
+        ("\\.avi\\'" "mpv ? &")
+        ("\\.flv\\'" "mpv ? &"))))))
 
 ;; -------------------------------------------------------
 ;; Local Variables:

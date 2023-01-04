@@ -2,7 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-ox-html")
 
 (setq-default org-html-with-latex `dvipng)
 

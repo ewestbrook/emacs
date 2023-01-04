@@ -2,7 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-vc")
 
 (setq-default vc-handled-backends nil)
 (add-to-list 'vc-handled-backends 'CVS)
@@ -13,7 +12,6 @@
 ;; -------------------------------------------------------
 ;; Local Variables:
 ;; mode: emacs-lisp
-;; read-symbol-shorthands: (("ewsh-" . "ew-vc-"))
 ;; End:
 (provide 'ew-vc)
 ;;; ew-vc.el ends here

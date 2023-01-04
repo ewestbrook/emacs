@@ -3,10 +3,10 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
-(message "loading ew-flyspell")
-
-(setq-default ispell-program-name "/usr/bin/aspell")
-(add-hook 'text-mode-hook 'flyspell-mode)
+(use-package flyspell
+  :hook (text-mode-hook . flyspell-mode)
+  :config
+  (setq ispell-program-name "/usr/bin/aspell"))
 
 ;; -------------------------------------------------------
 ;; Local Variables:

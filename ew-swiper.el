@@ -1,16 +1,16 @@
-;;; ew-smex -- Summary
+;;; ew-swiper.el -- Summary
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
 
-;; see also
-;; https://github.com/nonsequitur/smex/
+(use-package swiper
+  :bind ("s-s" . swiper-isearch))
 
-(smex-initialize)
+;; (global-set-key (kbd "C-s") 'swiper-isearch)
 
 ;; -------------------------------------------------------
 ;; Local Variables:
 ;; mode: emacs-lisp
 ;; End:
-(provide 'ew-smex)
-;;; ew-smex.el ends here
+(provide 'ew-swiper)
+;;; ew-swiper.el ends here

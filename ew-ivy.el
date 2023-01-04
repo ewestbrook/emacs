@@ -2,16 +2,22 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-ivy.el")
 
-;; ivy-mode
+(use-package ivy
+
+  :bind (("C-x b"   . ivy-switch-buffer)
+         ("C-c v"   . ivy-push-view)
+         ("C-c V"   . ivy-pop-view)
+         ("C-c C-r" . ivy-resume))
+  :config
+  (setq enable-recursive-minibuffers nil)
+  (setq ivy-use-virtual-buffers t)
+  (setq ivy-count-format "(%d/%d) ") ;; intentional space before end of string
+  (setq ivy-initial-inputs-alist nil)
+  (setq ivy-re-builders-alist '((t . ivy--regex-fuzzy))))
+
 (ivy-mode 1)
 (counsel-mode 1)
-(setq-default enable-recursive-minibuffers nil)
-(setq-default ivy-use-virtual-buffers t)
-(setq-default ivy-count-format "(%d/%d) ") ;; intentional space before end of string
-(setq-default ivy-initial-inputs-alist nil)
-(setq-default ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
 
 ;; -------------------------------------------------------
 ;; Local Variables:

@@ -1,16 +1,14 @@
-;;; ew-smex -- Summary
+;;; ew-custom -- Summary
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
 
-;; see also
-;; https://github.com/nonsequitur/smex/
-
-(smex-initialize)
+(setq custom-file "~/.emacs-custom.el")
+(load custom-file)
 
 ;; -------------------------------------------------------
 ;; Local Variables:
 ;; mode: emacs-lisp
 ;; End:
-(provide 'ew-smex)
-;;; ew-smex.el ends here
+(provide 'ew-custom)
+;;; ew-custom.el ends here

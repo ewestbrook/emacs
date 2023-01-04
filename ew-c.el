@@ -2,11 +2,11 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-c")
 
-(setq-default c-offsets-alist
-      '((case-label . +)
-        (statement-case-intro . +)))
+(use-package cc-mode
+  :config
+  (setq c-offsets-alist '((case-label . +) (statement-case-intro . +)))
+  (setq c-basic-offset 2))
 
 ;; -------------------------------------------------------
 ;; Local Variables:

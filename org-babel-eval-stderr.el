@@ -2,7 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading org-babel-eval-stderr")
 
 (defvar org-babel-eval-verbose t
   "A non-nil value makes `org-babel-eval' display.")

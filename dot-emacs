@@ -2,130 +2,66 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-;; packages required
-;; -----------------
-;; company
-;; graphviz-dot-mode
-;; org-bullets
-;; ob-http
-;; ivy
-;; web-mode
-;; flycheck
-;; ztree
-;; smex
-;; flx-ido
-;; helm (melpa)
-;; projectile
-;; helm-projectile
-;; mmm-mode
-;; htmlize
-;; vterm
-;; yaml-mode
-;; lua-mode
-;; magit
-;; markdown-mode
-;; org-donwload
-;; imenu-anywhere
-;; -------------------------------------------------------
-(if (string-match "\\.lanl\\.gov$" (system-name))
-    (progn
-      (message "setq url-proxy-services")
-      (setq url-proxy-services
-            '(("no_proxy" . "^\\(localhost\\|10.*\\|192.168.29.*\\|172.55.*\\|lcs.lanl.gov\\|lanl.gov\\)")
-              ("http" . "proxyout.lanl.gov:8080")
-              ("https" . "proxyout.lanl.gov:8080")))))
-;; -------------------------------------------------------
-(message "dot-emacs: package-initialize")
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-(package-initialize)
-;; -------------------------------------------------------
-;; (message "dot-emacs: add load paths")
 (add-to-list 'load-path "~/git/eew/emacs")
-;; ;; -------------------------------------------------------
-;; (message "dot-emacs: load gentoo site-lisp")
+;; -------------------------------------------------------
+;; bootstraps
+(require 'ew-custom)
+(require 'ew-lanl-proxy)
+(require 'ew-use-package)
 ;; (load "/usr/share/emacs/site-lisp/site-gentoo")
 ;; -------------------------------------------------------
-(message "dot-emacs: requiring packages")
-;; -------------------------------------------------------
-;; (require 'ew-lanl-proxy)
-;; -------------------------------------------------------
-(require 'counsel)
-;; (require 'ebuild-mode)
-(require 'flx-ido)
-(require 'flycheck)
-(require 'graphviz-dot-mode)
-(require 'gud)
-(require 'helm)
-(require 'helm-command)
-(require 'helm-config)
-(require 'helm-mode)
-(require 'helm-projectile)
-(require 'ivy)
-(require 'lua-mode)
-;; (require 'mac-print-mode)
-(require 'magit)
-(require 'mmm-mode)
-(require 'ob-http)
-(require 'org)
-(require 'org-bullets)
-(require 'org-download)
-(require 'org-tempo)
-(require 'ox-reveal)
-(require 'ox-twbs)
-(require 'projectile)
-(require 'python-mode)
-(require 'rjsx-mode)
-(require 'smex)
-(require 'swiper)
-(require 'uniquify)
-(require 'vterm)
-(require 'web-mode)
-(require 'yaml-mode)
-(require 'ztree)
-;; -------------------------------------------------------
-(require 'ew-autosave)
-(require 'ew-babel)
+;; ew configs/packages
 (require 'ew-c)
-(require 'ew-calc)
-(require 'ew-clipboard)
 (require 'ew-company)
-(require 'ew-dir)
+(require 'ew-counsel)
+;; (require 'ew-custom) ;; bootstrapped
 (require 'ew-dired)
+(require 'ew-fns-dir)
+(require 'ew-dns-mode)
 (require 'ew-ediff)
-(require 'ew-elisp)
-(require 'ew-flx)
+;; (require 'ew-flx-ido)
 (require 'ew-flycheck)
 (require 'ew-flyspell)
+(require 'ew-fns-autosave)
+(require 'ew-fns-calc)
+(require 'ew-fns-clipboard)
+(require 'ew-fns-kill)
+(require 'ew-fns-org)
+(require 'ew-fns-org-index)
+(require 'ew-fns-tog-ded)
 (require 'ew-font)
 ;; (require 'ew-font-test)
 (require 'ew-global-keys)
 (require 'ew-gnus)
-(require 'ew-helm)
-(require 'ew-hs-minor-mode)
+(require 'ew-gud)
+;; (require 'ew-helm)
 (require 'ew-imenu)
 (require 'ew-indent)
 (require 'ew-ivy)
-(require 'ew-kill)
-;; (require 'ew-lanl-proxy)
-(require 'ew-lua)
+;; (require 'ew-lanl-proxy.el) ;; bootstrapped
+;; (require 'ew-lua)
 (require 'ew-magit)
 (require 'ew-markdown)
 (require 'ew-misc)
 (require 'ew-mmm)
 (require 'ew-modeline)
+(require 'ew-org-bullets)
 (require 'ew-org)
-(require 'ew-org-faces)
-(require 'ew-org-fns)
-(require 'ew-org-index)
 (require 'ew-org-keys)
 (require 'ew-org-reveal)
 (require 'ew-org-same-window)
 (require 'ew-org-targets)
+;; (require 'ew-org-targets-ew)
+;; (require 'ew-org-targets-lanl)
+;; (require 'ew-org-targets-lcs)
 (require 'ew-os-linux)
-(require 'ew-os-windows)
 (require 'ew-os-macos)
+(require 'ew-os-windows)
+(require 'ew-ox)
+;; ewoxhtml.css
 ;; (require 'ew-ox-html)
+;; ewoxtwbs.css
+;; (require 'ew-package)
 (require 'ew-path)
 (require 'ew-perl)
 (require 'ew-prettify-symbols)
@@ -135,33 +71,18 @@
 (require 'ew-sh)
 (require 'ew-smex)
 (require 'ew-string)
-(require 'ew-tog-ded)
+(require 'ew-swiper)
 (require 'ew-tramp)
 (require 'ew-twbs)
 (require 'ew-unicode)
+;; (require 'ew-use-package)
 (require 'ew-vc)
 (require 'ew-viking)
 (require 'ew-web-mode)
 (require 'ew-window)
 (require 'show-wspace)
 ;; (require 'org-babel-eval-stderr)
-;; ;; -------------------------------------------------------
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(imenu-anywhere visible-mark org-download markdown-mode magit async company flx-ido flycheck graphviz-dot-mode helm
-                    (melpa)
-                    helm-projectile htmlize ivy ivy lua-mode mmm-mode ob-http org-bullets projectile python-mode smex smex vterm web-mode yaml-mode ztree)))
 ;; -------------------------------------------------------
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 ;; Local Variables:
 ;; mode: emacs-lisp
 ;; End:

@@ -2,7 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-os-linux")
 
 (if (equal system-type 'gnu/linux)
     (progn

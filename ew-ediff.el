@@ -2,31 +2,37 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-ediff")
 
-(setq-default ediff-split-window-function 'split-window-horizontally)
-(setq-default ediff-window-setup-function 'ediff-setup-windows-plain)
-(setq-default ediff-diff-options "-w")
+(use-package ediff
 
-(if (display-graphic-p)
-    (add-hook
-     'ediff-mode-hook
-     (lambda ()
+  :preface
 
-       (set-face-attribute 'ediff-current-diff-A nil :background "#402020")
-       (set-face-attribute 'ediff-fine-diff-A    nil :background "#582020")
-       (set-face-attribute 'ediff-odd-diff-A     nil :background "#303030")
-       (set-face-attribute 'ediff-even-diff-A    nil :background "#383030")
+  (defun ew-ediff-mode-init()
+    "Init ediff mode."
+    (if (display-graphic-p)
+        (set-face-attribute 'ediff-current-diff-A nil :background "#402020")
+      (set-face-attribute 'ediff-fine-diff-A    nil :background "#582020")
+      (set-face-attribute 'ediff-odd-diff-A     nil :background "#303030")
+      (set-face-attribute 'ediff-even-diff-A    nil :background "#383030")
 
-       (set-face-attribute 'ediff-current-diff-B nil :background "#204020")
-       (set-face-attribute 'ediff-fine-diff-B    nil :background "#205820")
-       (set-face-attribute 'ediff-odd-diff-B     nil :background "#303030")
-       (set-face-attribute 'ediff-even-diff-B    nil :background "#303830")
+      (set-face-attribute 'ediff-current-diff-B nil :background "#204020")
+      (set-face-attribute 'ediff-fine-diff-B    nil :background "#205820")
+      (set-face-attribute 'ediff-odd-diff-B     nil :background "#303030")
+      (set-face-attribute 'ediff-even-diff-B    nil :background "#303830")
 
-       (set-face-attribute 'ediff-current-diff-C nil :background "#404000")
-       (set-face-attribute 'ediff-fine-diff-C    nil :background "#505010")
-       (set-face-attribute 'ediff-odd-diff-C     nil :background "#303030")
-       (set-face-attribute 'ediff-even-diff-C    nil :background "#383830"))))
+      (set-face-attribute 'ediff-current-diff-C nil :background "#404000")
+      (set-face-attribute 'ediff-fine-diff-C    nil :background "#505010")
+      (set-face-attribute 'ediff-odd-diff-C     nil :background "#303030")
+      (set-face-attribute 'ediff-even-diff-C    nil :background "#383830")))
+
+  :bind (("M-s b" . 'ediff-buffers)
+         ("M-s v" . 'ediff-revision))
+
+  :config
+
+  (setq ediff-split-window-function 'split-window-horizontally)
+  (setq ediff-window-setup-function 'ediff-setup-windows-plain)
+  (setq ediff-diff-options "-w"))
 
 ;; https://oremacs.com/2015/01/17/setting-up-ediff/
 ;; for saving and restoring window configuration

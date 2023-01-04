@@ -1,8 +1,7 @@
-;;; ew-autosave --- Summary
+;;; ew-fns-autosave --- Summary
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-autosave")
 
 (defun make-auto-save-file-name ()
   "Return file name to use for auto-saves of current buffer.."
@@ -23,5 +22,5 @@
 ;; Local Variables:
 ;; mode: emacs-lisp
 ;; End:
-(provide 'ew-autosave)
-;;; ew-autosave.el ends here
+(provide 'ew-fns-autosave)
+;;; ew-fns-autosave.el ends here

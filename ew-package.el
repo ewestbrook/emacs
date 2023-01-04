@@ -2,9 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-package")
 
-(defun ewp-list ()
+(defun ew-package-list ()
   "Return a list of all installed packages and their versions."
   (mapcar
    (lambda (pkg)
@@ -17,7 +16,6 @@
 ;; -------------------------------------------------------
 ;; Local Variables:
 ;; mode: emacs-lisp
-;; read-symbol-shorthands: (("ewp-" . "ew-package-"))
 ;; End:
 (provide 'ew-package)
 ;;; ew-package.el ends here

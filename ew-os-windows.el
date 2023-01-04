@@ -2,7 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-os-windows")
 
 (if (equal system-type 'windows-nt)
     (progn

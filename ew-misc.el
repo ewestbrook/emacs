@@ -2,7 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-misc")
 
 (setq gc-cons-threshold 20000000)
 (load "url") (url-handler-mode t)
@@ -30,7 +29,6 @@
 (setq-default uniquify-buffer-name-style 'post-forward)
 (setq-default user-mail-address "")
 (setq-default user-full-name "")
-(add-to-list 'auto-mode-alist '("/db\\." . dns-mode))
 
 ;; -------------------------------------------------------
 ;; Local Variables:

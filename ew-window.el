@@ -2,7 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-window")
 
 (defun no-split-window ()
   "Function for preference of not splitting window."

@@ -2,7 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-org-same-window")
 
 ;; see https://emacs.stackexchange.com/a/17163
 

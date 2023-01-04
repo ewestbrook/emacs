@@ -1,11 +1,14 @@
-;;; ew-elisp --- Summary
+;;; ew-dns-mode --- Summary
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-elisp")
+
+(use-package dns-mode
+  :mode ("/db\\." . dns-mode))
+
 ;; -------------------------------------------------------
 ;; Local Variables:
 ;; mode: emacs-lisp
 ;; End:
-(provide 'ew-elisp)
-;;; ew-elisp.el ends here
+(provide 'ew-dns-mode)
+;;; ew-dns-mode.el ends here

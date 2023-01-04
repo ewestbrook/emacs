@@ -1,56 +1,54 @@
-;;; ew-org-index --- Summary
+;;; ew-fns-org-index --- Summary
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-org-index")
 
-(require 'ew-dir)
+(require 'ew-fns-dir)
 
 (setq-default
- ewoi-except-bns
+ ew-org-index-except-bns
  ["index.org" "." ".." "c" "i" "j"])
 
-(defun ewoi-get-title-from-file (file)
+(defun ew-org-index-get-title-from-file (file)
   "Get title string from `FILE`."
   (format "go to %s" file))
 
-(defun ewoi-file-from-bn (bn)
+(defun ew-org-index-file-from-bn (bn)
   "Get relative file path from basename `BN`."
   (if (string-match "\\.org$" bn)
       bn
     (format "%s/index.org" bn)))
 
-(defun ewoi-file-link (file)
+(defun ew-org-index-file-link (file)
   "Make link from `FILE`."
   (format
    "  + [[./%s][%s]]\n"
    file
-   (ewoi-get-title-from-file file)))
+   (ew-org-index-get-title-from-file file)))
 
-(defun ewoi-bn-link (bn)
+(defun ew-org-index-bn-link (bn)
   "Make link from `BN`."
-  (ewoi-file-link
-   (ewoi-file-from-bn bn)))
+  (ew-org-index-file-link
+   (ew-org-index-file-from-bn bn)))
 
-(defun ewoi-bns ()
+(defun ew-org-index-bns ()
   "Get list of elegible BNs in current directory."
   (ew-dir-cwd-bns-except
-   ewoi-except-bns))
+   ew-org-index-except-bns))
 
-(defun ewoi-links ()
+(defun ew-org-index-links ()
   "Make set of all index links for current directory."
   (seq-map
-   'ewoi-bn-link
-   (ewoi-bns)))
+   'ew-org-index-bn-link
+   (ew-org-index-bns)))
 
 (defun ew-org-index ()
   "Concatenate string of links for current directory."
-  (apply 'concat (ewoi-links)))
+  (apply 'concat (ew-org-index-links)))
 
 ;; -------------------------------------------------------
 ;; Local Variables:
 ;; mode: emacs-lisp
-;; read-symbol-shorthands: (("ewoi-" . "ew-org-index-"))
 ;; End:
-(provide 'ew-org-index)
-;;; ew-org-index.el ends here
+(provide 'ew-fns-org-index)
+;;; ew-fns-org-index.el ends here

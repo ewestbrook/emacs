@@ -2,9 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-string")
 
-(defun ews-matches-one-of(str pats)
+(defun ew-string-matches-one-of(str pats)
   "Return first match of STR against any regular expression in PATS."
   (catch 'result
     (mapc (lambda(pat)
@@ -16,7 +15,6 @@
 ;; -------------------------------------------------------
 ;; Local Variables:
 ;; mode: emacs-lisp
-;; read-symbol-shorthands: (("ews-" . "ew-string-"))
 ;; End:
 (provide 'ew-string)
 ;;; ew-string.el ends here
