@@ -11,6 +11,7 @@
 ;; (load "/usr/share/emacs/site-lisp/site-gentoo")
 ;; -------------------------------------------------------
 ;; ew configs/packages
+;; (require 'epics-mode) ;; use-package ew-epics-mode
 (require 'ew-c)
 (require 'ew-company)
 (require 'ew-counsel)
@@ -19,6 +20,7 @@
 (require 'ew-fns-dir)
 (require 'ew-dns-mode)
 (require 'ew-ediff)
+(require 'ew-epics-mode)
 ;; (require 'ew-flx-ido)
 (require 'ew-flycheck)
 (require 'ew-flyspell)

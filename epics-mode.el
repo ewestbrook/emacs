@@ -117,7 +117,7 @@ Pass t as UPPER if upper case only."
 
   (font-lock-ensure))
 
-(message "epics-mode go")
+;; (message "epics-mode go")
 
 ;; -------------------------------------------------------
 ;; Local Variables:
