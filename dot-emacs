@@ -28,6 +28,7 @@
 (require 'ew-fns-autosave)
 (require 'ew-fns-calc)
 (require 'ew-fns-clipboard)
+(require 'ew-fns-fix-date)
 (require 'ew-fns-kill)
 (require 'ew-fns-org)
 (require 'ew-fns-org-index)
