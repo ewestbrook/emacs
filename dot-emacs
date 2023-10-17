@@ -18,6 +18,7 @@
 ;; (require 'ew-custom) ;; bootstrapped
 (require 'ew-dired)
 (require 'ew-fns-dir)
+(require 'ew-fns-flatten-tree)
 (require 'ew-dns-mode)
 (require 'ew-ediff)
 (require 'ew-epics-mode)
