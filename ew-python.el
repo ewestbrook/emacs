@@ -6,7 +6,7 @@
 (use-package python
 
   :mode ("\\.py" . python-mode)
-  
+
   :preface
   (defun ew-python-init()
     "EW Python init."
@@ -16,10 +16,9 @@
     (setq python-indent 2)
     (setq py-indent-offset 2)
     (setq py-indent-tabs-mode nil)
-	  (add-to-list 'write-file-functions 'delete-trailing-whitespace)
+    (add-to-list 'write-file-functions 'delete-trailing-whitespace)
     (hs-minor-mode 1)
-    (define-key hs-minor-mode-map (kbd "C-c TAB") 'hs-toggle-hiding)
-    (hs-minor-mode-on))
+    (define-key hs-minor-mode-map (kbd "C-c TAB") 'hs-toggle-hiding))
 
   :hook (python-mode . ew-python-init)
 

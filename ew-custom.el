@@ -3,7 +3,11 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
-(setq custom-file "~/.emacs-custom.el")
+(let
+    ((h (car (split-string (system-name) "\\."))))
+  (setq custom-file (concat "~/.emacs-custom-" h ".el"))
+  (setq user-emacs-directory (concat "~/.emacs." h ".d")))
+
 (load custom-file)
 
 ;; -------------------------------------------------------
