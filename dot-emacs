@@ -31,6 +31,7 @@
 (require 'ew-fns-kill)
 (require 'ew-fns-org)
 (require 'ew-fns-org-index)
+(require 'ew-fns-random-sort-lines)
 (require 'ew-fns-tog-ded)
 (require 'ew-font)
 ;; (require 'ew-font-test)
