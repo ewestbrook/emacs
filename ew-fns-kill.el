@@ -43,6 +43,11 @@
   (interactive)
   (ew-kill-buffers-of-mode 'c-mode))
 
+(defun ew-kill-yaml-buffers()
+  "Kill buffers of 'yaml-mode'."
+  (interactive)
+  (ew-kill-buffers-of-mode 'yaml-mode))
+
 (defun ew-kill-magit-buffers()
   "Kill buffers of 'magit-mode'."
   (interactive)
