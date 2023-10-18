@@ -1,5 +1,6 @@
-;;; ew-fns-flatten-tree -- Summary
-;;; Commentary:
+;;; ew-fns-flatten-tree -- Summary Commentary: Included
+;;; in Emacs 27 but not prior versions, so if not
+;;; present, we provide it here.
 ;;; Code:
 ;; -------------------------------------------------------
 
