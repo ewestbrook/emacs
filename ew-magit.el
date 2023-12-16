@@ -23,7 +23,37 @@
 
           (set-face-attribute 'magit-diff-context-highlight nil :background "#3a3a3a")
           (set-face-attribute 'magit-diff-removed-highlight nil :background "#633f3e")
-          (set-face-attribute 'magit-diff-added-highlight   nil :background "#3a5c40"))))
+          (set-face-attribute 'magit-diff-added-highlight   nil :background "#3a5c40"))
+      (progn
+
+        (set-face-attribute 'magit-diff-hunk-heading           nil :background "grey40")
+        (set-face-attribute 'magit-diff-hunk-heading-highlight nil :background "grey70")
+
+        (set-face-attribute 'magit-section-highlight        nil :background "#333333")
+
+        (set-face-attribute 'magit-diff-context-highlight   nil :background "grey15")
+
+        (set-face-attribute 'magit-diff-added-highlight     nil :background "#224422")
+        (set-face-attribute 'magit-diff-added-highlight     nil :foreground "#66ee66")
+
+        (set-face-attribute 'magit-diff-added               nil :background "#224422")
+        (set-face-attribute 'magit-diff-added               nil :foreground "#00aa00")
+
+        (set-face-attribute 'diff-refine-added              nil :background "#114411")
+        (set-face-attribute 'diff-refine-added              nil :foreground "#88ff88")
+
+        (set-face-attribute 'magit-diff-removed-highlight   nil :background "#442222")
+        (set-face-attribute 'magit-diff-removed-highlight   nil :foreground "#ee6666")
+
+        (set-face-attribute 'magit-diff-removed             nil :background "#441111")
+        (set-face-attribute 'magit-diff-removed             nil :foreground "#aa4444")
+
+        (set-face-attribute 'diff-refine-removed            nil :background "#441111")
+        (set-face-attribute 'diff-refine-removed            nil :foreground "#ff8888")
+
+        ;; (set-face-attribute 'magit-hash                   nil :foreground "#888888")
+        ;; (set-face-attribute 'magit-branch-remote          nil :foreground "#ff0000")
+        )))
 
   ;; :bind ("\C-xg" . magit-status)
 
