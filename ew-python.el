@@ -8,13 +8,18 @@
   :mode ("\\.py" . python-mode)
 
   :preface
+  (defun ew-python-set-tab-width(w)
+    "EW Python set tab width to w"
+    (interactive "NTab width: ")
+    (setq tab-width w)
+    (setq python-indent w)
+    (setq py-indent-offset w))
+
   (defun ew-python-init()
     "EW Python init."
     (setq python-indent-guess-indent-offset nil)
     (setq python-indent-guess-indent-offset-verbose nil)
-    (setq tab-width 2)
-    (setq python-indent 2)
-    (setq py-indent-offset 2)
+    (ew-python-set-tab-width 2)
     (setq py-indent-tabs-mode nil)
     (add-to-list 'write-file-functions 'delete-trailing-whitespace)
     (hs-minor-mode 1)
