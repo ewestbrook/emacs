@@ -71,6 +71,7 @@
 (require 'ew-prettify-symbols)
 (require 'ew-projectile)
 (require 'ew-python)
+(require 'ew-elpy)
 (require 'ew-rjsx)
 (require 'ew-sh)
 (require 'ew-smex)
