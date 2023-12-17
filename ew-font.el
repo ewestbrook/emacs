@@ -27,13 +27,11 @@
                (or a
                    (cdr
                     (assoc (car (split-string (shell-command-to-string "hostname -f")))
-                           map 'string-match))))))))
+                           map 'string-match)))))))
+  (progn
+    (set-face-attribute 'match nil :background "#662200"))
 
 (set-face-attribute 'default nil :foreground "#a6a376")
-;; (set-face-attribute 'default nil :background "#181818")
-
-;; (set-face-attribute 'diff-refine-removed nil :background "#a04247")
-;; (set-face-attribute 'diff-refine-added   nil :background "#378446")
 
 ;; -------------------------------------------------------
 ;; Local Variables:
