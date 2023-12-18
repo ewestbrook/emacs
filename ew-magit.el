@@ -66,7 +66,9 @@
   (setq magit-diff-paint-whitespace t)
   (setq magit-diff-highlight-trailing t)
   (setq magit-diff-hide-trailing-cr-characters t)
-  (setq magit-repository-directories '(("~/git" . 5))))
+  (setq magit-repository-directories
+        '(("~/git" . 5)
+          ("/usr/local/eric/git" . 5))))
 
 ;; -------------------------------------------------------
 ;; Local Variables:
