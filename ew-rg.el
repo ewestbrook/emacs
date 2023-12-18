@@ -1,9 +1,9 @@
-;;; ew-elpy -- Summary
+;;; ew-rg -- Summary
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
 
-(use-package elpy
+(use-package rg
   :ensure t
 )
 
@@ -11,5 +11,5 @@
 ;; Local Variables:
 ;; mode: emacs-lisp
 ;; End:
-(provide 'ew-elpy)
-;;; ew-elpy.el ends here
+(provide 'ew-rg)
+;;; ew-rg.el ends here
