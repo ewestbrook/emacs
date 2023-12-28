@@ -21,7 +21,6 @@
     (setq python-indent-guess-indent-offset-verbose nil)
     (ew-python-set-tab-width 2)
     (setq py-indent-tabs-mode nil)
-    (add-to-list 'write-file-functions 'delete-trailing-whitespace)
     (hs-minor-mode 1)
     (define-key hs-minor-mode-map (kbd "C-c TAB") 'hs-toggle-hiding))
 
