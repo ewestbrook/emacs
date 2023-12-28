@@ -33,6 +33,12 @@
 (tool-bar-mode -1)
 (xterm-mouse-mode t)
 
+(if (not (display-graphic-p))
+    (set-face-attribute 'minibuffer-prompt            nil :foreground "cyan")
+    (set-face-attribute 'counsel-outline-1            nil :foreground "cyan")
+    (set-face-attribute 'dired-directory              nil :foreground "cyan")
+    (set-face-attribute 'font-lock-function-name-face nil :foreground "cyan"))
+
 ;; -------------------------------------------------------
 ;; Local Variables:
 ;; mode: emacs-lisp
