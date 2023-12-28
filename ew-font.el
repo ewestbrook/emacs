@@ -29,7 +29,8 @@
                     (assoc (car (split-string (shell-command-to-string "hostname -f")))
                            map 'string-match)))))))
   (progn
-    (set-face-attribute 'match nil :background "#662200")))
+    (set-face-attribute 'match nil :background "RoyalBlue3")
+    (set-face-attribute 'region nil :background "RoyalBlue3")))
 
 (set-face-attribute 'default nil :foreground "#a6a376")
 
