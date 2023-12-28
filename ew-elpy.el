@@ -13,8 +13,10 @@
 
   (defun ew-elpy-init()
     "Init elpy."
-    (if (not (display-graphic-p))
+    (if (display-graphic-p)
         (progn
+          (set-face-attribute 'highlight-indentation-face nil :background "grey25"))
+      (progn
           (set-face-attribute 'highlight-indentation-face nil :background "grey15"))))
 
   (defun ew-elpy-goto-def-or-rgrep ()
