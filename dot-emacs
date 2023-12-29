@@ -35,7 +35,7 @@
 (require 'ew-fns-tog-ded)
 (require 'ew-font)
 ;; (require 'ew-font-test)
-(require 'ew-gitlab)
+;; (require 'ew-gitlab)
 (require 'ew-global-keys)
 (require 'ew-gnus)
 (require 'ew-gud)
