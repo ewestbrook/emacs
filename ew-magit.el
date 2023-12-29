@@ -3,7 +3,26 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(use-package forge
+
+  :ensure t
+
+  :after magit
+
+  :config
+  (add-to-list
+   'forge-alist
+   '("gitlab.lanl.gov" "gitlab.lanl.gov/api/v4" "gitlab.lanl.gov" forge-gitlab-repository))
+
+  ;; (add-to-list
+  ;;  'magit-clone-name-alist
+  ;;  '("\\`\\(?:gitlab\\.lanl\\.gov:\\)\\([^:]+\\)\\'" "gitlab.lanl.gov" "gitlab.user"))
+
+)
+
 (use-package magit
+
+  :ensure t
 
   :preface
   (defun ew-magit-status-mode-init()
