@@ -53,7 +53,8 @@
         '((stashes . hide)
           (untracked . show)
           (unstaged . show)
-          (unpushed . show)))
+          (unpushed . show)
+          (issues . show)))
   (setq magit-repository-directories
         '(("~/git" . 5)
           ("/usr/local/eric/git" . 5))))
