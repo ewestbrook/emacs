@@ -13,7 +13,7 @@
             ("https" . "proxyout.lcs.lanl.gov:8080")))
   (if (string-match "\\.lanl\\.gov$" (system-name))
       (setq url-proxy-services
-            '(("no_proxy" . "^\\(localhost\\|10\\.*\\|192\\.168\\.29\\..*\\|172\\.55\\..*\\|.*\\.lcs\\.lanl\\.gov\\|.*\\.anl\\.gov\\)")
+            '(("no_proxy" . "^\\(localhost\\|10\\.*\\|192\\.168\\.29\\..*\\|172\\.55\\..*\\|.*\\.lcs\\.lanl\\.gov\\|.*\\.lanl\\.gov\\)")
               ("http" . "proxyout.lanl.gov:8080")
               ("https" . "proxyout.lanl.gov:8080")))))
 
