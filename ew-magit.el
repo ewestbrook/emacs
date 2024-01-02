@@ -6,19 +6,11 @@
 (use-package forge
 
   :ensure t
-
   :after magit
-
   :config
   (add-to-list
    'forge-alist
-   '("gitlab.lanl.gov" "gitlab.lanl.gov/api/v4" "gitlab.lanl.gov" forge-gitlab-repository))
-
-  ;; (add-to-list
-  ;;  'magit-clone-name-alist
-  ;;  '("\\`\\(?:gitlab\\.lanl\\.gov:\\)\\([^:]+\\)\\'" "gitlab.lanl.gov" "gitlab.user"))
-
-)
+   '("gitlab.lanl.gov" "gitlab.lanl.gov/api/v4" "gitlab.lanl.gov" forge-gitlab-repository)))
 
 (use-package magit
 
@@ -28,7 +20,6 @@
   (defun ew-magit-status-mode-init()
     "Init magit status mode."
     (if (display-graphic-p)
-
         (progn
           (set-face-attribute 'magit-section-heading        nil :family "Noto Sans")
           (set-face-attribute 'magit-section-heading        nil :height 1.6)
@@ -40,7 +31,6 @@
           (set-face-attribute 'magit-diff-context-highlight nil :background "#3a3a3a")
           (set-face-attribute 'magit-diff-removed-highlight nil :background "#633f3e")
           (set-face-attribute 'magit-diff-added-highlight   nil :background "#3a5c40"))
-
       (progn
         (set-face-attribute 'magit-log-date                    nil :foreground "grey50")
         (set-face-attribute 'magit-diff-hunk-heading           nil :background "grey40")
@@ -58,7 +48,8 @@
         (set-face-attribute 'magit-diff-removed                nil :background "#441111")
         (set-face-attribute 'magit-diff-removed                nil :foreground "#aa4444")
         (set-face-attribute 'diff-refine-removed               nil :background "#441111")
-        (set-face-attribute 'diff-refine-removed               nil :foreground "#ff8888"))))
+        (set-face-attribute 'diff-refine-removed               nil :foreground "#ff8888")))
+    (setq forge-topic-list-order '(number . >)))
 
   :hook (magit-status-mode . ew-magit-status-mode-init)
 
