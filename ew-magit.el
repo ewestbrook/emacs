@@ -33,7 +33,8 @@
           (set-face-attribute 'magit-diff-added-highlight   nil :background "#3a5c40"))
       (progn
         (set-face-attribute 'magit-log-date                    nil :foreground "grey50")
-        (set-face-attribute 'magit-diff-hunk-heading           nil :background "grey40")
+        (set-face-attribute 'magit-diff-hunk-heading           nil :foreground "grey60")
+        (set-face-attribute 'magit-diff-hunk-heading           nil :background "grey30")
         (set-face-attribute 'magit-diff-hunk-heading-highlight nil :background "grey70")
         (set-face-attribute 'magit-section-highlight           nil :background "#333333")
         (set-face-attribute 'magit-diff-context-highlight      nil :background "grey15")
