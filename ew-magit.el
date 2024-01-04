@@ -69,7 +69,8 @@
           (pullreqs . show)))
   (setq magit-repository-directories
         '(("~/git" . 5)
-          ("/usr/local/eric/git" . 5))))
+          ("/usr/local/eric/git" . 5)
+          ("/ade/epics/efs/R3.15.9" . 5))))
 
 ;; -------------------------------------------------------
 ;; Local Variables:
