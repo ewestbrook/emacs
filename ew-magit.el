@@ -66,7 +66,8 @@
           (unstaged . show)
           (unpushed . show)
           (issues . show)
-          (pullreqs . show)))
+          (pullreqs . show)
+          (unuplled . show)))
   (setq magit-repository-directories
         '(("~/git" . 5)
           ("/usr/local/eric/git" . 5)
