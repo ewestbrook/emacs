@@ -9,7 +9,7 @@
 ;; https://emacs.stackexchange.com/questions/55059/ligatures-with-the-jetbrains-mono-font
 
 (defconst lisp--prettify-symbols-alist
-  '(("lambda"  . ?λ)))
+  '(("lambda" . ?λ)))
 
 (add-hook
  'emacs-lisp-mode-hook
