@@ -3,7 +3,11 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
-(use-package python
+(use-package python-mode
+
+  :ensure t
+  :defer t
+  :requires pyvenv
 
   :mode ("\\.py" . python-mode)
 
@@ -17,9 +21,10 @@
 
   (defun ew-python-init()
     "EW Python init."
+    (pyvenv-mode)
     (setq python-indent-guess-indent-offset nil)
     (setq python-indent-guess-indent-offset-verbose nil)
-    (ew-python-set-tab-width 2)
+    (ew-python-set-tab-width 4)
     (setq py-indent-tabs-mode nil)
     (hs-minor-mode 1)
     (define-key hs-minor-mode-map (kbd "C-c TAB") 'hs-toggle-hiding))
@@ -28,6 +33,14 @@
 
   :config
   (setq py-keep-windows-configuration t))
+
+(use-package elpy
+
+  :ensure t
+  :defer t
+
+  :init
+  (advice-add 'python-mode :before 'elpy-enable))
 
 ;; -------------------------------------------------------
 ;; Local Variables:
