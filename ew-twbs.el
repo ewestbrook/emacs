@@ -37,10 +37,10 @@
  '(("en" "
 <ul class=\"ewbar ewtop\">
   <li class=\"ewbara\">
-    <a accesskey=\"H\" href=\"%H\"> home </a>
+    <a accesskey=\"H\" href=\"/\"> home </a>
   </li>
   <li class=\"ewbara\">
-    <a accesskey=\"h\" href=\"%U\"> up </a>
+    <a accesskey=\"h\" href=\"../\"> up </a>
   </li>
   <li class=\"ewbara\">
     <a href=\"#title\">%t</a>
