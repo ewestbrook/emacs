@@ -45,6 +45,7 @@
 (require 'ew-indent)
 (require 'ew-ini)
 (require 'ew-ivy)
+(require 'ew-org-journal)
 ;; (require 'ew-lanl-proxy.el) ;; bootstrapped
 ;; (require 'ew-lua)
 (require 'ew-magit)
