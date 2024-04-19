@@ -18,10 +18,11 @@
        "/Applications/Wireshark.app/Contents/MacOS"
        "/usr/local/texlive/2020/bin/x86_64-darwin"
        "/usr/local/bin"
-       "/usr/local/sbin")
+       "/usr/local/sbin"
+       "/usr/lcs/python/rocky311lcs/bin")
      (mapcar (lambda (p) (concat home p))
-	     '("/bin"
-	       "/git/eew/w/bin")))))
+       '("/bin"
+         "/git/eew/w/bin")))))
 
 (defun ew-path-prepend-paths()
   "Prepend paths in 'ew-path-paths' to env's PATH and 'exec-path' uniquely.
