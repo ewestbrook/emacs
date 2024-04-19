@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-fns-org-index.el")
+
 (require 'ew-fns-dir)
 
 (setq-default

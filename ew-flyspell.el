@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-flyspell.el")
+
 (use-package flyspell
   :hook (text-mode-hook . flyspell-mode)
   :config

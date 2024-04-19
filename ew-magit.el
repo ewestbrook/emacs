@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-magit.el")
+
 (use-package forge
 
   :ensure t

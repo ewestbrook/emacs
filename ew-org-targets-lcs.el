@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-org-targets-lcs.el")
+
 (setq-default
  org-publish-project-alist
  '(

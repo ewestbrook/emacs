@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-epics-mode.el")
+
 (use-package epics-mode
   :ensure nil
   :mode (("\\.db" . epics-mode)

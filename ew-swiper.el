@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-swiper.el")
+
 (use-package swiper
   :bind ("s-s" . swiper-isearch))
 

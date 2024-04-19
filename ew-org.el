@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-org.el")
+
 (use-package org
 
   :mode (("\\.org\\'" . org-mode)

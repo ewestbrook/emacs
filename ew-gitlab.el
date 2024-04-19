@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-gitlab.el")
+
 (use-package f
 
   :ensure t

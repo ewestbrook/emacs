@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-web-mode.el")
+
 (use-package web-mode
 
   :preface

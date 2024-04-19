@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-os-macos.el")
+
 (if (equal system-type 'darwin)
     (progn
       (setq-default mac-option-key-is-meta  nil)

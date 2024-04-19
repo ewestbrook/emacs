@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-org-bullets.el")
+
 (use-package org-bullets
   :config
   (setq org-hide-leading-stars t)

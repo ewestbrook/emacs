@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-vc.el")
+
 (setq-default vc-handled-backends nil)
 (add-to-list 'vc-handled-backends 'CVS)
 (add-to-list 'vc-handled-backends 'RCS)

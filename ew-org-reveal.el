@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-org-reveal.el")
+
 ;; see also
 ;; https://github.com/yjwen/org-reveal/
 

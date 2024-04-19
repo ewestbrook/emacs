@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-custom.el")
+
 (let
     ((h (car (split-string (system-name) "\\."))))
   (setq custom-file (concat "~/.emacs-custom-" h ".el"))

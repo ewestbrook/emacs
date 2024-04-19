@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-smex.el")
+
 ;; see also
 ;; https://github.com/nonsequitur/smex/
 

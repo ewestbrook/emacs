@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-fns-tog-ded.el")
+
 ;; tog-ded
 (defun ew-toggle-current-window-dedication ()
   "Toggle dedication of curent window."

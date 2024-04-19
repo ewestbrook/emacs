@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-fns-calc.el")
+
 (require 's)
 
 (defun ew-calc-mkfloat(v)

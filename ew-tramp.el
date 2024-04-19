@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-tramp.el")
+
 (setq-default tramp-default-method "ssh")
 (setq-default tramp-change-syntax 'simplified)
 

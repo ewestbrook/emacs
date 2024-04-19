@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "epics-mode.el")
+
 (defun epics-mode-comment-regexp()
   "Comment regexp."
   "#.*$")

@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-xref.el")
+
 (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
 (setq xref-search-program 'ripgrep)
 

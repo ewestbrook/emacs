@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-perl.el")
+
 (defalias 'perl-mode 'cperl-mode)
 
 (use-package cperl-mode

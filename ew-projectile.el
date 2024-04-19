@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-projectile.el")
+
 (projectile-mode +1)
 
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)

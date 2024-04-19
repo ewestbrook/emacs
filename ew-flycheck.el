@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-flycheck.el")
+
 (use-package flycheck
   :config
   ;; (setq-default flycheck-python-pylint-executable "python3")

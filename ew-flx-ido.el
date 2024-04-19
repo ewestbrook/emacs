@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-flx-ido.el")
+
 ;; see also
 ;; https://github.com/lewang/flx
 ;; https://www.youtube.com/watch?v=d-nxFHYsxN0

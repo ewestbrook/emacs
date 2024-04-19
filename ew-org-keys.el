@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-org-keys.el")
+
 (defun ew-org-hook ()
   "EW stuff specific to 'org-mode'."
 

@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-viking.el")
+
 (require 'ew-font)
 
 (if (and (display-graphic-p) (equal "viking" (system-name)))

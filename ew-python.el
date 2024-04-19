@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-python.el")
+
 (use-package python-mode
 
   :ensure t

@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-package.el")
+
 (defun ew-package-list ()
   "Return a list of all installed packages and their versions."
   (mapcar

@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-helm.el")
+
 (use-package helm
 
   :pin melpa
@@ -31,4 +33,4 @@
 ;; mode: emacs-lisp
 ;; End:
 (provide 'ew-helm)
-;;; ew-helm ends here
+;;; ew-helm.el ends here

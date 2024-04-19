@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-dns-mode.el")
+
 (use-package dns-mode
   :mode ("/db\\." . dns-mode))
 

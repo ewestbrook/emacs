@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-lua.el")
+
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
 (require 'ew-path)
 

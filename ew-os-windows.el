@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-os-windows.el")
+
 (if (equal system-type 'windows-nt)
     (progn
       (message "ew-os-windows: Microsoft Windows")))

@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-ox-html.el")
+
 (setq-default org-html-with-latex `dvipng)
 
 (setq-default org-html-head-include-scripts nil)

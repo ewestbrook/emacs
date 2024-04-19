@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-fns-fix-date.el")
+
 (defun ew-fix-us-date()
   "Fix next US-format date to %F."
   (interactive)

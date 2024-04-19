@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-ediff.el")
+
 (use-package ediff
 
   :preface

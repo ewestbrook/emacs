@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-unicode.el")
+
 ;; set up unicode
 (prefer-coding-system        'utf-8)
 (set-default-coding-systems  'utf-8)

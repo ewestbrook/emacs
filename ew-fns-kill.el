@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-fns-kill.el")
+
 (defun ew-kill-buffers-of-mode(mode)
   "Kill buffers of mode MODE."
   (interactive)

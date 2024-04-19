@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-lanl-proxy.el")
+
 ;; bug, see
 ;; https://debbugs.gnu.org/cgi/bugreport.cgi?bug=11788
 

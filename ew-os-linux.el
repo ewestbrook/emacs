@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-os-linux.el")
+
 (if (equal system-type 'gnu/linux)
     (progn
       (setq-default browse-url-browser-function 'browse-url-firefox)

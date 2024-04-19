@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-sh.el")
+
 (add-hook
  'sh-mode-hook
  (lambda ()

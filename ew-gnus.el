@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-gnus.el")
+
 (setq-default
  gnus-select-method
  '(nnimap "mail.westbrook.io"

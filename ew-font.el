@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-font.el")
+
 (if (display-graphic-p)
     (progn
       (setq

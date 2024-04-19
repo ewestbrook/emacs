@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-gud.el")
+
 (global-set-key (kbd"<f5>") 'gud-cont)
 (global-set-key (kbd"<f7>") 'gud-finish)
 (global-set-key (kbd"<f8>") 'gud-next)

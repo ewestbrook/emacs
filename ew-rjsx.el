@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-rjsx.el")
+
 (use-package rjsx-mode
   :mode ("\\.js\\'" . rjsx-mode))
 

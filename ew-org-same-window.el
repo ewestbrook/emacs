@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-org-same-window.el")
+
 ;; see https://emacs.stackexchange.com/a/17163
 
 ;; Macro which creates advice 'template'

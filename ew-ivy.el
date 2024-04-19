@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-ivy.el")
+
 (use-package ivy
 
   :bind (("C-x b"   . ivy-switch-buffer)

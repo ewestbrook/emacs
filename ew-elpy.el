@@ -3,7 +3,7 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
-(use-package elpy
+(message "ew-elpy.el")
 
   :ensure t
 

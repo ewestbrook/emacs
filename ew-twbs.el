@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-twbs.el")
+
 ;; scripts overrides
 (setq-default org-twbs-google-analytics "")
 (setq-default org-twbs-scripts "")

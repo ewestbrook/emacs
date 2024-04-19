@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-c.el")
+
 (use-package cc-mode
   :config
   (setq c-offsets-alist '((case-label . +) (statement-case-intro . +)))

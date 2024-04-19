@@ -4,6 +4,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-fns-flatten-tree.el")
+
 (if (symbol-function 'flatten-tree)
     (message "flatten-tree already present")
   (progn

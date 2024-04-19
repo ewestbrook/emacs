@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-fns-clipboard.el")
+
 (defun ew-toggle-clipboard-mode ()
   "Toggle clipboard mode."
   (interactive)

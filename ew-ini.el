@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-ini.el")
+
 (use-package ini
   :ensure t
   :mode (("\\.ini" . ini-mode)

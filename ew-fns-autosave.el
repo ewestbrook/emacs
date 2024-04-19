@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-fns-autosave.el")
+
 (defun make-auto-save-file-name ()
   "Return file name to use for auto-saves of current buffer.."
   (if buffer-file-name

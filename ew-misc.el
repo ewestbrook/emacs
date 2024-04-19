@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-misc.el")
+
 (add-to-list 'term-file-aliases '("screen.xterm-256color" . "xterm-256color"))
 (column-number-mode 1)
 (global-auto-revert-mode 1)

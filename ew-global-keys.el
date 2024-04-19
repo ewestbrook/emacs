@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-global-keys.el")
+
 ;; misc
 (global-set-key (kbd "M-S-SPC") 'set-mark)
 (global-set-key (kbd "C-x M-e") 'eval-buffer)

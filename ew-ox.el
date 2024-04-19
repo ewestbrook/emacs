@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-ox.el")
+
 (use-package ox
   :ensure nil
   :config

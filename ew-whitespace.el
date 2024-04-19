@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-whitespace.el")
+
 ;; see also the builtins whitespace-cleanup and
 ;; whitespace-cleanup-region from whitespace.el.gz
 

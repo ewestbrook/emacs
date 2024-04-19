@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-org-targets.el")
+
 (require
  (cdr
   (assoc

@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-dired.el")
+
 (use-package dired
 
   :ensure nil

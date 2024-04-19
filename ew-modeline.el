@@ -2,7 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(message "loading ew-modeline")
+
+(message "ew-modeline.el")
 
 (eval-when-compile (defvar ew-modeline-isroot-regexp))
 (setq-default ew-modeline-isroot-regexp "^/\\(sudo\\|ssh:root\\)")

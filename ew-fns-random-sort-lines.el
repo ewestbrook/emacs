@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-fns-random-sort-lines.el")
+
 (defun ew-random-sort-lines (beg end)
   "Sort lines in region randomly."
   (interactive "r")

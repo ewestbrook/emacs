@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-fns-dir.el")
+
 (defun ew-dir-cwd-bns-except (exceptbns)
   "Basenames in current directory, except `EXCEPTBNS`."
   (seq-filter

@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-markdown.el")
+
 (use-package markdown-mode
 
   :commands markdown-mode gfm-mode

@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-window.el")
+
 (defun no-split-window ()
   "Function for preference of not splitting window."
   (interactive) nil)

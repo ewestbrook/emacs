@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-path.el")
+
 (require 's)
 
 (defun ew-path-prependable-paths()

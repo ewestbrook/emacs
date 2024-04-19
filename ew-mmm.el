@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-mmm.el")
+
 (use-package mmm-mode
   :config
   (setq mmm-global-mode 'maybe)

@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-string.el")
+
 (defun ew-string-matches-one-of(str pats)
   "Return first match of STR against any regular expression in PATS."
   (catch 'result

@@ -3,6 +3,8 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
+(message "ew-indent.el")
+
 (setq-default column-number-mode t)
 (setq-default default-tab-width 2)
 (setq-default default-tab-width 2)
