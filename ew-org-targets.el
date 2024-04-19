@@ -14,9 +14,8 @@
      ("^ce2496b\\b"            . ew-org-targets-ew)
      ("^a1\\.local\\b"         . ew-org-targets-ew)
      ("^a1\\.westbrook\\.com$" . ew-org-targets-ew)
-     ("^viking\\b"             . ew-org-targets-ew)
-     ("^lcssvr"                . ew-org-targets-lcs)
-     ("\\.lcs\\.net$"          . ew-org-targets-lcs)
+     ("\\.lcs\\.net$"          . ew-org-targets-ew)
+     ("\\.lcs\\.lanl\\.gov$"   . ew-org-targets-ew)
      ("\\.lanl\\.gov$"         . ew-org-targets-lanl))
    'string-match)))
 

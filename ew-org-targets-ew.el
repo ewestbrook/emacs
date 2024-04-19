@@ -265,6 +265,14 @@
     :publishing-function org-twbs-publish-to-html
     :auto-preamble nil)
 
+   ("eewe-mediawikifiles"
+    :base-directory "~/git/eew/mediawikifiles"
+    :base-extension "org"
+    :publishing-directory "~/git/eew/mediawikifiles-h"
+    :recursive t
+    :publishing-function org-twbs-publish-to-html
+    :auto-preamble nil)
+
    ))
 
 ;; -------------------------------------------------------
