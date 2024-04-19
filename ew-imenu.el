@@ -3,12 +3,17 @@
 ;;; Code:
 ;; -------------------------------------------------------
 
-(defun ew-try-to-add-imenu ()
-  "Try to add imenu."
-  (condition-case nil (imenu-add-to-menubar "imenu") (error nil)))
-(add-hook 'font-lock-mode-hook 'ew-try-to-add-imenu)
+(message "ew-imenu.el")
 
-(global-set-key (kbd "C-.") 'imenu-anywhere)
+(use-package imenu-anywhere
+  :ensure t
+  :bind (("C-." . imenu-anywhere))
+  ;; :hook ('font-lock-mode 'ew-try-to-add-imenu)
+  ;; :preface
+  ;; (defun ew-try-to-add-imenu ()
+  ;;   "Try to add imenu."
+  ;;   (condition-case nil (imenu-add-to-menubar "imenu") (error nil)))
+  )
 
 ;; -------------------------------------------------------
 ;; Local Variables:
