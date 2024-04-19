@@ -10,26 +10,30 @@
 ;; https://github.com/tonsky/FiraCode/wiki/Emacs-instructions
 ;; https://emacs.stackexchange.com/questions/55059/ligatures-with-the-jetbrains-mono-font
 
-(defconst lisp--prettify-symbols-alist
-  '(("lambda" . ?λ)))
-
 (add-hook
  'emacs-lisp-mode-hook
  (lambda ()
+   (push '("lambda" . ?λ) prettify-symbols-alist)
    (push '(">=" . ?≥) prettify-symbols-alist)
-   (push '("<=" . ?≤) prettify-symbols-alist)
-   ))
+   (push '("<=" . ?≤) prettify-symbols-alist)))
 
 ;; (add-hook
 ;;  'python-mode-hook
 ;;  (lambda ()
+;;    (push '("lambda" . ?λ) prettify-symbols-alist)
+;;    (push '("and" . 8743) prettify-symbols-alist)
+;;    (push '("or" . 8744) prettify-symbols-alist)
+;;    (push '("lambda" . ?λ) prettify-symbols-alist)
 ;;    (push '("def" . ?ƒ) prettify-symbols-alist)
 ;;    (push '("class" . ?¶) prettify-symbols-alist)
 ;;    (push '("self" . ?●) prettify-symbols-alist)
 ;;    (push '("__init__" . ?§) prettify-symbols-alist)
 ;;    (push '("pass" . ?—) prettify-symbols-alist)
 ;;    (push '("None" . ?∅) prettify-symbols-alist)
-;;    ))
+;;    (push '("True" . ?✔) prettify-symbols-alist)
+;;    (push '("False" . ?✘) prettify-symbols-alist)
+;;    (push '("100" . ?💯) prettify-symbols-alist)))
+
 
 (global-prettify-symbols-mode)
 
