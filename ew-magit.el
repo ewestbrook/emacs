@@ -35,24 +35,31 @@
           (set-face-attribute 'magit-diff-added-highlight   nil :background "#3a5c40"))
       (progn
         (set-face-attribute 'magit-log-date                    nil :foreground "grey50")
+
         (set-face-attribute 'magit-diff-hunk-heading           nil :foreground "grey60")
         (set-face-attribute 'magit-diff-hunk-heading           nil :background "grey30")
-        (set-face-attribute 'magit-diff-hunk-heading-highlight nil :background "grey70")
+        (set-face-attribute 'magit-diff-hunk-heading-highlight nil :background "grey60")
+
         (set-face-attribute 'magit-section-highlight           nil :background "#333333")
+
         (set-face-attribute 'magit-diff-context-highlight      nil :background "grey15")
+
         (set-face-attribute 'magit-diff-added-highlight        nil :background "#224422")
-        (set-face-attribute 'magit-diff-added-highlight        nil :foreground "#66ee66")
+        (set-face-attribute 'magit-diff-added-highlight        nil :foreground "#44bb44")
         (set-face-attribute 'magit-diff-added                  nil :background "#224422")
-        (set-face-attribute 'magit-diff-added                  nil :foreground "#00aa00")
+        (set-face-attribute 'magit-diff-added                  nil :foreground "#008800")
         (set-face-attribute 'diff-refine-added                 nil :background "#114411")
-        (set-face-attribute 'diff-refine-added                 nil :foreground "#88ff88")
+        (set-face-attribute 'diff-refine-added                 nil :foreground "#77cc77")
+
         (set-face-attribute 'magit-diff-removed-highlight      nil :background "#442222")
-        (set-face-attribute 'magit-diff-removed-highlight      nil :foreground "#ee6666")
-        (set-face-attribute 'magit-diff-removed                nil :background "#441111")
-        (set-face-attribute 'magit-diff-removed                nil :foreground "#aa4444")
+        (set-face-attribute 'magit-diff-removed-highlight      nil :foreground "#bb4444")
+        (set-face-attribute 'magit-diff-removed                nil :background "#442222")
+        (set-face-attribute 'magit-diff-removed                nil :foreground "#880000")
         (set-face-attribute 'diff-refine-removed               nil :background "#441111")
-        (set-face-attribute 'diff-refine-removed               nil :foreground "#ff8888")))
-    (setq forge-topic-list-order '(number . >)))
+        (set-face-attribute 'diff-refine-removed               nil :foreground "#cc7777")))
+
+    (setq forge-topic-list-order '(number . >))
+    (setq forge-topic-list-limit '(60 . -60)))
 
   :hook (magit-status-mode . ew-magit-status-mode-init)
 
@@ -69,7 +76,7 @@
           (unpushed . show)
           (issues . show)
           (pullreqs . show)
-          (unuplled . show)))
+          (unpulled . show)))
   (setq magit-repository-directories
         '(("~/git" . 5)
           ("/usr/local/eric/git" . 5)
