@@ -2,6 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
+(add-variable-watcher 'prettify-symbols-alist (lambda (&rest x) (message "%S" x)))
 (add-to-list 'load-path "~/git/eew/emacs")
 ;; -------------------------------------------------------
 ;; bootstraps
@@ -17,6 +18,7 @@
 (require 'ew-counsel)
 ;; (require 'ew-custom) ;; bootstrapped
 (require 'ew-dired)
+(require 'ew-emacs-lisp)
 (require 'ew-fns-dir)
 (require 'ew-fns-flatten-tree)
 (require 'ew-dns-mode)
@@ -50,7 +52,6 @@
 ;; (require 'ew-lua)
 (require 'ew-magit)
 (require 'ew-markdown)
-(require 'ew-misc)
 (require 'ew-mmm)
 (require 'ew-modeline)
 (require 'ew-org-bullets)
@@ -76,6 +77,8 @@
 (require 'ew-projectile)
 (require 'ew-python)
 (require 'ew-elpy)
+;; (require 'ew-rainbow)
+;; (require 'ew-rainbow-delimiters)
 (require 'ew-rg)
 (require 'ew-rjsx)
 (require 'ew-sh)
@@ -94,6 +97,8 @@
 (require 'ew-xref)
 (require 'show-wspace)
 ;; (require 'org-babel-eval-stderr)
+;; -------------------------------------------------------
+(require 'ew-misc)
 ;; -------------------------------------------------------
 ;; Local Variables:
 ;; mode: emacs-lisp
