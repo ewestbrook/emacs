@@ -16,7 +16,11 @@
   (setq ivy-use-virtual-buffers t)
   (setq ivy-count-format "(%d/%d) ") ;; intentional space before end of string
   (setq ivy-initial-inputs-alist nil)
-  (setq ivy-re-builders-alist '((t . ivy--regex-fuzzy))))
+  (setq ivy-re-builders-alist
+        '(
+          (t . ivy--regex-fuzzy)
+          (t . ivy--regex-ignore-order)
+          )))
 
 (ivy-mode 1)
 (counsel-mode 1)
