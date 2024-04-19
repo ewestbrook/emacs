@@ -5,12 +5,16 @@
 
 (message "ew-elpy.el")
 
+(use-package elpy
   :ensure t
-
+  :hook (elpy-mode . ew-elpy-init)
+  :init (elpy-enable)
+  :bind (("C-c C-g" . ew-elpy-goto-def-or-rgrep))
   :preface
-
   (defun ew-elpy-init()
     "Init elpy."
+    (message "ew-elpy init start")
+    (if (display-graphic-p)
     (if (string-match "\\.lcs.lanl.gov$" (system-name))
         (pyvenv-activate "/usr/lcs/python/rocky311venv")
       (pyvenv-activate "~/.venv"))
@@ -18,6 +22,7 @@
     (if (display-graphic-p)
         (set-face-attribute 'highlight-indentation-face nil :background "grey15")
       (set-face-attribute 'highlight-indentation-face nil :background "grey15")))
+    (message "ew-elpy init finish"))
 
   (defun ew-elpy-goto-def-or-rgrep ()
     "Go to definition of thing at point or do an rgrep in project if that fails"
