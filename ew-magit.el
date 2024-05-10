@@ -17,6 +17,7 @@
 (use-package magit
 
   :ensure t
+  :demand t
 
   :preface
   (defun ew-magit-status-mode-init()
