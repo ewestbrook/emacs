@@ -6,8 +6,7 @@
 (message "ew-citeproc.el")
 
 (use-package citeproc
-  :ensure t
-  :hook emacs-lisp-mode)
+  :ensure t)
 
 ;; -------------------------------------------------------
 ;; Local Variables:
