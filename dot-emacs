@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 ;; -------------------------------------------------------
-(add-variable-watcher 'prettify-symbols-alist (lambda (&rest x) (message "%S" x)))
+;; (add-variable-watcher 'prettify-symbols-alist (lambda (&rest x) (message "%S" x)))
 (add-to-list 'load-path "~/git/eew/emacs")
 ;; -------------------------------------------------------
 ;; bootstraps
