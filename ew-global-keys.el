@@ -5,6 +5,9 @@
 
 (message "ew-global-keys.el")
 
+;; work around C-; on iterm2
+(global-set-key (kbd "C-x C-[ [ a a") 'comment-line)
+
 ;; misc
 (global-set-key (kbd "M-S-SPC") 'set-mark)
 (global-set-key (kbd "C-x M-e") 'eval-buffer)
