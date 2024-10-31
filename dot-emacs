@@ -60,7 +60,7 @@
 (require 'ew-org-keys)
 (require 'ew-org-reveal)
 (require 'ew-org-same-window)
-(require 'ew-org-targets)
+;; (require 'ew-org-targets)
 ;; (require 'ew-org-targets-ew)
 ;; (require 'ew-org-targets-lanl)
 ;; (require 'ew-org-targets-lcs)
