@@ -50,6 +50,11 @@
   (interactive)
   (ew-kill-buffers-of-mode 'yaml-mode))
 
+(defun ew-kill-java-buffers()
+  "Kill buffers of 'java-mode'."
+  (interactive)
+  (ew-kill-buffers-of-mode 'java-mode))
+
 (defun ew-kill-magit-buffers()
   "Kill buffers of 'magit-mode'."
   (interactive)
