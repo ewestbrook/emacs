@@ -34,7 +34,7 @@
 ;;    (push '("False" . ?✘) prettify-symbols-alist)
 ;;    (push '("100" . ?💯) prettify-symbols-alist)))
 
-
+(setq prettify-symbols-unprettify-at-point 'right-edge)
 (global-prettify-symbols-mode)
 
 ;; -------------------------------------------------------
