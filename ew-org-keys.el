@@ -10,6 +10,19 @@
 
   (org-bullets-mode 1)
 
+  ;; work around M-ret on iterm2
+  (local-set-key (kbd "C-[ [ a b") 'org-meta-return)
+
+  ;; work around M-{S-,}<right|left|up|down> on iterm2 (SEE ALSO ew-global-keys)
+  (local-set-key (kbd "C-[ [ a c") 'org-shiftmetaright)
+  (local-set-key (kbd "C-[ [ a d") 'org-shiftmetaleft)
+  (local-set-key (kbd "C-[ [ a e") 'org-shiftmetaup)
+  (local-set-key (kbd "C-[ [ a f") 'org-shiftmetadown)
+  (local-set-key (kbd "C-[ [ a g") 'org-metaright)
+  (local-set-key (kbd "C-[ [ a h") 'org-metaleft)
+  (local-set-key (kbd "C-[ [ a i") 'org-metaup)
+  (local-set-key (kbd "C-[ [ a j") 'org-metadown)
+
   (local-set-key (kbd "C-c h") 'ew-org-publish-current-file)
   (local-set-key (kbd "C-c H") 'ew-org-publish-to-browser)
   (local-set-key (kbd "C-c M-h") 'ew-org-make-all)

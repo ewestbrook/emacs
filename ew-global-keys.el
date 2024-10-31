@@ -5,7 +5,7 @@
 
 (message "ew-global-keys.el")
 
-;; work around C-; on iterm2
+;; work around C-x C-; on iterm2 (SEE ALSO ew-org-keys)
 (global-set-key (kbd "C-x C-[ [ a a") 'comment-line)
 
 ;; misc
