@@ -7,6 +7,10 @@
 
 (use-package org
 
+  :ensure t
+  :defer t
+  :requires org-mouse
+
   :mode (("\\.org\\'" . org-mode)
          ("\\.org.inc\\'" . org-mode))
 
