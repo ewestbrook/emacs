@@ -7,7 +7,7 @@
 ;; -------------------------------------------------------
 ;; bootstraps
 (require 'ew-custom)
-(require 'ew-lanl-proxy)
+;; (require 'ew-lanl-proxy)
 (require 'ew-use-package)
 ;; (load "/usr/share/emacs/site-lisp/site-gentoo")
 ;; -------------------------------------------------------
