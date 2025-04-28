@@ -21,7 +21,9 @@
 (require 'ew-dired)
 (require 'ew-emacs-lisp)
 (require 'ew-fns-dir)
+(require 'ew-fns-fillunfill)
 (require 'ew-fns-flatten-tree)
+(require 'ew-fns-mode)
 (require 'ew-dns-mode)
 (require 'ew-ediff)
 (require 'ew-epics-mode)
@@ -96,6 +98,7 @@
 (require 'ew-whitespace)
 (require 'ew-window)
 (require 'ew-xref)
+(require 'ew-yaml)
 (require 'show-wspace)
 ;; (require 'org-babel-eval-stderr)
 ;; -------------------------------------------------------
