@@ -6,19 +6,19 @@
 (message "ew-magit.el")
 
 (use-package forge
-
   :ensure t
   :after magit
   :config
   (add-to-list
    'forge-alist
-   '("gitlab.lanl.gov" "gitlab.lanl.gov/api/v4" "gitlab.lanl.gov" forge-gitlab-repository)))
+   '("gitlab.lanl.gov" "gitlab.lanl.gov/api/v4" "gitlab.lanl.gov" forge-gitlab-repository))
+  (setq auth-sources '("~/.authinfo"))
+  (setq forge-topic-list-order '(number . >))
+  (setq forge-topic-list-limit '(60 . -60)))
 
 (use-package magit
-
   :ensure t
   :demand t
-
   :preface
   (defun ew-magit-status-mode-init()
     "Init magit status mode."
@@ -36,33 +36,26 @@
           (set-face-attribute 'magit-diff-added-highlight   nil :background "#3a5c40"))
       (progn
         (set-face-attribute 'magit-log-date                    nil :foreground "grey50")
-
         (set-face-attribute 'magit-diff-hunk-heading           nil :foreground "grey60")
         (set-face-attribute 'magit-diff-hunk-heading           nil :background "grey30")
         (set-face-attribute 'magit-diff-hunk-heading-highlight nil :background "grey60")
-
         (set-face-attribute 'magit-section-highlight           nil :background "#333333")
-
         (set-face-attribute 'magit-diff-context-highlight      nil :background "grey15")
-
         (set-face-attribute 'magit-diff-added-highlight        nil :background "#224422")
         (set-face-attribute 'magit-diff-added-highlight        nil :foreground "#44bb44")
         (set-face-attribute 'magit-diff-added                  nil :background "#224422")
         (set-face-attribute 'magit-diff-added                  nil :foreground "#008800")
         (set-face-attribute 'diff-refine-added                 nil :background "#114411")
         (set-face-attribute 'diff-refine-added                 nil :foreground "#77cc77")
-
         (set-face-attribute 'magit-diff-removed-highlight      nil :background "#442222")
         (set-face-attribute 'magit-diff-removed-highlight      nil :foreground "#bb4444")
         (set-face-attribute 'magit-diff-removed                nil :background "#442222")
         (set-face-attribute 'magit-diff-removed                nil :foreground "#880000")
         (set-face-attribute 'diff-refine-removed               nil :background "#441111")
-        (set-face-attribute 'diff-refine-removed               nil :foreground "#cc7777")))
+        (set-face-attribute 'diff-refine-removed               nil :foreground "#cc7777"))))
 
-    (setq forge-topic-list-order '(number . >))
-    (setq forge-topic-list-limit '(60 . -60)))
-
-  :hook (magit-status-mode . ew-magit-status-mode-init)
+  :hook
+  (magit-status-mode . ew-magit-status-mode-init)
 
   :config
   (setq magit-diff-hide-trailing-cr-characters t)
@@ -80,8 +73,7 @@
           (unpulled . show)))
   (setq magit-repository-directories
         '(("~/git" . 5)
-          ("/usr/local/eric/git" . 5)
-          ("/ade/epics/efs/R3.15.9" . 5))))
+          ("/usr/local/eric/git" . 5))))
 
 ;; -------------------------------------------------------
 ;; Local Variables:
