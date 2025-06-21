@@ -44,6 +44,7 @@
 ;; (require 'ew-gitlab)
 (require 'ew-global-keys)
 (require 'ew-gnus)
+(require 'ew-goto-line-preview)
 (require 'ew-gud)
 ;; (require 'ew-helm)
 (require 'ew-imenu)
