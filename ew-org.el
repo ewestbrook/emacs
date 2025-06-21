@@ -5,11 +5,20 @@
 
 (message "ew-org.el")
 
+;; (use-package org-ref
+;;   :ensure t
+;;   :defer t)
+
+;; (use-package org-tempo
+;;   :ensure t
+;;   :defer t)
+
 (use-package org
 
   :ensure t
   :defer t
   :requires org-mouse
+  ;; :requires (org-mouse org-ref org-tempo)
 
   :mode (("\\.org\\'" . org-mode)
          ("\\.org.inc\\'" . org-mode))
@@ -138,6 +147,38 @@
      ("shell"     . sh)
      ("sqlite"    . sql)
      ("lua"       . lua)))
+
+  ;; (setq org-latex-classes (butfirst org-latex-classes))
+  ;; (defun ew-remove-nth-element (nth list) (if (zerop nth) (cdr list) (let ((last (nthcdr (1- nth) list))) (setcdr last (cddr last)) list)))
+  ;; (ew-remove-nth-element 0 org-latex-classes)
+  ;; (ew-remove-nth-element 0 (list 1 2 3 4 5))
+  ;; (setq org-latex-classes (eval (car (get 'org-latex-classes 'standard-value))))
+
+  (add-to-list
+   'org-latex-classes
+   '("ew-lt-journal-article"
+"\\documentclass[
+    letterpaper,
+    10pt,
+    unnumberedsections,
+    twoside,
+  ]{LTJournalArticle}
+\\setcounter{page}{1}
+\\makeatletter
+  \\def\\@fnsymbol#1{
+    \\ensuremath{
+      \\ifcase#1 \\or \\dagger \\or \\ddagger \\or
+      \\mathsection \\or \\mathparagraph \\or
+      \\| \\or ** \\or \\dagger \\dagger \\or
+      \\ddagger \\ddagger \\else \\@ctrerr \\fi}}
+\\makeatother
+[NO-DEFAULT-PACKAGES]
+[NO-PACKAGES]"
+     ("\\section{%s}" . "\\section*{%s}")
+     ("\\subsection{%s}" . "\\subsection*{%s}")
+     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+     ("\\paragraph{%s}" . "\\paragraph*{%s}")
+     ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
   )
 
