@@ -8,8 +8,16 @@
 
 (use-package flyspell
 
+  :ensure t
+  :requires ew-fns-mode
+
   :preface
-  (defvar ew-no-flyspell-modes '(yaml-mode emacs-lisp-mode))
+  (defvar ew-no-flyspell-modes
+    '(yaml-mode
+      emacs-lisp-mode
+      python-mode
+      css-mode
+      dns-mode))
 
   (defun ew-flyspell-mode ()
     (flyspell-mode 1))
