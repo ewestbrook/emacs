@@ -55,6 +55,11 @@
   (interactive)
   (ew-kill-buffers-of-mode 'java-mode))
 
+(defun ew-kill-python-buffers()
+  "Kill buffers of 'python-mode'."
+  (interactive)
+  (ew-kill-buffers-of-mode 'python-mode))
+
 (defun ew-kill-magit-buffers()
   "Kill buffers of 'magit-mode'."
   (interactive)
