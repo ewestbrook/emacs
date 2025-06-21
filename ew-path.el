@@ -11,18 +11,22 @@
   "Get the list of prepependable paths."
   (let ((home (getenv "HOME")))
     (append
-     '("/opt/X11/bin"
-       "/usr/local/opt/gnu-sed/libexec/gnubin"
-       "/usr/local/opt/texinfo/bin"
-       "/Applications/Firefox.app/Contents/MacOS"
-       "/Applications/Wireshark.app/Contents/MacOS"
-       "/usr/local/texlive/2020/bin/x86_64-darwin"
-       "/usr/local/bin"
-       "/usr/local/sbin"
-       "/usr/lcs/python/rocky311lcs/bin")
+     '(
+       "/usr/local/stow/texlive-74223/2025/bin/x86_64-linux/"
+       ;; "/opt/X11/bin"
+       ;; "/usr/local/opt/gnu-sed/libexec/gnubin"
+       ;; "/usr/local/opt/texinfo/bin"
+       ;; "/Applications/Firefox.app/Contents/MacOS"
+       ;; "/Applications/Wireshark.app/Contents/MacOS"
+       ;; "/usr/local/texlive/2020/bin/x86_64-darwin"
+       ;; "/usr/local/bin"
+       ;; "/usr/local/sbin"
+       ;; "/usr/lcs/python/rocky311lcs/bin"
+       )
      (mapcar (lambda (p) (concat home p))
        '("/bin"
-         "/git/eew/w/bin")))))
+         ;; "/git/eew/w/bin"
+         )))))
 
 (defun ew-path-prepend-paths()
   "Prepend paths in 'ew-path-paths' to env's PATH and 'exec-path' uniquely.
